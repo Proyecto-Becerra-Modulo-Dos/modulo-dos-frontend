@@ -3,6 +3,6 @@ import { login } from "../controllers/home.controllers.js";
 
 const rutaHome = Router();
 
-rutaHome.get("/", login)
+rutaHome.get("/login", login)
 
 export default rutaHome

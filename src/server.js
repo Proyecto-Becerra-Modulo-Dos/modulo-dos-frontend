@@ -4,6 +4,7 @@ import ejs from "ejs";
 import path from "path";
 import { fileURLToPath } from "url";
 import ruta from "./routes/index.js";
+import { error404 } from "./controllers/home.controllers.js";
 config();
 
 const __filename = fileURLToPath(import.meta.url);
@@ -17,6 +18,7 @@ app.set("views", path.join(__dirname, "views"));
 app.set("port", process.env.PORT || 3000);
 
 app.use("/", ruta);
+app.use("/", error404);
 
 // app.use("/", (req, res) => {
 //     res.render("views.error.ejs");
