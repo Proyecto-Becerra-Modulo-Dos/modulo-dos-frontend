@@ -9,7 +9,12 @@
     height: 100vh;
 }
 
+.cont-fondo{
+    padding-bottom: 15px;
+}
+
 .cabecera {
+    margin-top: 35px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;

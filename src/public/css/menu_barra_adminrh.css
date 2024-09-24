@@ -84,6 +84,10 @@
     background-color: #1E3DEA;
     z-index: 1;
     justify-content: right;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
 .icon-notis,
