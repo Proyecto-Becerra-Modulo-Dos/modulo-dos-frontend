@@ -12,11 +12,6 @@
     grid-template-rows: 6% 94%;
 }
 
-.cont-barra-superior {
-    background-color: #1E3DEA;
-    z-index: 1;
-}
-
 .cont-fondo {
     width: 100%;
     height: 100%;

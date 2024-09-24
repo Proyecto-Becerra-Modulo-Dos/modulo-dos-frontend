@@ -81,6 +81,8 @@
 
 .cont-barra-superior{
     display: flex;
+    background-color: #1E3DEA;
+    z-index: 1;
     justify-content: right;
 }
 

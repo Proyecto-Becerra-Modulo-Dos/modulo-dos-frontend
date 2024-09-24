@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apex</title>
+    <link rel="stylesheet" href="/css/menu_barra_adminrh.css">
+    <link rel="stylesheet" href="/css/crear_empleado.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <%- include('partials/menu_adminrh') %>
+        <%- include('partials/barra_adminrh') %>
+        <div class="cont-fondo">
+            <div class="cabecera">
+                <h1 class="tittle">Crear Nuevo Empleado</h1>
+            </div>
+            <div class="cont-form">
+                <form class="form-crear-empleado" action="" method="post">
+                    <input type="text" name="id" id="id" placeholder="Ingrese la identificación del empleado">
+                    <input type="text" name="nombres" id="nombres" placeholder="Ingrese los nombres del empleado">
+                    <input type="text" name="apellidos" id="apellidos" placeholder="Ingrese los apellidos del empleado">
+                    <input type="tel" name="celular" id="celular" placeholder="Ingrese el celular del empleado">
+                    <input type="text" name="direccion" id="direccion" placeholder="Ingrese la dirección del empleado">
+                    <input type="email" name="email" id="email" placeholder="Ingrese el E-mail del empleado">
+                    <input type="password" name="contrasena" id="contrasena" placeholder="Ingrese la contraseña temporal del empleado">
+                    <select name="" id="">
+                        <option value="" disabled selected>Ingrese el rol del empleado</option>
+                        <option value="administrador" >Administrador recursos humanos</option>
+                        <option value="supervisor" >Supervisor</option>
+                        <option value="entrevistador" >Entrevistador</option>
+                        <option value="reclutador" >Reclutador</option>
+                        <option value="encargado" >Encargado de inventario</option>
+                        <option value="gerente" >Gerente de ventas</option>
+                        <option value="vendedor" >Vendedor</option>
+                    </select>
+                    <div class="cont-btn">
+                        <button class="btn-guardar" type="submit">Guardar empleado</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
