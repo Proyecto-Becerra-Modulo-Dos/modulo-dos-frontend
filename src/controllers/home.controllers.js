@@ -7,6 +7,10 @@ export const login = (req, res) => {
     res.render("views.login.ejs", {url: url})
 }
 
+export const principal = (req, res) => {
+    res.render("views.principal.ejs")
+}
+
 export const error404 = (req, res) => {
     res.render("views.error404.ejs")
 }
