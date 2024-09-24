@@ -109,3 +109,9 @@
 .img-cuenta{
     width: 30px;
 }
+
+/* Alerta */
+
+.bg-alert{
+    background-color: #1E3DEA;
+}
