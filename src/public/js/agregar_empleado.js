@@ -1,18 +1,18 @@
-document.addEventListener('DOMContentLoaded', async () => {
-
-    document.getElementById('crearEmpleado').addEventListener('submit', async (e) => {
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('btnCrearEmpleado').addEventListener('submit', async (e) => {
         e.preventDefault();
 
         const identificacion = document.getElementById('identificacion').value;
         const nombre = document.getElementById('nombre').value;
         const apellido = document.getElementById('apellido').value;
+        const usuario = document.getElementById('usuario').value;
         const celular = document.getElementById('celular').value;
         const direccion = document.getElementById('direccion').value;
         const email = document.getElementById('email').value;
         const contrasena = document.getElementById('contrasena').value;
         const rol = document.getElementById('rol').value;
 
-        if (!identificacion || !nombre || !apellido|| !celular || !direccion || !email|| !contrasena || !rol) {
+        if (!identificacion || !nombre || !apellido || !usuario || !celular || !direccion || !email || !contrasena || !rol) {
             Swal.fire({
                 icon: 'error',
                 title: "<h5 style='color:white; font-family: 'Inter', sans-serif;'>" + 'Todos los campos son obligatorios' + "</h5>",
@@ -35,6 +35,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 identificacion: identificacion,
                 nombre: nombre,
                 apellido: apellido,
+                usuario: usuario,
                 celular: celular,
                 direccion: direccion,
                 email: email,
@@ -45,16 +46,19 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         try {
             const response = await fetch('http://localhost:3000/empleados/crear', options);
-
+            console.log(response);
+            
             if (!response.ok) {
                 const responseText = await response.text();
                 throw new Error(`Error: ${response.status} ${response.statusText} - ${responseText}`);
             }
 
             const responseData = await response.json();
+            console.log("Usuario registrado:", responseData);
+
             Swal.fire({
                 icon: 'success',
-                title: "<h5 style='color:white; font-family: 'Inter', sans-serif;'>" + 'Empleado agregada exitosamente' + "</h5>",
+                title: "<h5 style='color:white; font-family: 'Inter', sans-serif;'>" + 'Empleado agregado exitosamente' + "</h5>",
                 showConfirmButton: false,
                 timer: 1500,
                 customClass: {
@@ -62,9 +66,9 @@ document.addEventListener('DOMContentLoaded', async () => {
                     content: 'text-alert'
                 }
             });
-            setTimeout(() => {
-                window.location.href = `/admin/empleados`;
-            }, 1500);
+            // setTimeout(() => {
+            //     window.location.href = `/admin/empleados`;
+            // }, 1500);
         } catch (error) {
             console.error('Error al agregar empleado:', error);
             Swal.fire({
