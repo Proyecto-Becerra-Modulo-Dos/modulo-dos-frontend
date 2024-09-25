@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    document.getElementById('btnCrearEmpleado').addEventListener('submit', async (e) => {
+    document.getElementById('crearEmpleado').addEventListener('submit', async (e) => {
         e.preventDefault();
 
         const identificacion = document.getElementById('identificacion').value;
@@ -44,6 +44,9 @@ document.addEventListener('DOMContentLoaded', () => {
             })
         }
 
+        console.log("OPCIONES:",options);
+        
+
         try {
             const response = await fetch('http://localhost:3000/empleados/crear', options);
             console.log(response);
@@ -66,9 +69,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     content: 'text-alert'
                 }
             });
-            // setTimeout(() => {
-            //     window.location.href = `/admin/empleados`;
-            // }, 1500);
+            setTimeout(() => {
+                window.location.href = `/admin/empleados`;
+            }, 1500);
         } catch (error) {
             console.error('Error al agregar empleado:', error);
             Swal.fire({

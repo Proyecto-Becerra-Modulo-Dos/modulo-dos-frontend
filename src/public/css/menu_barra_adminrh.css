@@ -113,5 +113,9 @@
 /* Alerta */
 
 .bg-alert{
-    background-color: #1E3DEA;
+    background-color: #303135;
+}
+
+.text-alert{
+    color: white;
 }
