@@ -11,6 +11,14 @@ export const principal = (req, res) => {
     res.render("views.principal.ejs")
 }
 
+export const solicitarcambio = (req, res) => {
+    res.render("views.solicitarcambio.ejs")
+}
+
+export const formulario = (req, res) => {
+    res.render("views.ventanaeditar.ejs")
+}
+
 export const error404 = (req, res) => {
     res.render("views.error404.ejs")
 }
