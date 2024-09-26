@@ -36,105 +36,21 @@
                             <th>Estado</th>
                         </tr>
                     </thead>
+                    <% if (empleados && empleados.length> 0) { %>
                     <tbody class="cuerpo-tabla">
+                        <% empleados.forEach(empleado=> { %>
                         <tr class="column-1">
-                            <td>Camila</td>
-                            <td>Rios Bustamante</td>
-                            <td>300 330 4500</td>
-                            <td>camila@gmail.com</td>
-                            <td>Contador</td>
-                            <td>Activo</td>
+                            <td><%= empleado.nombre%></td>
+                            <td><%= empleado.apellido%></td>
+                            <td><%= empleado.celular%></td>
+                            <td><%= empleado.email%></td>
+                            <td><%= empleado.rol%></td>
+                            <td><%= empleado.estado%></td>
                         </tr>
-                        <tr class="column-2">
-                            <td>Andres</td>
-                            <td>Rodriguez Toro</td>
-                            <td>300 330 4500</td>
-                            <td>rodToro@gmail.com</td>
-                            <td>Secretario</td>
-                            <td>Activo</td>
-                        </tr>
-                        <tr class="column-1">
-                            <td>Camila</td>
-                            <td>Rios Bustamante</td>
-                            <td>300 330 4500</td>
-                            <td>camila@gmail.com</td>
-                            <td>Contador</td>
-                            <td>Activo</td>
-                        </tr>
-                        <tr class="column-2">
-                            <td>Andres</td>
-                            <td>Rodriguez Toro</td>
-                            <td>300 330 4500</td>
-                            <td>rodToro@gmail.com</td>
-                            <td>Secretario</td>
-                            <td>Activo</td>
-                        </tr>
-                        <tr class="column-1">
-                            <td>Camila</td>
-                            <td>Rios Bustamante</td>
-                            <td>300 330 4500</td>
-                            <td>camila@gmail.com</td>
-                            <td>Contador</td>
-                            <td>Activo</td>
-                        </tr>
-                        <tr class="column-2">
-                            <td>Andres</td>
-                            <td>Rodriguez Toro</td>
-                            <td>300 330 4500</td>
-                            <td>rodToro@gmail.com</td>
-                            <td>Secretario</td>
-                            <td>Activo</td>
-                        </tr>
-                        <tr class="column-1">
-                            <td>Camila</td>
-                            <td>Rios Bustamante</td>
-                            <td>300 330 4500</td>
-                            <td>camila@gmail.com</td>
-                            <td>Contador</td>
-                            <td>Activo</td>
-                        </tr>
-                        <tr class="column-2">
-                            <td>Andres</td>
-                            <td>Rodriguez Toro</td>
-                            <td>300 330 4500</td>
-                            <td>rodToro@gmail.com</td>
-                            <td>Secretario</td>
-                            <td>Activo</td>
-                        </tr>
-                        <tr class="column-1">
-                            <td>Camila</td>
-                            <td>Rios Bustamante</td>
-                            <td>300 330 4500</td>
-                            <td>camila@gmail.com</td>
-                            <td>Contador</td>
-                            <td>Activo</td>
-                        </tr>
-                        <tr class="column-2">
-                            <td>Andres</td>
-                            <td>Rodriguez Toro</td>
-                            <td>300 330 4500</td>
-                            <td>rodToro@gmail.com</td>
-                            <td>Secretario</td>
-                            <td>Activo</td>
-                        </tr>
-                        <tr class="column-1">
-                            <td>Camila</td>
-                            <td>Rios Bustamante</td>
-                            <td>300 330 4500</td>
-                            <td>camila@gmail.com</td>
-                            <td>Contador</td>
-                            <td>Activo</td>
-                        </tr>
-                        <tr class="column-2">
-                            <td>Andres</td>
-                            <td>Rodriguez Toro</td>
-                            <td>300 330 4500</td>
-                            <td>rodToro@gmail.com</td>
-                            <td>Secretario</td>
-                            <td>Activo</td>
-                        </tr>
+                        <% }); %>
                         <!-- <tr class="bg-light"><td colspan="5"></td></tr> -->
                     </tbody>
+                    <% } %>
                 </table>
             </div>
         </div>

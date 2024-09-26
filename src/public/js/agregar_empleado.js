@@ -27,11 +27,11 @@ document.addEventListener('DOMContentLoaded', () => {
         // const token = sessionStorage.getItem("token");
         const options = {
             method: "POST",
-            headers:{
+            headers: {
                 "content-Type": "application/json",
                 // "x-access-token": token
             },
-            body:JSON.stringify({
+            body: JSON.stringify({
                 identificacion: identificacion,
                 nombre: nombre,
                 apellido: apellido,
@@ -44,20 +44,14 @@ document.addEventListener('DOMContentLoaded', () => {
             })
         }
 
-        console.log("OPCIONES:",options);
-        
-
         try {
             const response = await fetch('http://localhost:3000/empleados/crear', options);
             console.log(response);
-            
+
             if (!response.ok) {
                 const responseText = await response.text();
                 throw new Error(`Error: ${response.status} ${response.statusText} - ${responseText}`);
             }
-
-            const responseData = await response.json();
-            console.log("Usuario registrado:", responseData);
 
             Swal.fire({
                 icon: 'success',
@@ -69,9 +63,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     content: 'text-alert'
                 }
             });
+
             setTimeout(() => {
                 window.location.href = `/admin/empleados`;
             }, 1500);
+
         } catch (error) {
             console.error('Error al agregar empleado:', error);
             Swal.fire({
