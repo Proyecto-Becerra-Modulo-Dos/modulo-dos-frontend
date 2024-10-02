@@ -19,6 +19,10 @@ export const formulario = (req, res) => {
     res.render("views.ventanaeditar.ejs")
 }
 
+export const incoporacion = (req, res) => {
+    res.render("views.formulario.incorporacion.ejs")
+}
+
 export const error404 = (req, res) => {
     res.render("views.error404.ejs")
 }
