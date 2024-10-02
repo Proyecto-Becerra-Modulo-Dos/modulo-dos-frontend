@@ -1,12 +1,16 @@
-import { config } from "dotenv"
-config()
+import { config } from "dotenv";
+config();
 
-const url = process.env.BACKEND_URL
+const url = process.env.BACKEND_URL;
 
 export const login = (req, res) => {
-    res.render("views.login.ejs", {url: url})
-}
+  res.render("views.login.ejs", { url: url });
+};
 
 export const error404 = (req, res) => {
-    res.render("views.error404.ejs")
-}
+  res.render("views.error404.ejs");
+};
+
+export const supervisorHome = (req, res) => {
+  res.render("views.supervisor-home.ejs");
+};
