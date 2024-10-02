@@ -2,17 +2,16 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('crearEmpleado').addEventListener('submit', async (e) => {
         e.preventDefault();
 
+        const tipoId = document.getElementById('tipoId').value;
         const identificacion = document.getElementById('identificacion').value;
         const nombre = document.getElementById('nombre').value;
         const apellido = document.getElementById('apellido').value;
-        const usuario = document.getElementById('usuario').value;
-        const celular = document.getElementById('celular').value;
-        const direccion = document.getElementById('direccion').value;
         const email = document.getElementById('email').value;
+        const salario = document.getElementById('email').value;
         const contrasena = document.getElementById('contrasena').value;
         const rol = document.getElementById('rol').value;
 
-        if (!identificacion || !nombre || !apellido || !usuario || !celular || !direccion || !email || !contrasena || !rol) {
+        if (!tipoId || !identificacion || !nombre || !apellido || !salario || !email || !contrasena || !rol) {
             Swal.fire({
                 icon: 'error',
                 title: "<h5 style='color:white; font-family: 'Inter', sans-serif;'>" + 'Todos los campos son obligatorios' + "</h5>",
@@ -32,12 +31,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 // "x-access-token": token
             },
             body: JSON.stringify({
+                tipoId: tipoId,
                 identificacion: identificacion,
                 nombre: nombre,
                 apellido: apellido,
-                usuario: usuario,
-                celular: celular,
-                direccion: direccion,
+                salario: salario,
                 email: email,
                 contrasena: contrasena,
                 rol: rol
@@ -72,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error('Error al agregar empleado:', error);
             Swal.fire({
                 icon: 'error',
-                title: "<h5 style='color:white; font-family: 'Inter', sans-serif;'>" + 'Error al agregar la oferta' + "</h5>",
+                title: "<h5 style='color:white; font-family: 'Inter', sans-serif;'>" + 'Error al agregar el usuario' + "</h5>",
                 showConfirmButton: true,
                 customClass: {
                     popup: 'bg-alert',

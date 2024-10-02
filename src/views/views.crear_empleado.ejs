@@ -25,13 +25,17 @@
             </div>
             <div class="cont-form">
                 <form class="form-crear-empleado" id="crearEmpleado">
+                    <select id="tipoId" name="tipoId">
+                        <option value="" disabled selected>Ingrese el tipo de documento del empleado</option>
+                        <option value="C.C" >Cedula de Ciudadanía</option>
+                        <option value="C.E" >Cedula de Extranjería</option>
+                        <option value="P.E" >Pasaporte para extranjeros</option>
+                    </select>
                     <input type="text" name="identificacion" id="identificacion" placeholder="Ingrese la identificación del empleado">
                     <input type="text" name="nombre" id="nombre" placeholder="Ingrese los nombres del empleado">
                     <input type="text" name="apellido" id="apellido" placeholder="Ingrese los apellidos del empleado">
-                    <input type="text" name="usuario" id="usuario" placeholder="Ingrese el usuario del empleado">
-                    <input type="tel" name="celular" id="celular" placeholder="Ingrese el celular del empleado">
-                    <input type="text" name="direccion" id="direccion" placeholder="Ingrese la dirección del empleado">
                     <input type="email" name="email" id="email" placeholder="Ingrese el E-mail del empleado">
+                    <input type="text" name="salario" id="salario" placeholder="Ingrese el salario del empleado">
                     <input type="password" name="contrasena" id="contrasena" placeholder="Ingrese la contraseña temporal del empleado">
                     <select id="rol" name="rol">
                         <option value="" disabled selected>Ingrese el rol del empleado</option>

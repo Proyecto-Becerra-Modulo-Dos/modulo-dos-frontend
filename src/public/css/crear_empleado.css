@@ -44,7 +44,7 @@ input{
     background-color: #A1A6CA;
     border-radius: 10px;
     border: none;
-    margin-top: 17px;
+    margin-top: 25px;
     color: #2B2C33;
 }
 
@@ -63,7 +63,7 @@ select{
 }
 
 .btn-guardar{
-    margin-top: 17px;
+    margin-top: 25px;
     margin-right: 20px;
     width: 150px;
     height: 35px;
