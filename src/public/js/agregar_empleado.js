@@ -7,11 +7,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const nombre = document.getElementById('nombre').value;
         const apellido = document.getElementById('apellido').value;
         const email = document.getElementById('email').value;
-        const salario = document.getElementById('email').value;
+        const salario = document.getElementById('salario').value;
         const contrasena = document.getElementById('contrasena').value;
         const rol = document.getElementById('rol').value;
 
-        if (!tipoId || !identificacion || !nombre || !apellido || !salario || !email || !contrasena || !rol) {
+        if (!tipoId || !identificacion || !nombre || !apellido || !email || !salario || !contrasena || !rol) {
             Swal.fire({
                 icon: 'error',
                 title: "<h5 style='color:white; font-family: 'Inter', sans-serif;'>" + 'Todos los campos son obligatorios' + "</h5>",
