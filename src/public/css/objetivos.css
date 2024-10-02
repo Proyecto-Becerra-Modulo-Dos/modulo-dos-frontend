@@ -1,0 +1,147 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    background-color: #F5F5F5;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+
+
+.contenido_fondo{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+
+.content {
+    flex-grow: 1;
+    background-color: #C8CBE0;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 15px;
+
+    height: 90vh; 
+    overflow-y: scroll;    /* Scroll en el eje Y (vertical) */
+    overflow-x: hidden;    /* Oculta el scroll en el eje X (horizontal) */
+}
+
+
+
+
+
+.contenido_interno_superior{
+    padding: 20px;
+    margin: 8px;
+    background-color: white;
+    border-radius: 15px;
+}
+
+
+
+.contenido_interno{
+    padding: 20px;
+    margin: 8px;
+    background-color: white;
+    border-radius: 15px;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+.back-button {
+    color: #5064F0;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 15px;
+}
+
+.objectives-section h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.objective-form {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.objective-form input {
+    flex-grow: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #CCC;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+.objective-form button {
+    padding: 10px 20px;
+    background-color: #394DC0;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.objectives-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.objectives-table th, .objectives-table td {
+    padding: 12px;
+    border: 1px solid #CCC;
+    text-align: left;
+}
+
+.objectives-table th {
+    background-color: #3498DB;
+    color: white;
+}
+
+.objectives-table td button {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.botones{
+    display: flex;
+}
+
+.edit-btn, .delete-btn {
+    width: 32px; /* Ajusta según el tamaño de tus imágenes */
+    height: 32px;
+    background-size: contain; /* Asegura que la imagen se ajuste al botón */
+    background-repeat: no-repeat;
+    cursor: pointer;
+    margin: 5px;
+}
+
+/* Botón de Editar */
+.edit-btn {
+    background-image: url('../img/edit.png');
+}
+
+/* Botón de Eliminar */
+.delete-btn {
+    background-image: url('../img/delete.png');
+}
+

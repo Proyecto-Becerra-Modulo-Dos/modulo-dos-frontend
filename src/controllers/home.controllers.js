@@ -22,3 +22,11 @@ export const formulario = (req, res) => {
 export const error404 = (req, res) => {
     res.render("views.error404.ejs")
 }
+
+export const objetivos = (req, res) => {
+    res.render("views.objetivos.ejs")
+}
+
+export const nomina = (req, res) => {
+    res.render("views.nomina.ejs")
+}
