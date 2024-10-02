@@ -4,7 +4,7 @@ import ejs from "ejs";
 import path from "path";
 import { fileURLToPath } from "url";
 import ruta from "./routes/index.js";
-import { error404 } from "./controllers/home.controllers.js";
+import { error404 } from "./controllers/empleado.controllers.js";
 config();
 
 const __filename = fileURLToPath(import.meta.url);
