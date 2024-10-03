@@ -24,6 +24,15 @@ export const crearEmpleadoAdminRH = (req, res) => {
     res.render("views.crear_empleado.ejs")
 }
 
-export const planCompesaciones = (req, res) => {
-    res.render("views.plan_compensacion.ejs")
+export const planCompesaciones = async(req, res) => {
+    try {
+        const recurso = url + `/compensaciones/`;
+        const response = await fetch(recurso);
+        const data = await response.json();
+        res.render("views.plan_compensacion.ejs", {
+            compensaciones: data.compensaciones
+        });
+    } catch (error) {
+        res.status(500).send(error);
+    }
 }

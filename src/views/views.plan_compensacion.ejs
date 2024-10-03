@@ -37,8 +37,8 @@
                                         </p>
                                     </div>
                                     <div class="cont-btns">
-                                        <button class="btn-edit" id="openModalEdit">Editar</button>
-                                        <button class="btn-delete">Eliminar</button>
+                                        <button onclick="seleccionarCompensacion('<%= compensacion.id %>')" class="btn-edit" id="openModalEdit">Editar</button>
+                                        <button onclick="seleccionarCompensacion('<%= compensacion.id %>')" class="btn-delete">Eliminar</button>
                                     </div>
                                 </div>
                                 <div class="users">
@@ -51,8 +51,8 @@
                                         </p>
                                     </div>
                                     <div class="cont-btns">
-                                        <button class="btn-edit" id="openModalEdit">Editar</button>
-                                        <button class="btn-delete">Eliminar</button>
+                                        <button onclick="seleccionarCompensacion('<%= compensacion.id %>')" class="btn-edit" id="openModalEdit">Editar</button>
+                                        <button onclick="seleccionarCompensacion('<%= compensacion.id %>')" class="btn-delete">Eliminar</button>
                                     </div>
                                 </div>
                                 <div class="users">
@@ -65,8 +65,8 @@
                                         </p>
                                     </div>
                                     <div class="cont-btns">
-                                        <button class="btn-edit" id="openModalEdit">Editar</button>
-                                        <button class="btn-delete">Eliminar</button>
+                                        <button onclick="seleccionarCompensacion('<%= compensacion.id %>')" class="btn-edit" id="openModalEdit">Editar</button>
+                                        <button onclick="seleccionarCompensacion('<%= compensacion.id %>')" class="btn-delete">Eliminar</button>
                                     </div>
                                 </div>
                                 <div class="users">
@@ -79,8 +79,8 @@
                                         </p>
                                     </div>
                                     <div class="cont-btns">
-                                        <button class="btn-edit" id="openModalEdit">Editar</button>
-                                        <button class="btn-delete">Eliminar</button>
+                                        <button onclick="seleccionarCompensacion('<%= compensacion.id %>')" class="btn-edit" id="openModalEdit">Editar</button>
+                                        <button onclick="seleccionarCompensacion('<%= compensacion.id %>')" class="btn-delete">Eliminar</button>
                                     </div>
                                 </div>
                                 <div class="users">
@@ -93,8 +93,8 @@
                                         </p>
                                     </div>
                                     <div class="cont-btns">
-                                        <button class="btn-edit" id="openModalEdit">Editar</button>
-                                        <button class="btn-delete">Eliminar</button>
+                                        <button onclick="seleccionarCompensacion('<%= compensacion.id %>')" class="btn-edit" id="openModalEdit">Editar</button>
+                                        <button onclick="seleccionarCompensacion('<%= compensacion.id %>')" class="btn-delete">Eliminar</button>
                                     </div>
                                 </div>
                                 <div class="users">
@@ -107,8 +107,8 @@
                                         </p>
                                     </div>
                                     <div class="cont-btns">
-                                        <button class="btn-edit" id="openModalEdit">Editar</button>
-                                        <button class="btn-delete">Eliminar</button>
+                                        <button onclick="seleccionarCompensacion('<%= compensacion.id %>')" class="btn-edit" id="openModalEdit">Editar</button>
+                                        <button onclick="eliminarCompensacion('<%= compensacion.id %>')" class="btn-delete">Eliminar</button>
                                     </div>
                                 </div>
                             </div>
@@ -118,15 +118,20 @@
                         <div class="modal-content">
                             <h2>Crear Plan</h2>
                             <form action="" id="crearPlan" class="form-plan">
-                            <input class="inp-plan" type="text" name="cedula" id="cedula" placeholder="Número de cédula">
-                            <input class="inp-plan" type="number" name="salario" id="salario" placeholder="Salario Base">
-                            <input class="inp-plan" type="number" name="bonificaciones" id="bonificaciones" placeholder="Bonificaciones">
-                            <input class="inp-plan" type="number" name="incentivos" id="incentivos" placeholder="Incentivos">
-                            <input class="inp-plan" type="number" name="tiempoLibre" id="tiempoLibre" placeholder="Tiempo Libre Pagado">
-                            <div class="cont-btns-plan">
-                                <button id="closeModalPlan" class="btn-cancel">Cancelar</button>
-                                <button type="submit" class="btn-crear">Crear</button>
-                            </div>
+                                <input class="inp-plan" type="text" name="cedula" id="cedula"
+                                    placeholder="Número de cédula">
+                                <input class="inp-plan" type="number" name="salario" id="salario"
+                                    placeholder="Salario Base">
+                                <input class="inp-plan" type="number" name="bonificaciones" id="bonificaciones"
+                                    placeholder="Bonificaciones">
+                                <input class="inp-plan" type="number" name="incentivos" id="incentivos"
+                                    placeholder="Incentivos">
+                                <input class="inp-plan" type="number" name="tiempoLibre" id="tiempoLibre"
+                                    placeholder="Tiempo Libre Pagado">
+                                <div class="cont-btns-plan">
+                                    <button id="closeModalPlan" class="btn-cancel">Cancelar</button>
+                                    <button type="submit" class="btn-crear">Crear</button>
+                                </div>
                             </form>
                         </div>
                     </div>
@@ -134,19 +139,25 @@
                         <div class="modal-content-edit">
                             <h2>Editar Plan</h2>
                             <form action="" id="editarPlan" class="form-plan">
-                            <input class="inp-plan" type="number" name="salario" id="salario" placeholder="Salario Base">
-                            <input class="inp-plan" type="number" name="bonificaciones" id="bonificaciones" placeholder="Bonificaciones">
-                            <input class="inp-plan" type="number" name="incentivos" id="incentivos" placeholder="Incentivos">
-                            <input class="inp-plan" type="number" name="tiempoLibre" id="tiempoLibre" placeholder="Tiempo Libre Pagado">
-                            <div class="cont-btns-plan">
-                                <button id="closeModalEdit" class="btn-cancel">Cancelar</button>
-                                <button type="submit" class="btn-crear">Guardar</button>
-                            </div>
+                                <input type="hidden" id="id" name="id" value="<%= id %>">
+                                <input class="inp-plan" type="number" name="salario" id="salario"
+                                    placeholder="Salario Base">
+                                <input class="inp-plan" type="number" name="bonificaciones" id="bonificaciones"
+                                    placeholder="Bonificaciones">
+                                <input class="inp-plan" type="number" name="incentivos" id="incentivos"
+                                    placeholder="Incentivos">
+                                <input class="inp-plan" type="number" name="tiempoLibre" id="tiempoLibre"
+                                    placeholder="Tiempo Libre Pagado">
+                                <div class="cont-btns-plan">
+                                    <button id="closeModalEdit" class="btn-cancel">Cancelar</button>
+                                    <button type="submit" class="btn-crear">Guardar</button>
+                                </div>
                             </form>
                         </div>
                     </div>
                 </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="/js/plan_compensacion.js"></script>
 </body>
 
