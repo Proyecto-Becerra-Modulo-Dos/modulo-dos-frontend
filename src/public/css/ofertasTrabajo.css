@@ -1,0 +1,83 @@
+/* Reset de márgenes y paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos del cuerpo */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Encabezado */
+header {
+    background-color: #4A90E2;
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav .logo {
+    font-size: 28px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav .logo .star {
+    margin-right: 8px;
+    color: #f5a623;
+}
+
+/* Sección de ofertas laborales */
+main {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.job-offers h1 {
+    font-size: 2.2em;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.card h2 {
+    font-size: 1.5em;
+    margin: 15px 0;
+    color: #4A90E2;
+}
+
+.card p {
+    font-size: 1em;
+    color: #555;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
