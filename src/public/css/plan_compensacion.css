@@ -143,15 +143,18 @@
 }
 
 .btn-delete:hover{
-    background-color: rgb(201, 0, 0, 0.1);
+    background-color: rgb(201, 0, 0, 0.2);
 }
 .btn-edit:hover{
-    background-color: rgba(30, 61, 234, 0.1);
+    background-color: rgba(30, 61, 234, 0.2);
 }
+
+/* Modal crear plan */
 
 .modal {
     display: none; 
     position: fixed;
+    border-radius: 15px;
     top: 0;
     left: 0;
     width: 100%;
@@ -163,17 +166,77 @@
 }
 
 .modal-content {
+    border-radius: 15px;
     background-color: white;
-    width: 200px;
-    height: 300px;
+    width: 350px;
+    height: 360px;
     padding: 20px;
     text-align: center;
     position: relative;
 }
 
-.close {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    cursor: pointer;
+h2{
+    margin-bottom: 20px;
+}
+
+.form-plan{
+    width: 100%;
+}
+.inp-plan{
+    width: 300px;
+    height: 40px;
+    border-radius: 10px;
+    color: #2B2C33;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    border: 1.5px solid rgb(200, 203, 224);
+}
+
+.cont-btns-plan{
+    width: calc(100% - 34px);
+    padding-left: 17px;
+    padding-right: 17px;
+    display: flex;
+    background-color: #00000000;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.btn-cancel,
+.btn-crear{
+    width: 45%;
+    height: 30px;
+    border-radius: 15px;
+    border: 1.5px solid #1E3DEA;
+    font-size: 14px;
+    font-weight: bold;
+    color: #1E3DEA;
+}
+
+.btn-cancel{
+    border: 1.5px solid #C90000;
+    color: #C90000;
+}
+
+.btn-cancel:hover{
+    background-color: rgba(201, 0, 0, 0.2);
+}
+
+.btn-crear:hover{
+    background-color: rgba(30, 61, 234, 0.2);
+}
+
+/* Modal editar plan */
+
+.modal-content-edit {
+    border-radius: 15px;
+    background-color: white;
+    width: 350px;
+    height: 310px;
+    padding: 20px;
+    text-align: center;
+    position: relative;
 }

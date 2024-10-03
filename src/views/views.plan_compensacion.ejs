@@ -24,7 +24,7 @@
                         <div class="cont">
                             <div class="cont-tittle">
                                 <h1 class="tittle">Planes de Compensación</h1>
-                                <button class="btn-crear-plan" id="openModal">Crear Plan</button>
+                                <button class="btn-crear-plan" id="openModalPlan">Crear Plan</button>
                             </div>
                             <div class="cont-users">
                                 <div class="users">
@@ -37,8 +37,8 @@
                                         </p>
                                     </div>
                                     <div class="cont-btns">
-                                        <button id="openModal" class="btn-edit">Editar</button>
-                                        <button id="openModal" class="btn-delete">Eliminar</button>
+                                        <button class="btn-edit" id="openModalEdit">Editar</button>
+                                        <button class="btn-delete">Eliminar</button>
                                     </div>
                                 </div>
                                 <div class="users">
@@ -51,8 +51,8 @@
                                         </p>
                                     </div>
                                     <div class="cont-btns">
-                                        <button id="openModal" class="btn-edit">Editar</button>
-                                        <button id="openModal" class="btn-delete">Eliminar</button>
+                                        <button class="btn-edit" id="openModalEdit">Editar</button>
+                                        <button class="btn-delete">Eliminar</button>
                                     </div>
                                 </div>
                                 <div class="users">
@@ -65,8 +65,8 @@
                                         </p>
                                     </div>
                                     <div class="cont-btns">
-                                        <button id="openModal" class="btn-edit">Editar</button>
-                                        <button id="openModal" class="btn-delete">Eliminar</button>
+                                        <button class="btn-edit" id="openModalEdit">Editar</button>
+                                        <button class="btn-delete">Eliminar</button>
                                     </div>
                                 </div>
                                 <div class="users">
@@ -79,8 +79,8 @@
                                         </p>
                                     </div>
                                     <div class="cont-btns">
-                                        <button id="openModal" class="btn-edit">Editar</button>
-                                        <button id="openModal" class="btn-delete">Eliminar</button>
+                                        <button class="btn-edit" id="openModalEdit">Editar</button>
+                                        <button class="btn-delete">Eliminar</button>
                                     </div>
                                 </div>
                                 <div class="users">
@@ -93,8 +93,8 @@
                                         </p>
                                     </div>
                                     <div class="cont-btns">
-                                        <button id="openModal" class="btn-edit">Editar</button>
-                                        <button id="openModal" class="btn-delete">Eliminar</button>
+                                        <button class="btn-edit" id="openModalEdit">Editar</button>
+                                        <button class="btn-delete">Eliminar</button>
                                     </div>
                                 </div>
                                 <div class="users">
@@ -107,27 +107,61 @@
                                         </p>
                                     </div>
                                     <div class="cont-btns">
-                                        <button id="openModal" class="btn-edit">Editar</button>
-                                        <button id="openModal" class="btn-delete">Eliminar</button>
+                                        <button class="btn-edit" id="openModalEdit">Editar</button>
+                                        <button class="btn-delete">Eliminar</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div id="modal" class="modal">
+                    <div id="modalPlan" class="modal">
                         <div class="modal-content">
-                            <span id="closeModal" class="close">&times;</span>
-                            <p>Este es el contenido de la ventana emergente</p>
+                            <h2>Crear Plan</h2>
+                            <form action="" id="crearPlan" class="form-plan">
+                            <input class="inp-plan" type="text" name="cedula" id="cedula" placeholder="Número de cédula">
+                            <input class="inp-plan" type="number" name="salario" id="salario" placeholder="Salario Base">
+                            <input class="inp-plan" type="number" name="bonificaciones" id="bonificaciones" placeholder="Bonificaciones">
+                            <input class="inp-plan" type="number" name="incentivos" id="incentivos" placeholder="Incentivos">
+                            <input class="inp-plan" type="number" name="tiempoLibre" id="tiempoLibre" placeholder="Tiempo Libre Pagado">
+                            <div class="cont-btns-plan">
+                                <button id="closeModalPlan" class="btn-cancel">Cancelar</button>
+                                <button type="submit" class="btn-crear">Crear</button>
+                            </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div id="modalEdit" class="modal">
+                        <div class="modal-content-edit">
+                            <h2>Editar Plan</h2>
+                            <form action="" id="editarPlan" class="form-plan">
+                            <input class="inp-plan" type="number" name="salario" id="salario" placeholder="Salario Base">
+                            <input class="inp-plan" type="number" name="bonificaciones" id="bonificaciones" placeholder="Bonificaciones">
+                            <input class="inp-plan" type="number" name="incentivos" id="incentivos" placeholder="Incentivos">
+                            <input class="inp-plan" type="number" name="tiempoLibre" id="tiempoLibre" placeholder="Tiempo Libre Pagado">
+                            <div class="cont-btns-plan">
+                                <button id="closeModalEdit" class="btn-cancel">Cancelar</button>
+                                <button type="submit" class="btn-crear">Guardar</button>
+                            </div>
+                            </form>
                         </div>
                     </div>
                 </div>
     </div>
     <script>
-        document.getElementById('openModal').addEventListener('click', function () {
-            document.getElementById('modal').style.display = 'flex';
+        document.getElementById('openModalPlan').addEventListener('click', function () {
+            document.getElementById('modalPlan').style.display = 'flex';
         });
-        document.getElementById('closeModal').addEventListener('click', function () {
-            document.getElementById('modal').style.display = 'none';
+        document.getElementById('closeModalPlan').addEventListener('click', function () {
+            document.getElementById('modalPlan').style.display = 'none';
+        });
+
+        document.querySelectorAll('.btn-edit').forEach(button => {
+            button.addEventListener('click', () => {
+                document.getElementById('modalEdit').style.display = 'flex';
+            });
+        });
+        document.getElementById('closeModalEdit').addEventListener('click', function () {
+            document.getElementById('modalEdit').style.display = 'none';
         });
     </script>
 </body>
