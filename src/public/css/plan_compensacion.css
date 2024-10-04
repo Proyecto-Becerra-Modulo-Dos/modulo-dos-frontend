@@ -21,7 +21,7 @@
 .cont-mit{
     display: flex;
     width: 900px;
-    height: 550px;
+    height: 580px;
 }
 
 .cont{
@@ -30,7 +30,7 @@
     display: grid;
     gap: 15px;
     grid-template-columns: 100%;
-    grid-template-rows: 10% 90%;
+    grid-template-rows: 9% 91%;
     background-color: rgb(200, 203, 224, 0.69);
     border-radius: 15px;
     padding: 15px
@@ -125,6 +125,7 @@
     padding-right: 30px;
 }
 
+.btn-ver,
 .btn-edit,
 .btn-delete{
     width: 100px;
@@ -137,6 +138,10 @@
     transition: all ease 0.5s;
 }
 
+.btn-ver{
+    width: 215px;
+}
+
 .btn-delete{
     border: 1.5px solid #C90000;
     color: #C90000;
@@ -145,6 +150,8 @@
 .btn-delete:hover{
     background-color: rgb(201, 0, 0, 0.2);
 }
+
+.btn-ver:hover,
 .btn-edit:hover{
     background-color: rgba(30, 61, 234, 0.2);
 }
@@ -169,7 +176,7 @@
     border-radius: 15px;
     background-color: white;
     width: 350px;
-    height: 360px;
+    height: 400px;
     padding: 20px;
     text-align: center;
     position: relative;
@@ -235,7 +242,7 @@ h2{
     border-radius: 15px;
     background-color: white;
     width: 350px;
-    height: 310px;
+    height: 350px;
     padding: 20px;
     text-align: center;
     position: relative;

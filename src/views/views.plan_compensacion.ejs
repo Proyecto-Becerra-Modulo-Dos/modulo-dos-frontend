@@ -26,92 +26,27 @@
                                 <h1 class="tittle">Planes de Compensación</h1>
                                 <button class="btn-crear-plan" id="openModalPlan">Crear Plan</button>
                             </div>
+                            <% if (compensaciones && compensaciones.length> 0) { %>
                             <div class="cont-users">
-                                <div class="users">
-                                    <h3 class="tittle-users">Jhoan Salvaje</h3>
+                            <% compensaciones.forEach(compensacion=> { %>
+                            <div class="users">
+                                    <h3 class="tittle-users"><%= compensacion.nombre%></h3>
                                     <div class="cont-txt">
-                                        <p class="txt-users">Salario Base:<span class="spn-users">99999</span></p>
-                                        <p class="txt-users">Bonificaciones:<span class="spn-users">99999</span></p>
-                                        <p class="txt-users">Incentivos:<span class="spn-users">99999</span></p>
-                                        <p class="txt-users">Tiempo Libre Pagado:<span class="spn-users">99999</span>
-                                        </p>
+                                        <p class="txt-users">Salario Base:<span class="spn-users"><%= compensacion.salario%></span></p>
+                                        <p class="txt-users">Bonificación:<span class="spn-users"><%= compensacion.bonificacion%></span></p>
+                                        <p class="txt-users">Incentivo:<span class="spn-users"><%= compensacion.incentivo%></span></p>
+                                        <p class="txt-users">Fecha Inicio:<span class="spn-users"><%= compensacion.fechaInicio%></span></p>
+                                        <p class="txt-users">Fecha Fin:<span class="spn-users"><%= compensacion.fechaFin%></span></p>
                                     </div>
                                     <div class="cont-btns">
-                                        <button onclick="seleccionarCompensacion('<%= compensacion.id %>')" class="btn-edit" id="openModalEdit">Editar</button>
-                                        <button onclick="seleccionarCompensacion('<%= compensacion.id %>')" class="btn-delete">Eliminar</button>
-                                    </div>
-                                </div>
-                                <div class="users">
-                                    <h3 class="tittle-users">Jhoan Salvaje</h3>
-                                    <div class="cont-txt">
-                                        <p class="txt-users">Salario Base:<span class="spn-users">99999</span></p>
-                                        <p class="txt-users">Bonificaciones:<span class="spn-users">99999</span></p>
-                                        <p class="txt-users">Incentivos:<span class="spn-users">99999</span></p>
-                                        <p class="txt-users">Tiempo Libre Pagado:<span class="spn-users">99999</span>
-                                        </p>
-                                    </div>
-                                    <div class="cont-btns">
-                                        <button onclick="seleccionarCompensacion('<%= compensacion.id %>')" class="btn-edit" id="openModalEdit">Editar</button>
-                                        <button onclick="seleccionarCompensacion('<%= compensacion.id %>')" class="btn-delete">Eliminar</button>
-                                    </div>
-                                </div>
-                                <div class="users">
-                                    <h3 class="tittle-users">Jhoan Salvaje</h3>
-                                    <div class="cont-txt">
-                                        <p class="txt-users">Salario Base:<span class="spn-users">99999</span></p>
-                                        <p class="txt-users">Bonificaciones:<span class="spn-users">99999</span></p>
-                                        <p class="txt-users">Incentivos:<span class="spn-users">99999</span></p>
-                                        <p class="txt-users">Tiempo Libre Pagado:<span class="spn-users">99999</span>
-                                        </p>
-                                    </div>
-                                    <div class="cont-btns">
-                                        <button onclick="seleccionarCompensacion('<%= compensacion.id %>')" class="btn-edit" id="openModalEdit">Editar</button>
-                                        <button onclick="seleccionarCompensacion('<%= compensacion.id %>')" class="btn-delete">Eliminar</button>
-                                    </div>
-                                </div>
-                                <div class="users">
-                                    <h3 class="tittle-users">Jhoan Salvaje</h3>
-                                    <div class="cont-txt">
-                                        <p class="txt-users">Salario Base:<span class="spn-users">99999</span></p>
-                                        <p class="txt-users">Bonificaciones:<span class="spn-users">99999</span></p>
-                                        <p class="txt-users">Incentivos:<span class="spn-users">99999</span></p>
-                                        <p class="txt-users">Tiempo Libre Pagado:<span class="spn-users">99999</span>
-                                        </p>
-                                    </div>
-                                    <div class="cont-btns">
-                                        <button onclick="seleccionarCompensacion('<%= compensacion.id %>')" class="btn-edit" id="openModalEdit">Editar</button>
-                                        <button onclick="seleccionarCompensacion('<%= compensacion.id %>')" class="btn-delete">Eliminar</button>
-                                    </div>
-                                </div>
-                                <div class="users">
-                                    <h3 class="tittle-users">Jhoan Salvaje</h3>
-                                    <div class="cont-txt">
-                                        <p class="txt-users">Salario Base:<span class="spn-users">99999</span></p>
-                                        <p class="txt-users">Bonificaciones:<span class="spn-users">99999</span></p>
-                                        <p class="txt-users">Incentivos:<span class="spn-users">99999</span></p>
-                                        <p class="txt-users">Tiempo Libre Pagado:<span class="spn-users">99999</span>
-                                        </p>
-                                    </div>
-                                    <div class="cont-btns">
-                                        <button onclick="seleccionarCompensacion('<%= compensacion.id %>')" class="btn-edit" id="openModalEdit">Editar</button>
-                                        <button onclick="seleccionarCompensacion('<%= compensacion.id %>')" class="btn-delete">Eliminar</button>
-                                    </div>
-                                </div>
-                                <div class="users">
-                                    <h3 class="tittle-users">Jhoan Salvaje</h3>
-                                    <div class="cont-txt">
-                                        <p class="txt-users">Salario Base:<span class="spn-users">99999</span></p>
-                                        <p class="txt-users">Bonificaciones:<span class="spn-users">99999</span></p>
-                                        <p class="txt-users">Incentivos:<span class="spn-users">99999</span></p>
-                                        <p class="txt-users">Tiempo Libre Pagado:<span class="spn-users">99999</span>
-                                        </p>
-                                    </div>
-                                    <div class="cont-btns">
-                                        <button onclick="seleccionarCompensacion('<%= compensacion.id %>')" class="btn-edit" id="openModalEdit">Editar</button>
+                                        <button onclick="editarCompensacion('<%= compensacion.id %>')" class="btn-edit" id="openModalEdit">Editar</button>
                                         <button onclick="eliminarCompensacion('<%= compensacion.id %>')" class="btn-delete">Eliminar</button>
                                     </div>
+                                    <button class="btn-ver">Ver empleados</button>
                                 </div>
+                                <% }); %>
                             </div>
+                            <% } %>
                         </div>
                     </div>
                     <div id="modalPlan" class="modal">
@@ -126,8 +61,10 @@
                                     placeholder="Bonificaciones">
                                 <input class="inp-plan" type="number" name="incentivos" id="incentivos"
                                     placeholder="Incentivos">
-                                <input class="inp-plan" type="number" name="tiempoLibre" id="tiempoLibre"
-                                    placeholder="Tiempo Libre Pagado">
+                                <input class="inp-plan" type="date" name="fechaInicio" id="fechaInicio"
+                                    placeholder="Fecha Inicio">
+                                <input class="inp-plan" type="date" name="fechaFin" id="fechaFin"
+                                    placeholder="Fecha Fin">
                                 <div class="cont-btns-plan">
                                     <button id="closeModalPlan" class="btn-cancel">Cancelar</button>
                                     <button type="submit" class="btn-crear">Crear</button>
@@ -139,15 +76,17 @@
                         <div class="modal-content-edit">
                             <h2>Editar Plan</h2>
                             <form action="" id="editarPlan" class="form-plan">
-                                <input type="hidden" id="id" name="id" value="<%= id %>">
-                                <input class="inp-plan" type="number" name="salario" id="salario"
+                                <input type="hidden" name="id" id="edit-id" value="">
+                                <input class="inp-plan" type="number" name="salario" id="edit-salario"
                                     placeholder="Salario Base">
-                                <input class="inp-plan" type="number" name="bonificaciones" id="bonificaciones"
-                                    placeholder="Bonificaciones">
-                                <input class="inp-plan" type="number" name="incentivos" id="incentivos"
-                                    placeholder="Incentivos">
-                                <input class="inp-plan" type="number" name="tiempoLibre" id="tiempoLibre"
-                                    placeholder="Tiempo Libre Pagado">
+                                <input class="inp-plan" type="number" name="bonificacion" id="edit-bonificaciones"
+                                    placeholder="Bonificación">
+                                <input class="inp-plan" type="text" name="incentivo" id="edit-incentivos"
+                                    placeholder="Incentivo">
+                                <input class="inp-plan" type="date" name="fechaInicio" id="edit-fechaInicio"
+                                    placeholder="Fecha Inicio">
+                                <input class="inp-plan" type="date" name="fechaFin" id="edit-fechaFin"
+                                    placeholder="Fecha Fin">
                                 <div class="cont-btns-plan">
                                     <button id="closeModalEdit" class="btn-cancel">Cancelar</button>
                                     <button type="submit" class="btn-crear">Guardar</button>
