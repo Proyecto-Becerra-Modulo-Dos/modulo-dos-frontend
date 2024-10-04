@@ -161,7 +161,7 @@ async function eliminarCompensacion(id) {
     }).then(async (result) => {
         if (result.isConfirmed) {
             // const token = sessionStorage.getItem("token")
-            // const url = sessionStorage.getItem("url") + "/compensaciones/desactivar";
+            const url = "http://localhost:3000";
             if (id) {
                 const respuesta = await fetch(url + '/compensaciones/desactivar', {
                     method: 'POST',
