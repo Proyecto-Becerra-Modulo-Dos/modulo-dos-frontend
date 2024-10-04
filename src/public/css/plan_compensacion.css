@@ -140,6 +140,11 @@
 
 .btn-ver{
     width: 215px;
+    text-decoration: none;
+    text-align: center;
+    padding-top: 5px;
+    height: 22px;
+    font-size: 14px;
 }
 
 .btn-delete{
@@ -176,7 +181,7 @@
     border-radius: 15px;
     background-color: white;
     width: 350px;
-    height: 460px;
+    height: 400px;
     padding: 20px;
     text-align: center;
     position: relative;

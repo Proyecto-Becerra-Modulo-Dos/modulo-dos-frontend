@@ -42,7 +42,7 @@
                                         <button onclick="editarCompensacion('<%= compensacion.id %>')" class="btn-edit" id="openModalEdit">Editar</button>
                                         <button onclick="eliminarCompensacion('<%= compensacion.id %>')" class="btn-delete">Eliminar</button>
                                     </div>
-                                    <button class="btn-ver">Ver empleados</button>
+                                    <a href="/admin/empleadoXcompensacion/<%= compensacion.id %>" class="btn-ver">Ver empleados</a>
                                 </div>
                                 <% }); %>
                             </div>
@@ -53,8 +53,6 @@
                         <div class="modal-content">
                             <h2>Crear Plan</h2>
                             <form action="" id="crearPlan" class="form-plan">
-                                <input class="inp-plan" type="text" name="cedula" id="cedula"
-                                    placeholder="Número de cédula">
                                 <input class="inp-plan" type="text" name="nombre" id="nombre"
                                     placeholder="Nombre de Compensación">
                                 <input class="inp-plan" type="number" name="salario" id="salario"

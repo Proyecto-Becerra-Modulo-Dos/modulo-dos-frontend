@@ -36,3 +36,22 @@ export const planCompesaciones = async(req, res) => {
         res.status(500).send(error);
     }
 }
+
+export const empleadoXCompensacion = async(req, res) => {
+    const { id } = req.params
+
+    try {
+        const recurso = url + `/compensaciones/empleadosXcompensacion/${id}`;
+        const response = await fetch(recurso);
+        const data = await response.json();
+        console.log("COMPENSACIONES: ",data.compensaciones);
+        console.log("EMPLEADOS: ",data.empleados);
+        res.render("views.empleado_compensacion.ejs", {
+            empleados: data.empleados,
+            compensaciones: data.compensaciones
+        });
+    } catch (error) {
+        console.error(error);
+        res.status(500).send(error);
+    }
+}

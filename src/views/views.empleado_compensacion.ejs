@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apex</title>
+    <link rel="stylesheet" href="/css/menu_barra_adminrh.css">
+    <link rel="stylesheet" href="/css/empleados_admin_rh.css">
+    <link rel="icon" href="/img/estrella-afilada-medio-trazo 1.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <%- include('partials/menu_adminrh') %>
+        <%- include('partials/barra_adminrh') %>
+        <div class="cont-fondo">
+            <% if (compensaciones && compensaciones.length> 0) { %>
+            <div class="cabecera">
+                <% compensaciones.forEach(compensacion=> { %>
+                <h1 class="tittle">Compensación: <%= compensacion.incentivo %></h1>
+                <% }); %>
+            </div>
+            <% } %>
+            <div class="cont-tabla">
+                <table class="tabla">
+                    <thead class="cabecera-tabla">
+                        <tr class="cabecera-column">
+                            <th>Nombres</th>
+                            <th>Apellidos</th>
+                            <th>Celular</th>
+                            <th>E-mail</th>
+                            <th>Salario</th>
+                        </tr>
+                    </thead>
+                    <% if (empleados && empleados.length> 0) { %>
+                    <tbody class="cuerpo-tabla">
+                        <% empleados.forEach(empleado=> { %>
+                        <tr class="column-1">
+                            <td><%= empleado.nombre%></td>
+                            <td><%= empleado.apellido%></td>
+                            <td><%= empleado.telefono%></td>
+                            <td><%= empleado.email%></td>
+                            <td><%= empleado.salario%></td>
+                        </tr>
+                        <% }); %>
+                    </tbody>
+                    <% } %>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
