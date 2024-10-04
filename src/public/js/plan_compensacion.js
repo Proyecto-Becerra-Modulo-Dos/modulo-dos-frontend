@@ -21,12 +21,14 @@ document.addEventListener('DOMContentLoaded', async () => {
     document.getElementById('crearPlan').addEventListener('submit', async (e) => {
         e.preventDefault();
 
-        const bonificaciones = document.getElementById('bonificaciones').value;
+        const nombre = document.getElementById('nombre').value;
+        const bonificacion = document.getElementById('bonificaciones').value;
         const salario = document.getElementById('salario').value;
-        const incentivos = document.getElementById('incentivos').value;
-        const tiempoLibre = document.getElementById('tiempoLibre').value;
+        const incentivo = document.getElementById('incentivos').value;
+        const fechaInicio = document.getElementById('fechaInicio').value;
+        const fechaFin = document.getElementById('fechaFin').value;
 
-        if (!bonificaciones || !salario || !incentivos || !tiempoLibre) {
+        if (!bonificacion || !salario || !incentivo || !fechaInicio || !fechaFin) {
             Swal.fire({
                 icon: 'error',
                 title: "<h5 style='color:white; font-family: 'Inter', sans-serif;'>" + 'Todos los campos son obligatorios' + "</h5>",
@@ -46,10 +48,12 @@ document.addEventListener('DOMContentLoaded', async () => {
                 // "x-access-token": token
             },
             body: JSON.stringify({
+                nombre: nombre,
                 salario: salario,
-                bonificaciones: bonificaciones,
-                incentivos: incentivos,
-                tiempoLibre: tiempoLibre
+                bonificacion: bonificacion,
+                incentivo: incentivo,
+                fechaInicio: fechaInicio,
+                fechaFin: fechaFin
             })
         }
 
