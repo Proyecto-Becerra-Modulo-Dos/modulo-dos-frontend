@@ -1,0 +1,121 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: "Inter", sans-serif;
+}
+
+/* Menú */
+
+.cont-menu {
+    width: 215px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    left: 0;
+    background-color: #1E3DEA;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.cont-logo{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.img-logo{
+    height: 50px;
+}
+
+.nom-logo{
+    color: white; 
+    font-size: 30px; 
+    font-weight:700
+}
+
+.cont-menu ul {
+    list-style-type: none;
+    margin-top: 30px;
+    padding-left: 14px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    background-color: #4961E4;
+    border-radius: 10px;
+}
+
+.cont-menu ul li {
+    margin: 20px 0;
+}
+
+.cont-menu ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    transition: all ease 0.5s;
+}
+
+.cont-menu ul li a:hover {
+    font-size: 15.5px;
+}
+
+.cont-cuenta{
+    color: white;
+    position: fixed;
+    padding-bottom: 10px;
+    bottom: 0;
+}
+
+.correo-cuenta,
+.nom-cuenta{
+    font-size: 13px;
+}
+
+.nom-cuenta{
+    font-weight: 600;
+}
+
+/* Barra Superior */
+
+.cont-barra-superior{
+    display: flex;
+    background-color: #1E3DEA;
+    z-index: 1;
+    justify-content: right;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.icon-notis,
+.icon-cuenta{
+    background-color: #0000;
+    border: none;
+    cursor: pointer;
+    margin-right: 5px;
+    margin-top: 3.5px;
+    transition: all ease 0.5s;
+}
+
+.icon-notis:hover,
+.icon-cuenta:hover{
+    transform: scale(1.12);
+}
+
+.img-notis,
+.img-cuenta{
+    width: 30px;
+}
+
+/* Alerta */
+
+.bg-alert{
+    background-color: #333541;
+}
+
+.text-alert{
+    color: white;
+}
