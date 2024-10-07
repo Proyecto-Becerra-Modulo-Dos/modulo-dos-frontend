@@ -6,7 +6,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #b3b5ff;
+    background-color: #eeeef4;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,9 +14,9 @@ body {
 }
 
 .form-container {
-    background-color: #d3d6f5;
-    width: 300px;
-    padding: 20px;
+    background-color: #c6cbec;
+    width: 400px;
+    padding: 40px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     position: relative;
@@ -31,6 +31,8 @@ body {
 .form-header h2 {
     margin-bottom: 20px;
     font-size: 18px;
+    
+
 }
 
 .close-btn {
@@ -65,7 +67,7 @@ body {
 button {
     width: 100%;
     padding: 10px;
-    background-color: #3547c9;
+    background-color: #334bd7;
     color: white;
     font-size: 16px;
     border: none;
@@ -74,5 +76,5 @@ button {
 }
 
 button:hover {
-    background-color: #1d31a7;
+    background-color: #334bd7;
 }
