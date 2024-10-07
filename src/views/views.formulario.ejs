@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulario</title>
+    <link rel="stylesheet" href="./css/formulario.css">
+</head>
+<body>
+    dy>
+    <div class="form-container">
+        <div class="form-header">
+            <h2>Formulario</h2>
+            <a href="#" class="close-btn">x</a>
+        </div>
+        <form action="#" method="POST">
+            <div class="form-group">
+                <label for="name">Nombre completo</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="company">Nombre de la empresa</label>
+                <input type="text" id="company" name="company">
+            </div>
+            <div class="form-group">
+                <label for="title">Título profesional</label>
+                <select id="title" name="title" required>
+                    <option value="" disabled selected>Seleccione una opción</option>
+                    <option value="licenciado">Licenciado</option>
+                    <option value="ingeniero">Ingeniero</option>
+                    <option value="tecnico">Técnico</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="country">País</label>
+                <select id="country" name="country" required>
+                    <option value="" disabled selected>Seleccione un país</option>
+                    <option value="mexico">México</option>
+                    <option value="colombia">Colombia</option>
+                    <option value="argentina">Argentina</option>
+                    <option value="chile">Chile</option>
+                </select>
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</body>
+</html>

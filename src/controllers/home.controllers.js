@@ -18,3 +18,10 @@ export const vistaInicial = (req, res) => {
 export const ofertasTrabajo = (req, res) => {
     res.render("views.ofertasTrabajo.ejs", {url: url})
 }
+
+export const aplicarOfertas = (req, res) => {
+    res.render("views.aplicarOfertas.ejs", {url: url})
+}
+export const formulario = (req, res) => {
+    res.render("views.formulario.ejs", {url: url})
+}
