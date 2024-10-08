@@ -1,0 +1,248 @@
+* {
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    overflow: hidden; /* Evita scroll en el body */
+}
+
+.bgMain {
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    display: grid;
+    grid-template-rows: 1fr 10fr;
+    grid-template-columns: 1fr 3fr;
+}
+
+.logo {
+    grid-row: 1;
+    grid-column: 1;
+    background-color: #394dc0;
+}
+
+.navBar {
+    grid-row: 1;
+    grid-column: 2;
+    background-color: #394dc0;
+    padding: 10px;
+    color: white;
+}
+
+.menuBar {
+    grid-row: 2;
+    grid-column: 1;
+    background-color: #394dc0;
+}
+
+.containerMain {
+    grid-row: 2;
+    grid-column: 2;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+.headerTitle {
+    font-size: 27px;
+    margin-bottom: 6px;
+}
+
+.big_box{
+    width: 98%;
+    height: 89%;
+    padding: 10px 10px 20px 10px;
+    background-color: #C8CBE0;
+}
+.classification {
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+    padding: 3px;
+    border-radius: 5px;
+}
+
+.classification-item {
+    width: 45%;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 25px;
+    font-weight: bold;
+    border-bottom: 4px solid transparent;
+}
+
+.classification-item:hover {
+    background-color: #f0f0f0; /* Cambia el color de fondo al hacer hover */
+  }
+  
+  .classification-item.active {
+    background-color: #007bff; /* Color de fondo para la pestaña activa */
+    color: white; /* Color del texto para la pestaña activa */
+  }
+
+
+/* Clase para ocultar contenedores */
+.hidden {
+    display: none;
+}
+
+
+/* Estilo del scroll solo en .cont-classification */
+.cont-classification {
+    height: 85%;
+    margin-top: 10px;
+    padding: 15px 0px 0px 9px;
+    border-radius: 5px;
+    background-color: white;
+    overflow-y: auto; /* Activa el scroll vertical solo aquí */
+}
+
+/* Estilo de la barra de desplazamiento en cont-classification */
+.cont-classification::-webkit-scrollbar {
+    width: 10px; /* Ancho de la barra */
+}
+
+.cont-classification::-webkit-scrollbar-track {
+    background: #f5f5f5; /* Color de fondo del track */
+}
+
+.cont-classification::-webkit-scrollbar-thumb {
+    background-color: #394dc0; /* Color azul */
+    border-radius: 10px; /* Bordes redondeados */
+    border: 2px solid #f5f5f5; /* Espacio alrededor del thumb */
+}
+
+.cont-classification::-webkit-scrollbar-thumb:hover {
+    background-color: #1E40EA; /* Azul más intenso */
+}
+
+
+
+
+/* tabla */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 1px solid #394dc0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+thead th {
+    background-color: #394dc0;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #d8d5d5; /* Gris claro */
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #f9f9f9; /* Blanco no tan blanco */
+}
+
+th, td {
+    padding: 10px;
+    border: none;
+    text-align: center;
+}
+
+td {
+    border-bottom: 1px solid #ddd;
+}
+
+table {
+    border-radius: 10px;
+}
+
+thead th:first-child {
+    border-top-left-radius: 10px;
+}
+
+thead th:last-child {
+    border-top-right-radius: 10px;
+}
+
+tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 10px;
+}
+
+tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 10px;
+}
+
+td:nth-child(6) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* aprobar */
+.btn_aprobar {
+    background-color: #1cc038;
+    padding: 5px 10px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 2px dashed #1cc038;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    transition: .4s;
+    display: block;
+    /* margin: 5px 0; */
+}
+
+.btn_aprobar span:last-child {
+    display: none;
+}
+
+.btn_aprobar:hover {
+    transition: .4s;
+    border: 2px dashed #1cc038;
+    background-color: #fff;
+    color: #1cc038;
+}
+
+.btn_aprobar:active {
+    background-color: #1cc038;
+}
+
+/* rechazar */
+.btn_rechazar {
+    background-color: #e72020;
+    padding: 5px 10px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 2px dashed #e72020;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    transition: .4s;
+    display: block;
+    /* margin: 5px 0; */
+}
+
+.btn_rechazar span:last-child {
+    display: none;
+}
+
+.btn_rechazar:hover {
+    transition: .4s;
+    border: 2px dashed #e72020;
+    background-color: #fff;
+    color: #e72020;
+}
+
+.btn_rechazar:active {
+    background-color: #e72020;
+}
