@@ -99,8 +99,9 @@ body {
     justify-content: space-between;
 }
 .censura{
-    height: 16px;
-    width: 100px;
+    height: auto;
+    width: auto;
+    padding: 2px;
     display: flex;
     background: #C8CBE0;
     border-radius: 15px;

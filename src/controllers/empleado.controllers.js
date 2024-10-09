@@ -28,5 +28,17 @@ export const opciones = (req, res) => {
 }
 
 export const pago = (req, res) => {
-    res.render("views.pago.ejs")
+    fetch(url + "/empleados/cuenta")
+        .then(res => res.json())
+        .then(data => {
+            fetch(url + "/empleados/solicitudes")
+                .then(res => res.json())
+                .then(soliResponse => {
+                    const soli = soliResponse.cuenta; // Asegúrate de que esto sea un arreglo
+                    res.render("views.pago.ejs", { data, soli });
+                    console.log(soli);
+                })
+                .catch(err => console.error(err));
+        })
+        .catch(err => console.error(err));
 }
