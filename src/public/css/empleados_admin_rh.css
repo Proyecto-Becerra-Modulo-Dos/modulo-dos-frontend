@@ -82,3 +82,36 @@
 .column-2 {
     background-color: #A1A6CA;
 }
+
+/* Apartado para estilo de botones de vista en nomina */
+
+.tabla-nomina{
+    width: 1100px;
+}
+
+.btn-desaprovar,
+.btn-aprovar{
+    width: 100px;
+    height: 35px;
+    border-radius: 15px;
+    background-color: #00000000;
+    border: 1.5px solid #1E3DEA;
+    color: #1E3DEA;
+    font-weight: bold;
+    font-size: 14px;
+    transition: all ease 0.5s;
+}
+
+.btn-desaprovar{
+    border: 1.5px solid #C90000;
+    color: #C90000;
+    margin-left: 10px;
+}
+
+.btn-aprovar:hover{
+    background-color: rgba(30, 61, 234, 0.15);
+}
+
+.btn-desaprovar:hover{
+    background-color: rgba(201, 0, 0, 0.15);
+}
