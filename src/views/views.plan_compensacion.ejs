@@ -32,11 +32,11 @@
                             <div class="users">
                                     <h3 class="tittle-users"><%= compensacion.nombre%></h3>
                                     <div class="cont-txt">
-                                        <p class="txt-users">Salario Base:<span class="spn-users"><%= compensacion.salario%></span></p>
-                                        <p class="txt-users">Bonificación:<span class="spn-users"><%= compensacion.bonificacion%></span></p>
-                                        <p class="txt-users">Incentivo:<span class="spn-users"><%= compensacion.incentivo%></span></p>
-                                        <p class="txt-users">Fecha Inicio:<span class="spn-users"><%= compensacion.fechaInicio%></span></p>
-                                        <p class="txt-users">Fecha Fin:<span class="spn-users"><%= compensacion.fechaFin%></span></p>
+                                        <p class="txt-users">Salario Base: <span class="spn-users">$<%= Number(compensacion.salario).toLocaleString('es-CO')%></span></p>
+                                        <p class="txt-users">Bonificación: <span class="spn-users">$<%= Number(compensacion.bonificacion).toLocaleString('es-CO')%></span></p>
+                                        <p class="txt-users">Incentivo: <span class="spn-users"><%= compensacion.incentivo%></span></p>
+                                        <p class="txt-users">Fecha Inicio: <span class="spn-users"><%= compensacion.fechaInicio%></span></p>
+                                        <p class="txt-users">Fecha Fin: <span class="spn-users"><%= compensacion.fechaFin%></span></p>
                                     </div>
                                     <div class="cont-btns">
                                         <button onclick="editarCompensacion('<%= compensacion.id %>')" class="btn-edit" id="openModalEdit">Editar</button>

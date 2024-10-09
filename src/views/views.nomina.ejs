@@ -40,7 +40,6 @@
                             <% if (empleados && empleados.length > 0 && nominas && nominas.length > 0) { %>
                                 <tbody class="cuerpo-tabla">
                                     <% empleados.forEach(empleado => { 
-                                        console.log("Empleado ID:", empleado);
                                         const nominasEmpleado = nominas.filter(n => Number(n.id_empleado) === Number(empleado.id));
                                         
                                         if (nominasEmpleado.length > 0) { 
@@ -49,10 +48,10 @@
                                                     <td><%= empleado.nombre ? empleado.nombre : 'Sin nombre' %> <%= empleado.apellido ? empleado.apellido : 'Sin apellido' %></td>
                                                     <td><%= empleado.identificacion ? empleado.identificacion : 'Sin identificacion' %></td>
                                                     <td><%= empleado.rol ? empleado.rol : 'Sin cargo' %></td>
-                                                    <td>$ <%= nomina.salario_base ? nomina.salario_base : 'Sin salario base' %></td>
-                                                    <td>$ <%= nomina.descuento ? nomina.descuento : 'Sin deducciones' %></td>
-                                                    <td>$ <%= nomina.bonificacion ? nomina.bonificacion : 'Sin bonificación' %></td>
-                                                    <td>$ <%= nomina.salario_neto ? nomina.salario_neto : 'Sin salario base' %></td>
+                                                    <td>$ <%= nomina.salario_base ? Number(nomina.salario_base).toLocaleString('es-CO') : 'Sin salario base' %></td>
+                                                    <td>$ <%= nomina.descuento ? Number(nomina.descuento).toLocaleString('es-CO') : 'Sin deducciones' %></td>
+                                                    <td>$ <%= nomina.bonificacion ? Number(nomina.bonificacion).toLocaleString('es-CO') : 'Sin bonificación' %></td>
+                                                    <td>$ <%= nomina.salario_neto ? Number(nomina.salario_neto).toLocaleString('es-CO') : 'Sin salario base' %></td>
                                                     <td>
                                                         <div class="cont-btns-ad">
                                                             <button class="btn-aprovar" onclick="aprobarNomina('<%= nomina.id %>')">Aprobar</button>
@@ -90,7 +89,6 @@
                             <% if (empleadosAprobada && empleadosAprobada.length > 0 && nominasAprobada && nominasAprobada.length > 0) { %>
                                 <tbody class="cuerpo-tabla">
                                     <% empleadosAprobada.forEach(empleado => { 
-                                        console.log("Empleado ID:", empleado);
                                         const nominasEmpleado = nominasAprobada.filter(n => Number(n.id_empleado) === Number(empleado.id));
                                         
                                         if (nominasEmpleado.length > 0) { 
@@ -99,10 +97,10 @@
                                                     <td><%= empleado.nombre ? empleado.nombre : 'Sin nombre' %> <%= empleado.apellido ? empleado.apellido : 'Sin apellido' %></td>
                                                     <td><%= empleado.identificacion ? empleado.identificacion : 'Sin identificacion' %></td>
                                                     <td><%= empleado.rol ? empleado.rol : 'Sin cargo' %></td>
-                                                    <td>$ <%= nomina.salario_base ? nomina.salario_base : 'Sin salario base' %></td>
-                                                    <td>$ <%= nomina.descuento ? nomina.descuento : 'Sin deducciones' %></td>
-                                                    <td>$ <%= nomina.bonificacion ? nomina.bonificacion : 'Sin bonificación' %></td>
-                                                    <td>$ <%= nomina.salario_neto ? nomina.salario_neto : 'Sin salario base' %></td>
+                                                    <td>$ <%= nomina.salario_base ? Number(nomina.salario_base).toLocaleString('es-CO') : 'Sin salario base' %></td>
+                                                    <td>$ <%= nomina.descuento ? Number(nomina.descuento).toLocaleString('es-CO') : 'Sin deducciones' %></td>
+                                                    <td>$ <%= nomina.bonificacion ? Number(nomina.bonificacion).toLocaleString('es-CO') : 'Sin bonificación' %></td>
+                                                    <td>$ <%= nomina.salario_neto ? Number(nomina.salario_neto).toLocaleString('es-CO') : 'Sin salario base' %></td>
                                                 </tr>
                                             <% }); 
                                         } else { %>
@@ -134,7 +132,6 @@
                             <% if (empleadosDesaprobada && empleadosDesaprobada.length > 0 && nominasDesaprobada && nominasDesaprobada.length > 0) { %>
                                 <tbody class="cuerpo-tabla">
                                     <% empleadosDesaprobada.forEach(empleado => { 
-                                        console.log("Empleado ID:", empleado);
                                         const nominasEmpleado = nominasDesaprobada.filter(n => Number(n.id_empleado) === Number(empleado.id));
                                         
                                         if (nominasEmpleado.length > 0) { 
@@ -143,10 +140,10 @@
                                                     <td><%= empleado.nombre ? empleado.nombre : 'Sin nombre' %> <%= empleado.apellido ? empleado.apellido : 'Sin apellido' %></td>
                                                     <td><%= empleado.identificacion ? empleado.identificacion : 'Sin identificacion' %></td>
                                                     <td><%= empleado.rol ? empleado.rol : 'Sin cargo' %></td>
-                                                    <td>$ <%= nomina.salario_base ? nomina.salario_base : 'Sin salario base' %></td>
-                                                    <td>$ <%= nomina.descuento ? nomina.descuento : 'Sin deducciones' %></td>
-                                                    <td>$ <%= nomina.bonificacion ? nomina.bonificacion : 'Sin bonificación' %></td>
-                                                    <td>$ <%= nomina.salario_neto ? nomina.salario_neto : 'Sin salario base' %></td>
+                                                    <td>$ <%= nomina.salario_base ? Number(nomina.salario_base).toLocaleString('es-CO') : 'Sin salario base' %></td>
+                                                    <td>$ <%= nomina.descuento ? Number(nomina.descuento).toLocaleString('es-CO') : 'Sin deducciones' %></td>
+                                                    <td>$ <%= nomina.bonificacion ? Number(nomina.bonificacion).toLocaleString('es-CO') : 'Sin bonificación' %></td>
+                                                    <td>$ <%= nomina.salario_neto ? Number(nomina.salario_neto).toLocaleString('es-CO') : 'Sin salario base' %></td>
                                                 </tr>
                                             <% }); 
                                         } else { %>

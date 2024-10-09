@@ -46,7 +46,7 @@
                             <td><%= empleado.apellido%></td>
                             <td><%= empleado.telefono%></td>
                             <td><%= empleado.email%></td>
-                            <td><%= empleado.salario%></td>
+                            <td>$<%= Number(empleado.salario).toLocaleString('es-CO')%></td>
                         </tr>
                         <% }); %>
                     </tbody>
