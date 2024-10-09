@@ -25,3 +25,6 @@ export const aplicarOfertas = (req, res) => {
 export const formulario = (req, res) => {
     res.render("views.formulario.ejs", {url: url})
 }
+export const solicitudEquipo = (req, res) => {
+    res.render("views.solicitudEquipo.ejs", {url: url})
+}

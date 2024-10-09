@@ -16,7 +16,7 @@ body {
 /* Encabezado */
 header {
     height: 110px;
-    background-color: #334bd7;
+    background-color: #5162e3;
     padding: 20px 0;
     text-align: center;
     
@@ -34,7 +34,7 @@ nav .logo img {
 
 /* Sección de ofertas laborales */
 main {
-    padding: 50px 20px;  
+    padding: 30px 20px 0 20px;  
     text-align: center;
     background-color: #f0f0f0;
 }

@@ -5,9 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Solicitud de equipo para trabajo</title>
      <link rel="stylesheet" href="./css/solicitudEquipo.css">
-
 </head>
 <body>
-    
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="./img/logo.png">
+            </div>
+        </nav>
+    </header>
+
+
+    <div class="container">
+        <div class="form-header">
+            <h2>Solicitud de equipo para trabajo remoto</h2>
+            <p>Proporcione la siguiente información para solicitar equipos para trabajo remoto. 
+               Una vez enviada, un administrador revisará su solicitud.</p>
+        </div>
+        <div class="form-container">
+            <form action="#" method="post">
+                <label for="nombre">Nombre del empleado</label>
+                <input type="text" id="nombre" name="nombre" required>
+                
+                <label for="email">E-mail empleado</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="rol">Seleccione su rol</label>
+                <select id="rol" name="rol">
+                    <option value="" disabled selected>Seleccione su rol</option>
+                    <option value="gerente">Gerente</option>
+                    <option value="analista">Analista</option>
+                    <option value="desarrollador">Desarrollador</option>
+                </select>
+
+                <label for="equipo">Seleccione su equipo</label>
+                <select id="equipo" name="equipo">
+                    <option value="" disabled selected>Seleccione su equipo</option>
+                    <option value="portatil">Portátil</option>
+                    <option value="monitor">Monitor</option>
+                    <option value="teclado">Teclado</option>
+                </select>
+
+                <label for="direccion">Dirección de envío</label>
+                <input type="text" id="direccion" name="direccion" required>
+
+                <label for="justificacion">¿Cuál es la justificación de la solicitud?</label>
+                <textarea id="justificacion" name="justificacion" rows="4" required></textarea>
+
+                <button type="submit">Enviar solicitud</button>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
