@@ -14,22 +14,6 @@ export const hSolicitudes = (req, res) => {
     res.render("views.horas_solicitudes.ejs");
 };
 
-
-
-
-//   quitarrrrrrrrrrrrrr
-export const menu = (req, res) => {
-    res.render("views.menu.ejs");
-};
-
-//   --------------------------------
-
-
-
-
-
-
-
 export const pAprobadas = (req, res) => {
     res.render("views.permisos_aprobadas.ejs");
 };
