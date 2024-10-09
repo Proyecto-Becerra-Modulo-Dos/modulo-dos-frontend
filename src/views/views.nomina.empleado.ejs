@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/css/nomina.css">
+    <title>Recibo de Nómina.</title>
+
+</head>
+
+<body>
+    <%- include('partials/sidebar') %>
+
+        <div class="contenido_fondo">
+            <%- include('partials/navbar') %>
+
+                <main class="content">
+                    <header>
+                        <a href="#" class="back-button">← Volver</a>
+                        <button class="print-button">IMPRIMIR</button>
+                    </header>
+
+                    <div class="contenido_interno_superior">
+                        <div class="contenido_interno_superior_centrado">
+                            <strong>EMPRESA APEX</strong>
+                            <h2>Documento soporte de nómina</h2>
+                        </div>
+
+                        <div class="contenido_interno_superior_informacion">
+
+                            <div class="imagen">
+                                <div class="contenido_interno_superior_imagen"></div>
+                            </div>
+
+                            <div class="contenido_interno_superior_derecha">
+                                <div class="contenido_uno">
+                                    <strong>
+                                        <p>Período de pago:</p>
+                                        <p>Comprobante número:</p>
+                                        <p>Fecha generación:</p>
+                                        <p>Fecha emisión:</p>
+                                        <p>Nombre:</p>
+                                        <p>Identificación:</p>
+                                        <!-- <p>Cargo:</p> -->
+                                    </strong>
+                                </div>
+
+                                <div class="contenido_dos">
+                                    <strong>
+                                        <p id="periodoPago"></p>
+                                        <p id="comprobante"></p>
+                                        <p id="fecha_generacion">30/01/2022</p>
+                                        <p id="fecha_emision">30/01/2022</p>
+                                        <p id="nombre">Susana Rodríguez Peña</p>
+                                        <p id="identificacion">30.625.345</p>
+                                        <!-- <p>Evaluar proveedores</p> -->
+                                    </strong>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="contenido_interno">
+
+                        <table class="payroll-table">
+                            <thead>
+                                <tr>
+                                    <th colspan="2">INGRESOS</th>
+                                    <th colspan="2">DEDUCCIONES</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Sueldo</td>
+                                    <td id="salario_neto"></td>
+                                    <td>Fondo de salud</td>
+                                    <td>$52,000.00</td>
+                                </tr>
+                                <tr>
+                                    <td>Auxilio de transporte</td>
+                                    <td>$162,000.00</td>
+                                    <td>Fondo de pensión</td>
+                                    <td>$52,000.00</td>
+                                </tr>
+                                <tr>
+                                    <td>Bonificación:</td>
+                                    <td id="bonificacion"></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td>Total Ingresos:</td>
+                                    <td>$1,659,360.00</td>
+                                    <td>Total Deducciones:</td>
+                                    <td>$104,000.00</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">Medio de pago: Transferencia</td>
+                                    <td colspan="2">NETO A PAGAR: $1,535,360.00</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </main>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+<script src="../public/js/nomina.empleado.js"></script>
+</html>

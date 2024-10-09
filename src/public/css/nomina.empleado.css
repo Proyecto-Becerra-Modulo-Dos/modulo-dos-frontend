@@ -163,6 +163,12 @@ tfoot tr td:last-child {
     text-align: right;
 }
 
+.apex{
+    text-decoration: none;
+    color: white;
+    margin-top: 20px;
+}
+
 @media screen and (width <=900px) {
     .contenido_interno_superior_imagen {
         width: 150px;

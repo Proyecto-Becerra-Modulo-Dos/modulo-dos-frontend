@@ -13,11 +13,6 @@ body {
     background-color: #F5F5F5;
 }
 
-.container {
-    display: flex;
-    width: 100%;
-}
-
 
 
 .contenido_fondo{
@@ -143,5 +138,12 @@ header {
 /* Botón de Eliminar */
 .delete-btn {
     background-image: url('../img/delete.png');
+}
+
+
+.apex{
+    text-decoration: none;
+    color: white;
+    margin-top: 20px;
 }
 
