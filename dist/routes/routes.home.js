@@ -1,8 +1,14 @@
 import { Router } from "express";
-import { login } from "../controllers/home.controllers.js";
+import { cargarDocumentos, Documentos, formulario, incoporacion, login, principal, solicitarcambio } from "../controllers/home.controllers.js";
 
 const rutaHome = Router();
 
 rutaHome.get("/", login)
+rutaHome.get("/principal", principal)
+rutaHome.get("/solicitar", solicitarcambio)
+rutaHome.get("/editar", formulario)
+rutaHome.get("/incorporacion", incoporacion)
+rutaHome.get("/CargarDocumentos", cargarDocumentos)
+rutaHome.get("/documentos", Documentos)
 
 export default rutaHome
