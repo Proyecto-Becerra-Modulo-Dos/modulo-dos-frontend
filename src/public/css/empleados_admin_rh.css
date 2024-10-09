@@ -85,6 +85,17 @@
 
 /* Apartado para estilo de botones de vista en nomina */
 
+.cabecera-2{
+    justify-content: start;
+    margin-top: 0;
+}
+
+.tittle-2{
+    margin-top: 20px;
+    margin-left: 0;
+    margin-bottom: 20px;
+}
+
 .tabla-nomina{
     width: 1100px;
 }

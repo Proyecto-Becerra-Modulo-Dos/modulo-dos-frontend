@@ -69,7 +69,95 @@
                                     }); %>
                                 </tbody>
                             <% } %>                                                                            
-                        </table>                        
+                        </table>
+                        <!-- Tabla nominas aprobadas -->
+                        <div class="cabecera cabecera-2">
+                            <h1 class="tittle tittle-2">Nóminas Aprobadas</h1>
+                        </div>
+                        <table class="tabla tabla-nomina">
+                            <thead class="cabecera-tabla">
+                                <tr class="cabecera-column">
+                                    <th>Nombre</th>
+                                    <th>Identificación</th>
+                                    <th>Cargo</th>
+                                    <th>Salario Bruto</th>
+                                    <th>Deducciones</th>
+                                    <th>Bonificaciones</th>
+                                    <th>Salario Neto</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <% if (empleadosAprobada && empleadosAprobada.length > 0 && nominasAprobada && nominasAprobada.length > 0) { %>
+                                <tbody class="cuerpo-tabla">
+                                    <% empleadosAprobada.forEach(empleado => { 
+                                        console.log("Empleado ID:", empleado);
+                                        const nominasEmpleado = nominasAprobada.filter(n => Number(n.id_empleado) === Number(empleado.id));
+                                        
+                                        if (nominasEmpleado.length > 0) { 
+                                            nominasEmpleado.forEach(nomina => { %>
+                                                <tr class="column-1">
+                                                    <td><%= empleado.nombre ? empleado.nombre : 'Sin nombre' %> <%= empleado.apellido ? empleado.apellido : 'Sin apellido' %></td>
+                                                    <td><%= empleado.identificacion ? empleado.identificacion : 'Sin identificacion' %></td>
+                                                    <td><%= empleado.rol ? empleado.rol : 'Sin cargo' %></td>
+                                                    <td>$ <%= nomina.salario_base ? nomina.salario_base : 'Sin salario base' %></td>
+                                                    <td>$ <%= nomina.descuento ? nomina.descuento : 'Sin deducciones' %></td>
+                                                    <td>$ <%= nomina.bonificacion ? nomina.bonificacion : 'Sin bonificación' %></td>
+                                                    <td>$ <%= nomina.salario_neto ? nomina.salario_neto : 'Sin salario base' %></td>
+                                                </tr>
+                                            <% }); 
+                                        } else { %>
+                                            <tr class="column-1">
+                                                <td colspan="8">No se encontró una nómina para el empleado <%= empleado.nombre %></td>
+                                            </tr>
+                                        <% } 
+                                    }); %>
+                                </tbody>
+                            <% } %>                                                                            
+                        </table>
+                        <!-- Tabla nominas desaprobadas -->
+                        <div class="cabecera cabecera-2">
+                            <h1 class="tittle tittle-2">Nóminas Desaprobadas</h1>
+                        </div>
+                        <table class="tabla tabla-nomina">
+                            <thead class="cabecera-tabla">
+                                <tr class="cabecera-column">
+                                    <th>Nombre</th>
+                                    <th>Identificación</th>
+                                    <th>Cargo</th>
+                                    <th>Salario Bruto</th>
+                                    <th>Deducciones</th>
+                                    <th>Bonificaciones</th>
+                                    <th>Salario Neto</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <% if (empleadosDesaprobada && empleadosDesaprobada.length > 0 && nominasDesaprobada && nominasDesaprobada.length > 0) { %>
+                                <tbody class="cuerpo-tabla">
+                                    <% empleadosDesaprobada.forEach(empleado => { 
+                                        console.log("Empleado ID:", empleado);
+                                        const nominasEmpleado = nominasDesaprobada.filter(n => Number(n.id_empleado) === Number(empleado.id));
+                                        
+                                        if (nominasEmpleado.length > 0) { 
+                                            nominasEmpleado.forEach(nomina => { %>
+                                                <tr class="column-1">
+                                                    <td><%= empleado.nombre ? empleado.nombre : 'Sin nombre' %> <%= empleado.apellido ? empleado.apellido : 'Sin apellido' %></td>
+                                                    <td><%= empleado.identificacion ? empleado.identificacion : 'Sin identificacion' %></td>
+                                                    <td><%= empleado.rol ? empleado.rol : 'Sin cargo' %></td>
+                                                    <td>$ <%= nomina.salario_base ? nomina.salario_base : 'Sin salario base' %></td>
+                                                    <td>$ <%= nomina.descuento ? nomina.descuento : 'Sin deducciones' %></td>
+                                                    <td>$ <%= nomina.bonificacion ? nomina.bonificacion : 'Sin bonificación' %></td>
+                                                    <td>$ <%= nomina.salario_neto ? nomina.salario_neto : 'Sin salario base' %></td>
+                                                </tr>
+                                            <% }); 
+                                        } else { %>
+                                            <tr class="column-1">
+                                                <td colspan="8">No se encontró una nómina para el empleado <%= empleado.nombre %></td>
+                                            </tr>
+                                        <% } 
+                                    }); %>
+                                </tbody>
+                            <% } %>                                                                            
+                        </table>
                     </div>
                 </div>
     </div>

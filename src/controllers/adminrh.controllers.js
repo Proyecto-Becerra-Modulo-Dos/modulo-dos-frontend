@@ -67,7 +67,11 @@ export const verNomina = async(req, res) => {
         const data = await response.json();        
         res.render("views.nomina.ejs", {
             empleados: data.empleados,
-            nominas: data.nominas
+            nominas: data.nominas,
+            empleadosAprobada: data.empleadosAprobada,
+            nominasAprobada: data.nominasAprobada,
+            empleadosDesaprobada: data.empleadosDesaprobada,
+            nominasDesaprobada: data.nominasDesaprobada
         });
     } catch (error) {
         res.status(500).send(error);
