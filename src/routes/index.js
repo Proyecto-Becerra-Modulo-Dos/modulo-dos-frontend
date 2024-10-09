@@ -1,8 +1,8 @@
 import { Router } from "express";
-import rutaHome from "./routes.home.js";
+import rutaEmpleado from "./routes.empleado.js";
 
 const ruta = Router();
 
-ruta.use("/", rutaHome);
+ruta.use("/", rutaEmpleado);
 
 export default ruta

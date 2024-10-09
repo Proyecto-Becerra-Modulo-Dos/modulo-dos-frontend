@@ -26,3 +26,15 @@ export const incoporacion = (req, res) => {
 export const error404 = (req, res) => {
     res.render("views.error404.ejs")
 }
+
+export const opciones = (req, res) => {
+    res.render("views.opciones.ejs")
+}
+
+export const pago = (req, res) => {
+    res.render("views.pago.ejs")
+}
+
+export const pasantias = (req, res) => {
+    res.render("views.pasantias.ejs")
+}
