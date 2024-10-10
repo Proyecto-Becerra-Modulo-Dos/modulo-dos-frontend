@@ -1,0 +1,59 @@
+*{
+     padding: 0;
+     margin: 0;
+}
+
+
+.container{
+    margin-top: 50px;
+}
+.contenido{
+    width: 400px;
+    height: 500px;
+    padding: 40px;
+    margin-top:70px;
+    margin-left: 245px;
+}
+.contenido > .titulo{
+    margin-bottom: 20px;
+}
+.form__oferta {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+}
+
+
+
+label {
+    font-weight: bold;
+    margin-bottom: 3px;
+    font-size: 14px;
+    color: #2e3a59;
+}
+
+input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #e5e6ea;
+    width: 500px;
+}
+
+
+.btn__oferta {
+    grid-column: span 2;
+    padding: 20px;
+    font-size: 14px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn__oferta:hover {
+    background-color: #0056b3;
+}

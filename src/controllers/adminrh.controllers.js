@@ -23,3 +23,10 @@ export const empleadosAdminRH = async(req, res) => {
 export const crearEmpleadoAdminRH = (req, res) => {
     res.render("views.crear_empleado.ejs")
 }
+export const gestionReclutamiento = (req, res) => {
+    res.render("views.gestion.reclutamiento.ejs")
+}
+export const agregarOferta = (req, res) => {
+
+    res.render("views.oferta.ejs")
+}
