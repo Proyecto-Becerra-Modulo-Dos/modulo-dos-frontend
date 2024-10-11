@@ -25,13 +25,16 @@
                 <img src="./img/image.png" alt="Icono de archivo" class="upload-icon" />
                 <p class="title">Arrastra el archivo hasta aquí</p>
                 <p class="title">o</p>
-                <button class="upload-btn" onclick="document.getElementById('fileInput').click()">Elegir archivo en mi ordenador</button>
-                <input type="file" id="fileInput" class="file-input" accept=".pdf, .jpg, .png" onchange="handleFile(event)" />
+                <form id="uploadForm">
+                    <button class="upload-btn" onclick="document.getElementById('fileInput').click()">Elegir archivo en mi ordenador</button>
+                    <input type="file" name="file" id="fileInput" class="file-input" accept=".pdf, .jpg, .png" onchange="handleFile(event)" />
+                </form>
                 <p class="file-types">Solo archivos PDF, JPG O PNG (Máx. 2GB)</p>
             </div>
             <button class="cancelar" type="submit"> Cancelar </button>
         </div>
     </div>
   </div>
+  <script src="/js/documentos.js"></script>
 </body>
 </html>
