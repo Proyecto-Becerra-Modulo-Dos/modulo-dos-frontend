@@ -22,12 +22,17 @@ const optionss = {
         console.error("error al mostrar datos", data);
       } else {
   
-        document.getElementById("periodoPago").innerText = data.empleados[0].fecha_pago;
-        document.getElementById("comprobante").innerText = data.empleados[0].idNomina;
+        document.getElementById("estado").innerText = data.empleados[0].estado;
+        document.getElementById("fecha_pago").innerText = data.empleados[0].fecha_pago;
+        document.getElementById("banco").innerText = data.empleados[0].banco;
+        document.getElementById("numero_cuenta").innerText = data.empleados[0].numero_cuenta;
+        document.getElementById("tipo_cuenta").innerText = data.empleados[0].tipo_cuenta;
 
 
-        document.getElementById("salario_neto").innerText = data.empleados[0].salario_neto;
+        document.getElementById("salario_base").innerText = data.empleados[0].salario_base;
         document.getElementById("bonificacion").innerText = data.empleados[0].bonificaciones;
+
+        document.getElementById("descuentos").innerText = data.empleados[0].descuentos;
     
   
       }

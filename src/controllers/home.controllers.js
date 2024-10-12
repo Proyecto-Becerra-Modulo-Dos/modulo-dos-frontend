@@ -28,5 +28,5 @@ export const objetivos = (req, res) => {
 }
 
 export const nomina = (req, res) => {
-    res.render("views.nomina.ejs")
+    res.render("views.nomina.empleado.ejs")
 }
