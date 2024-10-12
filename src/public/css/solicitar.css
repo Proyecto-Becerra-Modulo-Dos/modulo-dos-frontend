@@ -57,12 +57,6 @@ body {
 .form-section.active {
     display: block;
 }
-.datoscuenta{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-}
 select{
     width: 250px;
     height: 40px;
@@ -115,21 +109,6 @@ select{
     margin-top: 50px;
     margin-bottom: 50px;
 }
-.contenedoropc{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 350px;
-    width: 370px;
-    border: 1px solid #000;
-    border-radius: 15px;
-    margin: 10px;
-    padding: 10px;
-}
-.archivos{
-    display: flex;
-}
 .contenedorC{
     display: flex;
     align-items: center;
@@ -142,11 +121,6 @@ select{
 }
 span{
     font-weight: bold;
-}
-.nombreArchivo{
-    border: 1px solid #000;
-    padding: 5px;
-    border-radius: 15px;
 }
 .aceptar{
     display: flex;

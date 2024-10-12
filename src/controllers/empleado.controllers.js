@@ -12,7 +12,13 @@ export const principal = (req, res) => {
 }
 
 export const solicitarcambio = (req, res) => {
-    res.render("views.solicitarcambio.ejs")
+    fetch(url + "/empleados/solicitar")
+        .then(res => res.json())
+        .then(data => {
+            const cuentasBancarias = data.cuenta;
+            res.render("views.solicitarcambio.ejs", { cuentasBancarias });            
+        })
+        .catch(err => console.error(err));
 }
 
 export const formulario = (req, res) => {
@@ -34,7 +40,7 @@ export const pago = (req, res) => {
             fetch(url + "/empleados/solicitudes")
                 .then(res => res.json())
                 .then(soliResponse => {
-                    const soli = soliResponse.cuenta; // Asegúrate de que esto sea un arreglo
+                    const soli = soliResponse.cuenta;
                     res.render("views.pago.ejs", { data, soli });
                     console.log(soli);
                 })

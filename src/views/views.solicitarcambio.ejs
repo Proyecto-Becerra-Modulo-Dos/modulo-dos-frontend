@@ -18,80 +18,59 @@
           <div class="titulo">
             <h3>Solicitar cambios en información bancaria</h3>
           </div>
-      <div class="formularios">
-        <div id="form1" class="form-section">
-          <h3 class="nombre">Información de la nueva cuenta bancaria</h3>
-          <div class="datosCuenta">
-            <select id="accountType" required>
-              <option value="">Seleccionar Banco</option>
-              <option value="current">BBVA</option>
-              <option value="savings">Bancolombia</option>
-            </select>
-            <select id="accountNumber" required>
-              <option value="">Número de cuenta</option>
-              <option value="current">156323536364</option>
-          </select>
-            <select id="accountType" required>
-                <option value="">Tipo de cuenta</option>
-                <option value="current">Cuenta corriente</option>
-                <option value="savings">Cuenta de ahorros</option>
-            </select>
-          </div>
-          <div class="posicion">
-          <button class="cancelar" onclick="">Cancelar</button>
-          <button onclick="nextForm(1)">Continuar</button>
-        </div>
-        </div>
-      
-        <div id="form2" class="form-section hidden">
-          <div class="datoscuenta">
-          <h3 class="nombre">Datos Cuenta</h3>
-          <div class="archivos">
-            <div class="contenedoropc">
-              <h5>Certificación bancaria</h5>
-              <p>Certificación bancaria actualizada a nombre de la razon social nueva (No mayor a 30 días)</p>
-              <input type="file" id="bankCertificate" required>
-              <p>PDF, JPG O PNG no mayor a 30MB</p>
+          <div class="formularios">
+            <div id="form1" class="form-section">
+                <h3 class="nombre">Información de la nueva cuenta bancaria</h3>
+                <div class="datosCuenta">
+                    <select id="bankSelect" required>
+                        <option value="">Seleccionar Banco</option>
+                        <% cuentasBancarias.forEach(cuenta => { %>
+                            <option value="<%= cuenta.banco %>"><%= cuenta.banco %></option>
+                        <% }); %>
+                    </select>
+        
+                    <select id="accountNumberSelect" required>
+                        <option value="">Número de cuenta</option>
+                        <% cuentasBancarias.forEach(cuenta => { %>
+                            <option value="<%= cuenta.numero_cuenta %>"><%= cuenta.numero_cuenta %></option>
+                        <% }); %>
+                    </select>
+        
+                    <select id="accountTypeSelect" required>
+                        <option value="">Tipo de cuenta</option>
+                        <% cuentasBancarias.forEach(cuenta => { %>
+                            <option value="<%= cuenta.tipo_cuenta %>"><%= cuenta.tipo_cuenta %></option>
+                        <% }); %>
+                    </select>
+                </div>
+                <div class="posicion">
+                    <button class="cancelar" onclick="">Cancelar</button>
+                    <button onclick="nextForm(1)">Continuar</button>
+                </div>
             </div>
-            <div class="contenedoropc">
-              <h5>Copia de documento de identidad</h5>
-              <p>Documento de identificación actualizada</p>
-              <input type="file" id="idDocument" required>
-              <p>PDF, JPG O PNG no mayor a 30MB</p>
+        
+            <div id="form2" class="form-section hidden">
+                <h3>Confirma solicitud</h3>
+                <p>El proceso de cambio podría tardar hasta 72 horas.</p>
+                <div class="contenedorC">
+                    <div class="info">
+                        <span>Información Bancaria</span>
+                        <p><span>Banco:</span> <span id="confirmBanco">BBVA</span></p>
+                        <p><span>Cuenta:</span> <span id="confirmCuenta">156323536364</span></p>
+                        <p><span>Tipo de cuenta:</span> <span id="confirmTipoCuenta">Cuenta corriente</span></p>
+                    </div>
+                </div>
+                <div class="aceptar">
+                    <input type="radio" required>
+                    <p>Autorizo a Apex para que realice la modificación de la cuenta bancaria.</p>
+                </div>
+                <div class="posicion1">
+                    <button class="cancelar" onclick="cancelChange()">Cancelar</button>
+                    <button onclick="submitForms()">Enviar</button>
+                </div>
             </div>
-          </div>
-          </div>
-          <div class="posicion1">
-            <button class="cancelar" onclick="">Cancelar</button>
-            <button onclick="nextForm(2)">Continuar</button>
-          </div>
         </div>
-      
-        <div id="form3" class="form-section hidden">
-          <h3>Confirma de solicitud</h3>
-          <p>El proceso de cambio podría tardar hasta 72 horas, puedes ver el estado en la pestaña de Solicitud de cambios.</p>
-          <div class="contenedorC">
-            <div class="info">
-              <span>Información Bancaria</span>
-              <p><span>Banco:</span> BBVA</p>
-              <p><span>Cuenta:</span> 156323536364</p>
-            </div>
-            <div class="documentos">
-              <span>Domumentos</span>
-              <p class="nombreArchivo">NombreDeArchivo.pdf</p>
-              <p class="nombreArchivo">NombreDeArchivo.pdf</p>
-            </div>
-          </div>
-          <div class="aceptar">
-            <input type="radio">
-            <p>Autorizo a Apex para que realice la modificación de la cuenta bancaria.</p>
-          </div>
-          <div class="posicion1">
-            <button class="cancelar" onclick="">Cancelar</button>
-            <button onclick="submitForms()">Enviar</button>
-          </div>
-        </div>
-      </div>
+        
     </div>
   </div>
 </div>
@@ -100,24 +79,47 @@
   function nextForm(currentForm) {
     const currentSection = document.getElementById(`form${currentForm}`);
     let isValid = true;
+
     currentSection.querySelectorAll('input[required], select[required]').forEach(input => {
         if (!input.value) {
             isValid = false;
             input.classList.add('error');
+        } else {
+            input.classList.remove('error');
         }
     });
 
     if (isValid) {
         currentSection.classList.remove('active');
         const nextSection = document.getElementById(`form${currentForm + 1}`);
+
         if (nextSection) {
+            updateConfirmation();
             nextSection.classList.add('active');
         }
     }
 }
-function submitForms() {
-    alert('Formularios enviados correctamente');
+
+function updateConfirmation() {
+    const banco = document.getElementById("bankSelect").value;
+    const cuenta = document.getElementById("accountNumberSelect").value;
+    const tipoCuenta = document.getElementById("accountTypeSelect").value;
+
+    document.getElementById("confirmBanco").innerText = banco;
+    document.getElementById("confirmCuenta").innerText = cuenta;
+    document.getElementById("confirmTipoCuenta").innerText = tipoCuenta;
+
+    document.getElementById("form2").classList.remove("hidden");
 }
+
+function cancelChange() {
+    document.getElementById("form2").classList.add("hidden");
+}
+
+function submitForms() {
+    alert("Formulario enviado.");
+}
+
 document.getElementById('form1').classList.add('active');
 
 </script>
