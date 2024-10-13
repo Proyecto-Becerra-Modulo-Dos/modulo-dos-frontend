@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos Completos</title>
+    <link rel="stylesheet" href="/css/menu_barra_adminrh.css">
+    <link rel="stylesheet" href="/css/crear_empleado.css">
+    <link rel="stylesheet" href="/css/recluta_completo.css">
+
+</head>
+<body>
+    <div class="container">
+        <%- include("partials/menu_adminrh") %>
+        <%- include("partials/barra_adminrh") %>
+
+        <div class="cont-fondo">
+
+
+            <div class="cont__tabla">
+                <div class="cuadro">
+                    
+                    <div class="form-group">
+                        <label for="oferta">Oferta</label>
+                        <input type="text" id="oferta" placeholder="Ingrese la oferta" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" placeholder="Ingrese el nombre" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="descripcion">Descripción</label>
+                        <input type="text" id="descripcion" placeholder="Ingrese la descripción" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="fecha">Fecha</label>
+                        <input type="date" id="fecha" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="estado">Estado</label>
+                        <input type="text" id="estado" placeholder="Ingrese el estado" readonly>
+                    </div>
+                    <button class="btn btn-back" id="devolver">Devolver</button>
+                   
+                </div>
+            </div>
+
+           
+        </div>
+    </div>
+    <script src="/js/recluta.completo.js"></script>
+</body>
+</html>

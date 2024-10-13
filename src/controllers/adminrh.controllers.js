@@ -26,7 +26,13 @@ export const crearEmpleadoAdminRH = (req, res) => {
 export const gestionReclutamiento = (req, res) => {
     res.render("views.gestion.reclutamiento.ejs")
 }
+export const mostrarRecluta = (req, res) => {
+    res.render("view.recluta.ejs")
+}
 export const agregarOferta = (req, res) => {
 
     res.render("views.oferta.ejs")
+}
+export const estructuraOrganizacional = (req, res) => {
+    res.render("view.estructura.organizacional.ejs")
 }

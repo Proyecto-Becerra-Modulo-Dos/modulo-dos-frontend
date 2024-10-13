@@ -1,0 +1,65 @@
+.cont-fondo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    margin-left: 270px;
+}
+    
+.cuadro{
+    width: 600px;
+    height: 600px;
+    background-color: #1E3DEA;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+.form-group label {
+    display: block;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+}
+.form-group input {
+    width: 500px;
+    padding: 8px;
+    font-size: 13px;
+    border-radius: 5px;
+    border: none;
+    background-color: #f0f0f0;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    pointer-events: none; /* Deshabilitar la interacción de copiar/pegar */
+}
+.form-group input:focus {
+    background-color: #e0e0e0;
+    outline: none;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+.btn {
+    width: 516px;
+    padding: 12px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+.btn:hover {
+    background-color: #218838;
+}
+.btn-back {
+    background-color: #ffc107;
+    margin-top: 10px;
+}
+.btn-back:hover {
+    background-color: #e0a800;
+}
