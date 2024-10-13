@@ -15,7 +15,6 @@ export const vistaInicial = (req, res) => {
     res.render("views.vistaInicial.ejs", {url: url})
 }
 
-
 export const ofertasTrabajo = (req, res) => {
     res.render("views.ofertasTrabajo.ejs", {url: url})
 }
