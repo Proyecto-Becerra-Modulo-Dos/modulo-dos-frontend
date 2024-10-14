@@ -28,9 +28,9 @@ export const cargarDocumentos = (req, res) => {
 }
 
 export const Documentos = (req, res) => {
-    res.render("views.documentos.ejs")
+    res.render("views.documentos.ejs") 
 }
 
 export const error404 = (req, res) => {
     res.render("views.error404.ejs")
-}
+} 
