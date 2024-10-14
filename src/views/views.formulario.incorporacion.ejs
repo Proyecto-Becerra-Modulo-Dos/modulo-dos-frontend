@@ -27,6 +27,10 @@
         </div>
         <form class="formular">
             <div class="form-group">
+                <label for="telefono">Identificacion:</label>
+                <input type="text" id="telefono" class="form-control" placeholder="_______________________________">
+            </div>
+            <div class="form-group">
                 <label for="telefono">Teléfono:</label>
                 <input type="text" id="telefono" class="form-control" placeholder="_______________________________">
             </div>
@@ -40,24 +44,10 @@
             </div>
         </form>
         <!-- Botón de guardar -->
-        <button type="button" class="btn btn-primary guardar-btn" onclick="ocultarFormulario()">GUARDAR</button>
+        <button type="button" class="btn btn-primary guardar-btn">GUARDAR</button>
     </div>
   </div>
   
-  <script>
-      // Función para ocultar el formulario
-      function ocultarFormulario() {
-          // Obtiene el formulario usando su id
-          var formulario = document.getElementById('formularioIncorporacion');
-          
-          // Verifica si el formulario se encuentra correctamente
-          if(formulario) {
-              formulario.style.display = 'none';  // Ocultar el formulario
-              alert("Formulario guardado con éxito.");  // Mensaje de confirmación
-          } else {
-              console.error('No se encontró el formulario');
-          }
-      }
-  </script>
+  <script src="./js/formulario.incorporacion.js"> </script>
 </body>
 </html>
