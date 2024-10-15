@@ -34,6 +34,40 @@ document
 // tabla
 const urlApi = url + "/supervisor";
 
+// Mostrar en proceso
+fetch(urlApi + "/verPermisos")
+  .then((res) => res.json())
+  .then((data) => {
+    if (data.error) {
+      console.error("error al mostrar datos", data);
+    } else {
+      mostrar(data);
+    }
+  })
+  .catch((error) => console.log(error));
+
+const mostrar = (data) => {
+  let body = "";
+
+  for (let i = 0; i < data.length; i++) {
+    body += `
+            <tr>
+              <td>${data[i].nombre}</td>
+              <td>${data[i].apellido}</td>
+              <td>${data[i].email}</td>
+              <td>${data[i].descripcion}</td>
+              <td>${data[i].rol}</td>
+              <td>
+                <button class="btn_aprobar" onclick = "aprobarPermiso(${data[i].idSoli});">Aprobar</button><br />
+                <button class="btn_rechazar" onclick = "rechazarPermiso(${data[i].idSoli});">Rechazar</button>
+              </td>
+            </tr>
+    `;
+  }
+
+  document.getElementById("dataSolicitud").innerHTML = body;
+};
+
 const aprobarApi = (ID) => {
   const options = {
     method: "POST",
@@ -136,40 +170,6 @@ const rechazarPermiso = (id) => {
       });
     }
   });
-};
-
-// Mostrar en proceso
-fetch(urlApi + "/verPermisos")
-  .then((res) => res.json())
-  .then((data) => {
-    if (data.error) {
-      console.error("error al mostrar datos", data);
-    } else {
-      mostrar(data);
-    }
-  })
-  .catch((error) => console.log(error));
-
-const mostrar = (data) => {
-  let body = "";
-
-  for (let i = 0; i < data.length; i++) {
-    body += `
-            <tr>
-              <td>${data[i].nombre}</td>
-              <td>${data[i].apellido}</td>
-              <td>${data[i].email}</td>
-              <td>${data[i].descripcion}</td>
-              <td>${data[i].rol}</td>
-              <td>
-                <button class="btn_aprobar" onclick = "aprobarPermiso(${data[i].idSoli});">Aprobar</button><br />
-                <button class="btn_rechazar" onclick = "rechazarPermiso(${data[i].idSoli});">Rechazar</button>
-              </td>
-            </tr>
-    `;
-  }
-
-  document.getElementById("dataSolicitud").innerHTML = body;
 };
 
 // Mostrar aprobados
