@@ -1,31 +1,20 @@
+import { config } from "dotenv";
+config();
+
+const url = process.env.BACKEND_URL;
+
 export const desempeno = (req, res) => {
-    res.render("views.desempeno.ejs");
-};
-
-export const hAprobadas = (req, res) => {
-    res.render("views.horas_aprobadas.ejs");
-};
-
-export const hRechazadas = (req, res) => {
-    res.render("views.horas_rechazadas.ejs");
+  res.render("views.desempeno.ejs");
 };
 
 export const hSolicitudes = (req, res) => {
-    res.render("views.horas_solicitudes.ejs");
-};
-
-export const pAprobadas = (req, res) => {
-    res.render("views.permisos_aprobadas.ejs");
-};
-
-export const pRechazados = (req, res) => {
-    res.render("views.permisos_rechazados.ejs");
+  res.render("views.horas_solicitudes.ejs");
 };
 
 export const pSolicitudes = (req, res) => {
-    res.render("views.permisos_solicitudes.ejs");
+  res.render("views.permisos_solicitudes.ejs", { url: url });
 };
 
 export const tRemoto = (req, res) => {
-    res.render("views.trabajoRemoto.ejs");
+  res.render("views.trabajoRemoto.ejs");
 };
