@@ -9,8 +9,9 @@ form.addEventListener('submit', async (e) => {
     const formData = new FormData();
     formData.append('file', file);
 
+    const url = `http://localhost:3000/documentos/upload`
     try {
-        const response = await fetch('http://localhost:6000/upload', {
+        const response = await fetch(url, {
             method: 'POST',
             body: formData,
         });
