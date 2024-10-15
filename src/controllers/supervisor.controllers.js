@@ -16,5 +16,5 @@ export const pSolicitudes = (req, res) => {
 };
 
 export const tRemoto = (req, res) => {
-  res.render("views.trabajoRemoto.ejs");
+  res.render("views.trabajoRemoto.ejs", { url: url });
 };
