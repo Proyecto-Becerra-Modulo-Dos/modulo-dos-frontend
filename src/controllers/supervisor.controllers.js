@@ -19,7 +19,7 @@ export const pSolicitudes = (req, res) => {
 };
 
 export const hTrabajadas = (req, res) => {
-  res.render("views.horas_trabajadas.ejs");
+  res.render("views.horas_trabajadas.ejs", { url: url });
 };
 
 export const tRemoto = (req, res) => {
