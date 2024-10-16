@@ -2,12 +2,10 @@
     <div class="ventana_perfil_arriba">
         <div class="btn-x" id="btn_x">&times;</div>
         <div class="foto_perfil_foto"></div>
-        <h3 class="nombre"><b>¡Hola, Carolina!</b></h3>
+        <h3 class="nombre"><b id="nombre"></b></h3>
     </div>
     <div class="ventana_perfil_abajo">
-        <p class="descripcion_puesto">El especialista de inventario es un perfil logístico que se
-            encarga de: Desarrollar y aplicar estrategias para asegurar los niveles óptimos de stock...
-        </p>
+        <p class="descripcion_puesto" id="descripcion_puesto"></p>
         <button class="btn-administrar">Administrar tu Cuenta</button>
     </div>
 </div>
@@ -95,4 +93,41 @@
     btn_x.addEventListener("click", () => {
         ventana_perfil.classList.toggle("aparece")
     })
+
+
+    const url2 = "http://localhost:3000"; //Está es la url que trae lo del backend
+    const endpoint2 = "/mostrarDescripcionRol";
+    const recurso2 = url2 + endpoint2;
+    const idUser2 = 1;
+
+
+
+    // Mostrar datos del usuario
+    const options = {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+            id_usuario: idUser2,
+        }),
+    };
+    fetch(recurso2, options)
+        .then((res) => res.json())
+        .then((data) => {
+            console.log(data.body[0]);
+
+            if (data.error) {
+                console.error("error al mostrar datos", data);
+            } else {
+
+                document.getElementById("descripcion_puesto").innerText = data.body[0].descripcion.substring(0, 150) + "...";
+                document.getElementById("nombre").innerText = `¡Hola, ${data.body[0].nombre}!`;
+            }
+
+        })
+        .catch((err) => console.log(err));
+
+
+
 </script>
