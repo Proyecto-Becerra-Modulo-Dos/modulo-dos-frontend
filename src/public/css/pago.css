@@ -118,8 +118,15 @@ body {
     width: 100%;
     max-width: 800px;
     margin: 20px auto;
+    border: 1px solid #BAB0B0;
     background-color: #fff;
     border-radius: 10px;
+    overflow-y: scroll;
+    max-height: 500px;
+}
+.tabla-container::-webkit-scrollbar{
+    background: transparent;
+    border: none;
 }
 
 table {
