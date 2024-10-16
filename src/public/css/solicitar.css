@@ -1,0 +1,136 @@
+body {
+    display: flex;
+  }
+  .content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #f8f9fa;
+    height: 100vh;
+    overflow-y: auto;
+}
+.container{
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.principal {
+    padding: 0px;
+}
+.apex{
+    text-decoration: none;
+    color: white;
+    margin-top: 20px;
+}
+.contenedor{
+    width: 100%;
+    height: 85vh;
+    background: #C8CBE0;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px;
+}
+.titulo{
+    width: 1200px;
+    height: 80px;
+    background: #fff;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+.formularios{
+    width: 1200px;
+    height: 700px;
+    margin-top: 5px;
+    background: #fff;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+.form-section {
+    display: none;
+}
+.form-section.active {
+    display: block;
+}
+select{
+    width: 250px;
+    height: 40px;
+    padding-left: 10px;
+    border-radius: 15px;
+}
+.posicion{
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: end;
+}
+.posicion1{
+    height: 8vh;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: end;
+}
+.posicion1 > button{
+    height: 40px;
+    width: 100px;
+    color: #fff;
+    border: none;
+    background: #5064F0;
+    border-radius: 15px;
+    margin: 5px;
+}
+.posicion > button{
+    height: 40px;
+    width: 100px;
+    color: #fff;
+    border: none;
+    background: #5064F0;
+    border-radius: 15px;
+    margin: 5px;
+}
+.posicion > .cancelar{
+    color: #5064F0;
+    border: 1px solid #5064F0;
+    background: #fff;
+}
+.posicion1 > .cancelar{
+    color: #5064F0;
+    border: 1px solid #5064F0;
+    background: #fff;
+}
+.nombre{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.contenedorC{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: auto;
+    width: auto;
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid #000;
+}
+span{
+    font-weight: bold;
+}
+.aceptar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.aceptar > input{
+    margin-right: 10px;
+}
+p {
+    margin-top: 10px;
+    margin-bottom: 1rem;
+}

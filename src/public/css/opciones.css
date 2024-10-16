@@ -1,0 +1,77 @@
+body {
+    display: flex;
+  }
+  .content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #f8f9fa;
+    height: 100vh;
+    overflow-y: auto;
+}
+.principal {
+    padding: 0px;
+}
+.container{
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.apex{
+    text-decoration: none;
+    color: white;
+    margin-top: 20px;
+}
+.contenedor{
+    height: 70vh;
+    width: 80%;
+    background: #d9dbea;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.fila{
+    display: flex;
+}
+.mini{
+    height: 200px;
+    width: 350px;
+    background: #edebef;
+    border-radius: 15px;
+    border: 1px solid #a8a8a8;
+    padding: 20px;
+    margin: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    transition: .2s;
+}
+h5{
+    display: flex;
+    align-items: center;
+}
+.mini > i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 30px;
+    background-color: #fff;
+    border-radius: 50px;
+}
+.mini:hover{
+    background: #bab9bb;
+    transition: .2s;
+}
+.cuenta{
+    margin-bottom: 20px;
+}
+.hidden{
+    background: none;
+    border: none;
+}
+.hidden:hover{
+    background: none;
+}
