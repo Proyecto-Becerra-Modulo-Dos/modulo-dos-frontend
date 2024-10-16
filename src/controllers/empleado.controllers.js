@@ -35,6 +35,3 @@ export const pago = (req, res) => {
     res.render("views.pago.ejs")
 }
 
-export const pasantias = (req, res) => {
-    res.render("views.pasantias.ejs")
-}

@@ -77,3 +77,7 @@ export const verNomina = async(req, res) => {
         res.status(500).send(error);
     }
 }
+
+export const pasantiasAdminRH = (req, res) => {
+    res.render("views.pasantias.ejs")
+}
