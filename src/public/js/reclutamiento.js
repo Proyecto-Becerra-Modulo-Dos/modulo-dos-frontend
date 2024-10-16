@@ -21,15 +21,22 @@
     for(let i = 0; i < data.length;i++){
         body += `
             <tr>
+                            <td>${data[i].idReclutamiento}</td>
                             <td>${data[i].nombre}</td>
                             <td>
                                 <button class="btn btn-primary">Programar entrevista</button>
-                                <button class="btn btn-success">Vincular</button>
                                 <button class="btn btn-danger">Desvincular</button>
-                                <a href="/admin/recluta" class="btn btn-primary">Mas informacion</a>
+                                <button class="btn btn-primary"  onclick="mostrarRecluta();">Mas informacion</button>
                             </td>
                         </tr>
         `
     }
     document.getElementById("tableBody").innerHTML = body;
  }
+
+
+ const mostrarRecluta = () =>{
+   
+    alert("hola")
+    
+}
