@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apex</title>
+    <link rel="stylesheet" href="/css/menu_barra_adminrh.css">
+    <link rel="stylesheet" href="/css/empleados_admin_rh.css">
+    <link rel="icon" href="/img/estrella-afilada-medio-trazo 1.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <%- include('partials/menu_adminrh') %>
+            <%- include('partials/barra_adminrh') %>
+                <div class="cont-fondo">
+                    <div class="cabecera">
+                        <h1 class="tittle">Nómina Empleados</h1>
+                    </div>
+                    <div class="cont-tabla">
+                        <table class="tabla tabla-nomina">
+                            <thead class="cabecera-tabla">
+                                <tr class="cabecera-column">
+                                    <th>Nombre</th>
+                                    <th>Identificación</th>
+                                    <th>Cargo</th>
+                                    <th>Salario Bruto</th>
+                                    <th>Deducciones</th>
+                                    <th>Bonificaciones</th>
+                                    <th>Salario Neto</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <% if (empleados && empleados.length > 0 && nominas && nominas.length > 0) { %>
+                                <tbody class="cuerpo-tabla">
+                                    <% empleados.forEach(empleado => { 
+                                        const nominasEmpleado = nominas.filter(n => Number(n.id_empleado) === Number(empleado.id));
+                                        
+                                        if (nominasEmpleado.length > 0) { 
+                                            nominasEmpleado.forEach(nomina => { %>
+                                                <tr class="column-1">
+                                                    <td><%= empleado.nombre ? empleado.nombre : 'Sin nombre' %> <%= empleado.apellido ? empleado.apellido : 'Sin apellido' %></td>
+                                                    <td><%= empleado.identificacion ? empleado.identificacion : 'Sin identificacion' %></td>
+                                                    <td><%= empleado.rol ? empleado.rol : 'Sin cargo' %></td>
+                                                    <td>$ <%= nomina.salario_base ? Number(nomina.salario_base).toLocaleString('es-CO') : 'Sin salario base' %></td>
+                                                    <td>$ <%= nomina.descuento ? Number(nomina.descuento).toLocaleString('es-CO') : 'Sin deducciones' %></td>
+                                                    <td>$ <%= nomina.bonificacion ? Number(nomina.bonificacion).toLocaleString('es-CO') : 'Sin bonificación' %></td>
+                                                    <td>$ <%= nomina.salario_neto ? Number(nomina.salario_neto).toLocaleString('es-CO') : 'Sin salario base' %></td>
+                                                    <td>
+                                                        <div class="cont-btns-ad">
+                                                            <button class="btn-aprovar" onclick="aprobarNomina('<%= nomina.id %>')">Aprobar</button>
+                                                            <button class="btn-desaprovar" onclick="desaprobarNomina('<%= nomina.id %>')">Desaprobar</button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            <% }); 
+                                        } else { %>
+                                            <tr class="column-1">
+                                                <td colspan="8">No se encontró una nómina para el empleado <%= empleado.nombre %></td>
+                                            </tr>
+                                        <% } 
+                                    }); %>
+                                </tbody>
+                            <% } %>                                                                            
+                        </table>
+                        <!-- Tabla nominas aprobadas -->
+                        <div class="cabecera cabecera-2">
+                            <h1 class="tittle tittle-2">Nóminas Aprobadas</h1>
+                        </div>
+                        <table class="tabla tabla-nomina">
+                            <thead class="cabecera-tabla">
+                                <tr class="cabecera-column">
+                                    <th>Nombre</th>
+                                    <th>Identificación</th>
+                                    <th>Cargo</th>
+                                    <th>Salario Bruto</th>
+                                    <th>Deducciones</th>
+                                    <th>Bonificaciones</th>
+                                    <th>Salario Neto</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <% if (empleadosAprobada && empleadosAprobada.length > 0 && nominasAprobada && nominasAprobada.length > 0) { %>
+                                <tbody class="cuerpo-tabla">
+                                    <% empleadosAprobada.forEach(empleado => { 
+                                        const nominasEmpleado = nominasAprobada.filter(n => Number(n.id_empleado) === Number(empleado.id));
+                                        
+                                        if (nominasEmpleado.length > 0) { 
+                                            nominasEmpleado.forEach(nomina => { %>
+                                                <tr class="column-1">
+                                                    <td><%= empleado.nombre ? empleado.nombre : 'Sin nombre' %> <%= empleado.apellido ? empleado.apellido : 'Sin apellido' %></td>
+                                                    <td><%= empleado.identificacion ? empleado.identificacion : 'Sin identificacion' %></td>
+                                                    <td><%= empleado.rol ? empleado.rol : 'Sin cargo' %></td>
+                                                    <td>$ <%= nomina.salario_base ? Number(nomina.salario_base).toLocaleString('es-CO') : 'Sin salario base' %></td>
+                                                    <td>$ <%= nomina.descuento ? Number(nomina.descuento).toLocaleString('es-CO') : 'Sin deducciones' %></td>
+                                                    <td>$ <%= nomina.bonificacion ? Number(nomina.bonificacion).toLocaleString('es-CO') : 'Sin bonificación' %></td>
+                                                    <td>$ <%= nomina.salario_neto ? Number(nomina.salario_neto).toLocaleString('es-CO') : 'Sin salario base' %></td>
+                                                </tr>
+                                            <% }); 
+                                        } else { %>
+                                            <tr class="column-1">
+                                                <td colspan="8">No se encontró una nómina para el empleado <%= empleado.nombre %></td>
+                                            </tr>
+                                        <% } 
+                                    }); %>
+                                </tbody>
+                            <% } %>                                                                            
+                        </table>
+                        <!-- Tabla nominas desaprobadas -->
+                        <div class="cabecera cabecera-2">
+                            <h1 class="tittle tittle-2">Nóminas Desaprobadas</h1>
+                        </div>
+                        <table class="tabla tabla-nomina">
+                            <thead class="cabecera-tabla">
+                                <tr class="cabecera-column">
+                                    <th>Nombre</th>
+                                    <th>Identificación</th>
+                                    <th>Cargo</th>
+                                    <th>Salario Bruto</th>
+                                    <th>Deducciones</th>
+                                    <th>Bonificaciones</th>
+                                    <th>Salario Neto</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <% if (empleadosDesaprobada && empleadosDesaprobada.length > 0 && nominasDesaprobada && nominasDesaprobada.length > 0) { %>
+                                <tbody class="cuerpo-tabla">
+                                    <% empleadosDesaprobada.forEach(empleado => { 
+                                        const nominasEmpleado = nominasDesaprobada.filter(n => Number(n.id_empleado) === Number(empleado.id));
+                                        
+                                        if (nominasEmpleado.length > 0) { 
+                                            nominasEmpleado.forEach(nomina => { %>
+                                                <tr class="column-1">
+                                                    <td><%= empleado.nombre ? empleado.nombre : 'Sin nombre' %> <%= empleado.apellido ? empleado.apellido : 'Sin apellido' %></td>
+                                                    <td><%= empleado.identificacion ? empleado.identificacion : 'Sin identificacion' %></td>
+                                                    <td><%= empleado.rol ? empleado.rol : 'Sin cargo' %></td>
+                                                    <td>$ <%= nomina.salario_base ? Number(nomina.salario_base).toLocaleString('es-CO') : 'Sin salario base' %></td>
+                                                    <td>$ <%= nomina.descuento ? Number(nomina.descuento).toLocaleString('es-CO') : 'Sin deducciones' %></td>
+                                                    <td>$ <%= nomina.bonificacion ? Number(nomina.bonificacion).toLocaleString('es-CO') : 'Sin bonificación' %></td>
+                                                    <td>$ <%= nomina.salario_neto ? Number(nomina.salario_neto).toLocaleString('es-CO') : 'Sin salario base' %></td>
+                                                </tr>
+                                            <% }); 
+                                        } else { %>
+                                            <tr class="column-1">
+                                                <td colspan="8">No se encontró una nómina para el empleado <%= empleado.nombre %></td>
+                                            </tr>
+                                        <% } 
+                                    }); %>
+                                </tbody>
+                            <% } %>                                                                            
+                        </table>
+                    </div>
+                </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/js/nomina.js"></script>
+</body>
+
+</html>

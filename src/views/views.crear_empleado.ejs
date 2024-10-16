@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apex</title>
+    <link rel="stylesheet" href="/css/menu_barra_adminrh.css">
+    <link rel="stylesheet" href="/css/crear_empleado.css">
+    <link rel="icon" href="/img/estrella-afilada-medio-trazo 1.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <%- include('partials/menu_adminrh') %>
+        <%- include('partials/barra_adminrh') %>
+        
+        <div class="cont-fondo">
+            <div class="cabecera">
+                <h1 class="tittle">Crear Nuevo Empleado</h1>
+            </div>
+            <div class="cont-form">
+                <form class="form-crear-empleado" id="crearEmpleado">
+                    <select id="tipoId" name="tipoId">
+                        <option value="" disabled selected>Ingrese el tipo de documento del empleado</option>
+                        <option value="C.C" >Cedula de Ciudadanía</option>
+                        <option value="C.E" >Cedula de Extranjería</option>
+                        <option value="P.E" >Pasaporte para extranjeros</option>
+                    </select>
+                    <input type="text" name="identificacion" id="identificacion" placeholder="Ingrese la identificación del empleado">
+                    <input type="text" name="nombre" id="nombre" placeholder="Ingrese los nombres del empleado">
+                    <input type="text" name="apellido" id="apellido" placeholder="Ingrese los apellidos del empleado">
+                    <input type="email" name="email" id="email" placeholder="Ingrese el E-mail del empleado">
+                    <input type="number" name="salario" id="salario" placeholder="Ingrese el salario del empleado">
+                    <input type="password" name="contrasena" id="contrasena" placeholder="Ingrese la contraseña temporal del empleado">
+                    <select id="rol" name="rol">
+                        <option value="" disabled selected>Ingrese el rol del empleado</option>
+                        <option value="1" >Administrador recursos humanos</option>
+                        <option value="2" >Supervisor</option>
+                        <option value="3" >Entrevistador</option>
+                        <option value="4" >Reclutador</option>
+                        <option value="5" >Encargado de inventario</option>
+                        <option value="6" >Gerente de ventas</option>
+                        <option value="7" >Vendedor</option>
+                    </select>
+                    <div class="cont-btn">
+                        <button class="btn-guardar" id="btnCrearEmpleado" type="submit">Guardar empleado</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/js/agregar_empleado.js"></script>
+</body>
+
+</html>
