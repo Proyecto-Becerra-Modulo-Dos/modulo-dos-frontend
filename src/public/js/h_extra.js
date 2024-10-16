@@ -96,7 +96,7 @@ const aprobarApi = (ID) => {
 
 const aprobarHorasExtra = (id) => {
   Swal.fire({
-    title: "¿Estas seguro que quieres aprobar estas horas Extra?",
+    title: "¿Estas seguro que quieres aprobar estas horas extra?",
     text: "¡No podrás revertir la accion!",
     icon: "warning",
     showCancelButton: true,
@@ -109,7 +109,7 @@ const aprobarHorasExtra = (id) => {
       aprobarApi(id);
       Swal.fire({
         title: "¡Aprobado!",
-        text: "Las horas Extra han sido aprobadas.",
+        text: "Las horas extra han sido aprobadas.",
         icon: "success",
         allowOutsideClick: false,
       }).then((result) => {
@@ -148,7 +148,7 @@ const rechazarApi = (ID) => {
 
 const rechazarHorasExtra = (id) => {
   Swal.fire({
-    title: "¿Estas seguro que quieres rechazar estas horas Extra?",
+    title: "¿Estas seguro que quieres rechazar estas horas extra?",
     text: "¡No podrás revertir la accion!",
     icon: "warning",
     showCancelButton: true,
@@ -161,7 +161,7 @@ const rechazarHorasExtra = (id) => {
       rechazarApi(id);
       Swal.fire({
         title: "¡Rechazado!",
-        text: "Las horas Extra han sido rechazadas.",
+        text: "Las horas extra han sido rechazadas.",
         icon: "success",
         allowOutsideClick: false,
       }).then((result) => {
