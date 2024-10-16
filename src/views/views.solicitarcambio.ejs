@@ -117,7 +117,26 @@ function cancelChange() {
 }
 
 function submitForms() {
-    alert("Formulario enviado.");
+    let confirmBanco = document.getElementById("confirmBanco").innerHTML
+    let confirmCuenta = document.getElementById("confirmCuenta").innerHTML
+    let confirmTipoCuenta = document.getElementById("confirmTipoCuenta").value
+
+    fetch("http://localhost:3000/empleados/solicitar", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({
+            id_tipo: 2, // CAMBIAR TABLA SOLICITUDES IDTIPO SOLO RECIBE NUMEROS Y ESTAN INTENTANDO PASAR UN STRING CON EL TIPO DE CUENTA
+            descripcion: confirmCuenta,
+            id_empleado: 6, //cambiar valor
+            banco: confirmBanco
+        })
+    })
+    .then(res => res.json())
+    .then(data => {
+        console.log(data);
+        
+    })
+    .catch(err => console.error(err))
 }
 
 document.getElementById('form1').classList.add('active');
