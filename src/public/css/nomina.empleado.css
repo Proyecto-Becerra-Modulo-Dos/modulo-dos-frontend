@@ -25,6 +25,7 @@ body {
     background-color: white;
 }
 
+
 .content {
     flex-grow: 1;
     background-color: #C8CBE0;
@@ -168,6 +169,9 @@ tfoot tr td:last-child {
     color: white;
     margin-top: 20px;
 }
+
+
+
 
 @media screen and (width <=900px) {
     .contenido_interno_superior_imagen {
