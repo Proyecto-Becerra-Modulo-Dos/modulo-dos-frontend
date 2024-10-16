@@ -1,7 +1,7 @@
 import { Router } from "express";
 import {
   desempeno,
-  hSolicitudes,
+  hExtra,
   hTrabajadas,
   pSolicitudes,
   Svista,
@@ -11,7 +11,7 @@ import {
 const rutaSupervisor = Router();
 
 rutaSupervisor.get("/desempeno", desempeno);
-rutaSupervisor.get("/hsolicitudes", hSolicitudes);
+rutaSupervisor.get("/hextra", hExtra);
 rutaSupervisor.get("/psolicitudes", pSolicitudes);
 rutaSupervisor.get("/tremoto", tRemoto);
 rutaSupervisor.get("/svista", Svista);

@@ -10,8 +10,8 @@ export const desempeno = (req, res) => {
   res.render("views.desempeno.ejs");
 };
 
-export const hSolicitudes = (req, res) => {
-  res.render("views.horas_solicitudes.ejs");
+export const hExtra = (req, res) => {
+  res.render("views.horas_extra.ejs", { url: url });
 };
 
 export const pSolicitudes = (req, res) => {
