@@ -6,4 +6,5 @@ const rutaInicio = Router();
 rutaInicio.get("/login", login)
 rutaInicio.get("/", vistaInicial)
 rutaInicio.get("/ofertasTrabajo", ofertasTrabajo)
+
 export default rutaInicio
