@@ -22,26 +22,31 @@
             <div id="form1" class="form-section">
                 <h3 class="nombre">Información de la nueva cuenta bancaria</h3>
                 <div class="datosCuenta">
-                    <select id="bankSelect" required>
-                        <option value="">Seleccionar Banco</option>
-                        <% cuentasBancarias.forEach(cuenta => { %>
-                            <option value="<%= cuenta.banco %>"><%= cuenta.banco %></option>
-                        <% }); %>
-                    </select>
-        
-                    <select id="accountNumberSelect" required>
-                        <option value="">Número de cuenta</option>
-                        <% cuentasBancarias.forEach(cuenta => { %>
-                            <option value="<%= cuenta.numero_cuenta %>"><%= cuenta.numero_cuenta %></option>
-                        <% }); %>
-                    </select>
-        
-                    <select id="accountTypeSelect" required>
-                        <option value="">Tipo de cuenta</option>
-                        <% cuentasBancarias.forEach(cuenta => { %>
-                            <option value="<%= cuenta.tipo_cuenta %>"><%= cuenta.tipo_cuenta %></option>
-                        <% }); %>
-                    </select>
+                    <div class="form-floating">
+                        <select id="bankSelect" required>
+                            <option value="" disabled selected>Seleccionar Banco</option>
+                            <% cuentasBancarias.forEach(cuenta => { %>
+                                <option value="<%= cuenta.banco %>"><%= cuenta.banco %></option>
+                            <% }); %>
+                        </select>
+                        <label for="bankSelect">Banco</label>
+                    </div>
+                    
+                    <div class="form-floating">
+                        <input class="numero" type="number" placeholder="" id="accountNumberSelect" required>
+                    <label for="bankSelect">Número</label>
+
+                    </div>
+
+                    <div class="form-floating">
+                        <select id="accountTypeSelect" required>
+                            <option value="" disabled selected>Tipo de cuenta</option>
+                            <% cuentasBancarias.forEach(cuenta => { %>
+                                <option value="<%= cuenta.tipo_cuenta %>"><%= cuenta.tipo_cuenta %></option>
+                            <% }); %>
+                        </select>
+                    <label for="bankSelect">Tipo</label>
+                    </div>
                 </div>
                 <div class="posicion">
                     <button class="cancelar" onclick="">Cancelar</button>
