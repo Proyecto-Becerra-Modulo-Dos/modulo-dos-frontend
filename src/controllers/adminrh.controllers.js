@@ -24,6 +24,7 @@ export const crearEmpleadoAdminRH = (req, res) => {
     res.render("views.crear_empleado.ejs")
 }
 
+
 export const seleccionarPlan = (req, res) => {
     res.render("views.planes_admin_rh.ejs")
 }

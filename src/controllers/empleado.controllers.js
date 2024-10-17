@@ -11,6 +11,10 @@ export const principal = (req, res) => {
     res.render("views.principal.ejs")
 }
 
+export const solicitarVacaciones = (req, res) => {
+    res.render("views.solicitar_vacaciones.ejs")
+}
+
 export const solicitarcambio = (req, res) => {
     fetch(url + "/empleados/solicitar")
         .then(res => res.json())
