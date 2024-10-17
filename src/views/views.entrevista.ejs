@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Oferta de Empleo</title>
+    
+    <link rel="stylesheet" href="/css/menu_barra_adminrh.css">
+    <link rel="stylesheet" href="/css/crear_empleado.css">
+    <link rel="stylesheet" href="/css/oferta.css">
+</head>
+<body>
+    <div class="container">
+        <%- include("partials/menu_adminrh") %>
+        <%- include("partials/barra_adminrh") %>
+        
+        
+        <div class="contenido">
+            <div class="titulo">
+                <h1 class="title">Programar Entrevista</h1>
+            </div>
+        
+            <div class="form__oferta">
+                <div class="form-group">
+                    <label for="jornada">Nombre Reclutado:</label>
+                    <input id="nombre" class="puesto" placeholder="">
+                    <!-- <input id="nombre" class="puesto" placeholder="nombre">
+                    <input id="nombre" class="puesto" placeholder="nombre"> -->
+                    <!-- <select name="" id="" class=""> -->
+                        <!-- <option  value="0">lisandro</option>
+                        <option  value="0">lisandro</option>
+                    </select> -->
+                </div>
+                <div class="form-group">
+                    <label for="jornada">Tipo de Entrevista:</label>
+                    <input id="tipo" class="puesto" placeholder="Ingrese la fecha de la entrevista">
+                </div>
+                <div class="form-group">
+                    <label for="titulo">Fecha de Entrevista:</label>
+                    <input type="date" id="fecha" placeholder="Ingrese el tipo de entrevista">
+                </div>
+                <div class="form-group">
+                    <label for="descripcion">descripcion:</label>
+                    <input type="text" id="descripcion" placeholder="Nombre del entrevistador">
+                </div>
+                <button class="btn__oferta" onclick="agregarEntrevista();">Agregar Entrevista</button>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/js/entrevista.js"></script>
+</body>
+</html>

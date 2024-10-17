@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reclutamiento</title>
+    
+    <link rel="stylesheet" href="/css/menu_barra_adminrh.css">
+    <link rel="stylesheet" href="/css/crear_empleado.css">
+    <link rel="stylesheet" href="/css/reclutamiento.css">
+</head>
+<body>
+    <div class="container">
+        <%- include("partials/menu_adminrh") %>
+        <%- include("partials/barra_adminrh") %>
+
+        <div class="cont-fondo">
+            <div class="title">
+                <h1>Administración de Reclutamiento</h1>
+                <!-- <button class="btn__oferta">Agregar Oferta</button> -->
+                <a href="/admin/oferta" class="btn__oferta">Agregar Oferta</a>
+            </div>
+
+            <div class="cont__tabla">
+                <table class="aspirantes-table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Aspirante</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                        <!-- <tr>
+                            <td>Jhoan Restrepo Torres</td>
+                            <td>
+                                <button class="btn btn-primary">Programar entrevista</button>
+                                <button class="btn btn-success">Vincular</button>
+                                <button class="btn btn-danger">Desvincular</button>
+                                <button class="btn btn-primary">Mas infomacion</button>
+                            </td>
+                        </tr> -->
+
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="pagination">
+                <button id="prevBtn" class="btn-pagination" onclick="prevPage()">Anterior</button>
+                <span id="pageInfo"></span>
+                <button id="nextBtn" class="btn-pagination" onclick="nextPage()">Siguiente</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script>
+        const rowsPerPage = 5;
+        let currentPage = 1;
+        const rows = document.querySelectorAll("#tableBody tr");
+        const totalPages = Math.ceil(rows.length / rowsPerPage);
+
+        function showPage(page) {
+            rows.forEach((row, index) => {
+                row.style.display = (index >= (page - 1) * rowsPerPage && index < page * rowsPerPage) ? '' : 'none';
+            });
+
+            document.getElementById("pageInfo").textContent = `Página ${page} de ${totalPages}`;
+            document.getElementById("prevBtn").disabled = (page === 1);
+            document.getElementById("nextBtn").disabled = (page === totalPages);
+        }
+
+        function nextPage() {
+            if (currentPage < totalPages) {
+                currentPage++;
+                showPage(currentPage);
+            }
+        }
+
+        function prevPage() {
+            if (currentPage > 1) {
+                currentPage--;
+                showPage(currentPage);
+            }
+        }
+
+        // Mostrar la primera página al cargar
+        showPage(currentPage);
+
+
+    </script>
+    
+    <script src="/js/reclutamiento.js"></script>
+</body>
+</html>
