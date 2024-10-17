@@ -24,7 +24,7 @@ export const error404 = (req, res) => {
 }
 
 export const objetivos = (req, res) => {
-    res.render("views.objetivos.ejs")
+    res.render("views.objetivos.empleado.ejs")
 }
 
 export const nomina = (req, res) => {
