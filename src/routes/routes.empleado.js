@@ -10,5 +10,4 @@ rutaEmpleado.get("/pago", pago)
 
 
 
-
-export default rutaEmpleado
+export default rutaEmpleado;

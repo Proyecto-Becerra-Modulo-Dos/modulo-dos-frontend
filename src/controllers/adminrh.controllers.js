@@ -77,3 +77,29 @@ export const verNomina = async(req, res) => {
         res.status(500).send(error);
     }
 }
+export const gestionReclutamiento = (req, res) => {
+    res.render("views.gestion.reclutamiento.ejs")
+}
+export const mostrarRecluta = (req, res) => {
+    res.render("view.recluta.ejs")
+}
+export const agregarOferta = async(req, res) => {
+    try {
+        const recurso = url + `/oferta/beneficios`;
+        const response = await fetch(recurso);
+        const data = await response.json();
+        res.render("views.oferta.ejs", {
+            beneficios: data.body
+        });
+    } catch (error) {
+        res.status(500).send(error);
+    }
+
+}
+export const estructuraOrganizacional = (req, res) => {
+    res.render("view.estructura.organizacional.ejs")
+}
+export const programarEntrevista = (req, res) => {
+    res.render("views.entrevista.ejs")
+}
+

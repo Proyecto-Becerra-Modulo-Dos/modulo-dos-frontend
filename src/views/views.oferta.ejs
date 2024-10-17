@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Oferta de Empleo</title>
+    
+    <link rel="stylesheet" href="/css/menu_barra_adminrh.css">
+    <link rel="stylesheet" href="/css/crear_empleado.css">
+    <link rel="stylesheet" href="/css/oferta.css">
+</head>
+<body>
+    <div class="container">
+        <%- include("partials/menu_adminrh") %>
+        <%- include("partials/barra_adminrh") %>
+        
+        
+        <div class="contenido">
+            <div class="titulo">
+                <h1 class="title">Agregar Oferta de Empleo</h1>
+            </div>
+        
+            <div class="form__oferta">
+                <div class="form-group">
+                    <% beneficios.forEach(beneficio => { %>
+                    <label for="beneficios">Beneficio:</label>
+                    <select name="select">
+                        <option value="<%= beneficio.idBeneficio %>"><%= beneficio.descripcion %></option>
+                        <option selected>Ingrese qué tipo de beneficios tendrá el empleado</option>
+                    </select>
+                    <!-- <input type="number" id="beneficio" placeholder="Ingrese qué tipo de beneficios tendrá el empleado"> -->
+                    <% }); %>
+                </div>
+                <div class="form-group">
+                    <label for="jornada">Fecha Fin de la oferta:</label>
+                    <input type="date" id="fecha" placeholder="Ingrese la fecha fin de la oferta">
+                </div>
+                <div class="form-group">
+                    <label for="titulo">Título del puesto:</label>
+                    <input id="puesto" class="puesto" placeholder="Ingrese el nombre del cargo o posición a cubrir">
+                </div>
+                <div class="form-group">
+                    <label for="descripcion">Descripción del trabajo:</label>
+                    <input type="text" id="descripcion" placeholder="Ingrese en detalle las responsabilidades del puesto">
+                </div>
+                <div class="form-group">
+                    <label for="formacion">Experiencia:</label>
+                    <input type="text" id="experiencia" placeholder="Ingrese la experiencia requerida">
+                </div>
+                <div class="form-group">
+                    <label for="salarios">Salario:</label>
+                    <input type="number" id="salario" placeholder="Ingrese el rango salarial">
+                </div>
+
+                <button class="btn__oferta" onclick="agregarOferta();">Agregar Oferta</button>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/js/oferta.js"></script>
+</body>
+</html>
