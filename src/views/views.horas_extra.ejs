@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Horas Extra Registradas</title>
+    <link rel="stylesheet" href="/css/menu.css" />
+    <link rel="stylesheet" href="/css/horas_extra.css" />
+  </head>
+
+  <body>
+    <div class="bg__main">
+      <div class="bg__left">
+        <div class="container__logo">
+          <div class="logo"></div>
+        </div>
+
+        <div class="container__menu">
+          <div class="menu">
+            <ul class="list">
+              <li class="list__item">
+                <div class="list__button">
+                  <a href="#" class="menu__link">Inicio</a>
+                </div>
+              </li>
+
+              <li class="list__item list__item--click">
+                <div class="list__button list__button--click">
+                  <a href="#" class="menu__link">Solicitudes</a>
+                  <img src="/img/down-arrow.png" class="list__arrow" />
+                </div>
+
+                <ul class="list__show">
+                  <li class="list__inside">
+                    <a href="#" class="menu__link menu__link--inside">
+                      Vacaciones
+                    </a>
+                  </li>
+
+                  <li class="list__inside">
+                    <a href="#" class="menu__link menu__link--inside">
+                      Permisos
+                    </a>
+                  </li>
+
+                  <li class="list__inside">
+                    <a href="#" class="menu__link menu__link--inside">
+                      Desvinculacion
+                    </a>
+                  </li>
+
+                  <li class="list__inside">
+                    <a href="#" class="menu__link menu__link--inside">
+                      Registro de horas
+                    </a>
+                  </li>
+
+                  <li class="list__inside">
+                    <a href="#" class="menu__link menu__link--inside">
+                      Trabajo remoto
+                    </a>
+                  </li>
+
+                  <li class="list__inside">
+                    <a href="#" class="menu__link menu__link--inside">
+                      Objetivo de empleados
+                    </a>
+                  </li>
+
+                  <li class="list__inside">
+                    <a href="#" class="menu__link menu__link--inside">
+                      Informes
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="list__item list__item--click">
+                <div class="list__button list__button--click">
+                  <a href="#" class="menu__link">Evaluaciones</a>
+                  <img src="/img/down-arrow.png" class="list__arrow" />
+                </div>
+
+                <ul class="list__show">
+                  <li class="list__inside">
+                    <a href="#" class="menu__link menu__link--inside">
+                      Pasantes
+                    </a>
+                  </li>
+
+                  <li class="list__inside">
+                    <a href="#" class="menu__link menu__link--inside">
+                      Desempeño
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="container__footer">
+          <div class="footer">
+            <p class="supervisor">Supervisor</p>
+            <p>supervisor@gmail.com</p>
+          </div>
+          <div class="img__footer">
+            <button class="setting-btn">
+              <span class="bar bar1"></span>
+              <span class="bar bar2"></span>
+              <span class="bar bar1"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="bg__right">
+        <div class="top__bar">
+          <div class="notications">
+            <button class="button">
+              <svg viewBox="0 0 448 512" class="bell">
+                <path
+                  d="M224 0c-17.7 0-32 14.3-32 32V49.9C119.5 61.4 64 124.2 64 200v33.4c0 45.4-15.5 89.5-43.8 124.9L5.3 377c-5.8 7.2-6.9 17.1-2.9 25.4S14.8 416 24 416H424c9.2 0 17.6-5.3 21.6-13.6s2.9-18.2-2.9-25.4l-14.9-18.6C399.5 322.9 384 278.8 384 233.4V200c0-75.8-55.5-138.6-128-150.1V32c0-17.7-14.3-32-32-32zm0 96h8c57.4 0 104 46.6 104 104v33.4c0 47.9 13.9 94.6 39.7 134.6H72.3C98.1 328 112 281.3 112 233.4V200c0-57.4 46.6-104 104-104h8zm64 352H224 160c0 17 6.7 33.3 18.7 45.3s28.3 18.7 45.3 18.7s33.3-6.7 45.3-18.7s18.7-28.3 18.7-45.3z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <div class="account">
+            <button class="user-button">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-user"
+              >
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <!-- container__main -->
+        <div class="container__main">
+          <h1 class="headerTitle">Horas Extra Registradas</h1>
+          <div class="big_box">
+            <div class="classification">
+              <div class="classification-item Solicitudes" id="solicitudes-btn">
+                <span>Solicitudes</span>
+              </div>
+              <div class="classification-item Aprobados" id="aprobados-btn">
+                <span>Aprobadas</span>
+              </div>
+              <div class="classification-item Rechazados" id="rechazados-btn">
+                <span>Rechazadas</span>
+              </div>
+            </div>
+
+            <!-- rechazados container -->
+            <div id="rechazados-container" class="cont-classification hidden">
+              <!-- tabla -->
+              <table>
+                <thead>
+                  <tr>
+                    <th>Nombres</th>
+                    <th>Apellidos</th>
+                    <th>E-mail</th>
+                    <th>Horas</th>
+                    <th>Rol</th>
+                    <th>Aprobación</th>
+                  </tr>
+                </thead>
+                <tbody id="dataRechazados"></tbody>
+              </table>
+            </div>
+
+            <!-- Contenedor de Aprobadas -->
+            <div id="aprobados-container" class="cont-classification hidden">
+              <!-- tabla -->
+              <table>
+                <thead>
+                  <tr>
+                    <th>Nombres</th>
+                    <th>Apellidos</th>
+                    <th>E-mail</th>
+                    <th>Horas</th>
+                    <th>Rol</th>
+                    <th>Aprobación</th>
+                  </tr>
+                </thead>
+                <tbody id="dataAprobados"></tbody>
+              </table>
+            </div>
+
+            <!-- container solicitudes -->
+            <div id="solicitudes-container" class="cont-classification">
+              <!-- tabla -->
+              <table>
+                <thead>
+                  <tr>
+                    <th>Nombres</th>
+                    <th>Apellidos</th>
+                    <th>E-mail</th>
+                    <th>Horas</th>
+                    <th>Rol</th>
+                    <th>Aprobación</th>
+                  </tr>
+                </thead>
+                <tbody id="dataSolicitud"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <input type="hidden" value="<%= url %>" id="url" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/js/menu.js"></script>
+    <script src="/js/h_extra.js"></script>
+  </body>
+</html>
