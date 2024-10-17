@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="/css/pago.css">
+  <title>Solicitud de permiso de ausencia</title>
+  <style>
+
+    .header {
+        background-color: white;
+        padding: 10px;
+        border: black solid 1px;
+        border-radius: 14px;
+        display: flex;
+
+        justify-content: center;
+        margin-bottom: 20px;
+        margin-top: 10px;
+    }
+    .back-link {
+        padding-top: 0;
+        text-decoration: none;
+        font-size: xx-large;
+        font-weight: bold;
+        color: #007bff;
+        margin-right: 10px;
+    }
+    h1 {
+        font-size: 18px;
+        margin: 0;
+    }
+    form {
+        background-color: white;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        border: black solid 1px;
+        border-radius: 16px;
+    }
+    label {
+        margin-top: 10px;
+        font-size: 14px;
+    }
+    input, select {
+        margin-top: 5px;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+    button {
+        margin-top: 20px;
+        padding: 10px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #0056b3;
+    }
+</style>
+</head>
+<body>
+  <%- include('partials/sidebar') %>
+  <div class="content principal">
+    <%- include('partials/navbar') %>
+    
+    <div class="container">
+      <div class="contenedor">
+        <a href="#" class="back-link">← Volver</a>
+        <div class="header">
+            <h1>Solicitud de Permiso de Ausencia</h1>
+        </div>
+        <form class="formulario">
+            <label for="nombre">Nombre del Empleado:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            
+            <label for="departamento">Departamento:</label>
+            <input type="text" id="departamento" name="departamento" required>
+            
+            <label for="fecha-inicio">Fecha de Inicio:</label>
+            <input type="date" id="fecha-inicio" name="fecha-inicio" value="2024-10-16" required>
+            
+            <label for="fecha-fin">Fecha de Fin:</label>
+            <input type="date" id="fecha-fin" name="fecha-fin" value="2024-10-16" required>
+            
+            <label for="tipo-permiso">Tipo de permiso:</label>
+            <select id="tipo-permiso" name="tipo-permiso" required>
+                <option value="">Seleccione el tipo</option>
+                <option value="vacaciones">Vacaciones</option>
+                <option value="enfermedad">Enfermedad</option>
+                <option value="personal">Personal</option>
+            </select>
+            
+            <label for="motivo">Motivo de la Ausencia:</label>
+            <input type="text" id="motivo" name="motivo" required>
+            
+            <button type="submit">Enviar solicitud</button>
+        </form>
+
+    </div>
+  </div>
+</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    let links = document.querySelectorAll(".nav1");
+    let contenido1 = document.querySelector(".contenido1");
+    let contenido2 = document.querySelector(".contenido2");
+    let line = document.querySelector(".line");
+    let badges = document.querySelectorAll(".badge");
+
+    badges.forEach(badge => {
+      if (badge.innerHTML === "En proceso") {
+        badge.classList.add("en-proceso");
+      } else if (badge.innerHTML === "Aprobado") {
+        badge.classList.add("completada");
+      } else if (badge.innerHTML === "Rechazado") {
+        badge.classList.add("rechazada");
+      }
+    });
+    links[0].style.fontWeight = "bold";
+    links[0].closest(".opcion").appendChild(line);
+
+    let array = [...links];
+
+    links.forEach((link) => {
+        link.addEventListener("click", (e) => {
+            links.forEach(l => l.style.fontWeight = "normal");
+            e.target.style.fontWeight = "bold";
+
+            let opcion = e.target.closest(".opcion");
+            opcion.appendChild(line);
+
+            if (array.indexOf(link) === 1) {
+                contenido1.style.display = "none";
+                contenido2.style.display = "flex";
+            } else {
+                contenido1.style.display = "flex";
+                contenido2.style.display = "none";
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
