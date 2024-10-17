@@ -117,22 +117,22 @@ body {
     outline: none;
 } 
 
-.upload-header {
-    font-size: 15px;
+.cargardocumentos{
     position: absolute;
-    margin-bottom: 10px;
-    margin-top: -270px;
-    margin-left: -790px;
-    font-weight: bold;
-    color: #2b2c33b0;
 }
 
 .file-list {
-    list-style: none;
+    list-style-type: none;
     padding: 0;
     margin: 0;
-    max-height: 200px;
-    overflow-y: auto;
+}
+
+.file-list li {
+    margin-bottom: 5px; 
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    position: relative; 
 }
 
 .file-item {

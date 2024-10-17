@@ -11,40 +11,39 @@
 <body>
     <%- include('partials/sidebar') %>
 
-  <div class="content principal">
-    <%- include('partials/navbar') %>
-    <div class="container">
-        <div class="volver">
-            <button class="boton" type="submit"> Volver </button>
-        </div>
-        <div class="titulo">
-            <h5>Cargar docuementos personales</h5>
-        </div>
-        <div class="contenido">
-            <div class="cargar">
-                <div class="upload-header">
-                    <p>Archivo <span id="fileCount">0/3</span> subido...</p>
-                </div>
-                <ul class="file-list" id="fileList">
-                    <!-- Aquí se mostrarán los archivos -->
-                </ul>
-                <div class="upload-actions">
-                    <button class="add-files-btn" onclick="document.getElementById('fileInput').click()">Añadir otros archivos</button>
-                </div>
-                <input type="file" id="fileInput" class="file-input" accept=".pdf" multiple onchange="handleFiles(event)" />
+    <div class="content principal">
+        <%- include('partials/navbar') %>
+        <div class="container">
+            <div class="volver">
+                <button class="boton" type="submit"> Volver </button>
             </div>
-            <button class="cancelar" type="submit"> Cancelar </button>
-            <button class="guardar" type="submit"> Guardar </button>
-            <input type="text" class="tipo" placeholder="Tipo de Archivo">
-            <div class="linea">
-                <span class="linee"></span>
+            <div class="titulo">
+                <h5>Cargar documentos personales</h5>
             </div>
-            <div class="linea">
-                <span class="linee2"></span>
+            <div class="contenido">
+                <div class="cargar">
+                    <div class="cargardocumentos">
+                        <ul class="file-list" id="fileList">
+                            <!-- Aquí se mostrarán los archivos -->
+                        </ul>
+                    </div>
+                    <div class="upload-actions">
+                        <button class="add-files-btn" onclick="document.getElementById('fileInput').click()">Añadir otros archivos</button>
+                    </div>
+                    <input type="file" id="fileInput" class="file-input" accept=".pdf,.doc,.docx,.xls,.xlsx,.ppt,.pptx" multiple />
+                </div>
+                <input type="text" id="tipoDocumento" class="tipo" placeholder="Tipo de Archivo">
+                <div class="linea">
+                    <span class="linee"></span>
+                </div>
+                <div class="linea">
+                    <span class="linee2"></span>
+                </div>
+                <button class="guardar" onclick="uploadDocument()">Guardar</button>
+                <button class="cancelar" type="submit"> Cancelar </button>
             </div>
         </div>
     </div>
-  </div>
-  <script src="./js/documentos.js"></script>
+    <script src="./js/documentos.js"></script>
 </body>
 </html>

@@ -23,10 +23,6 @@ export const incoporacion = (req, res) => {
     res.render("views.formulario.incorporacion.ejs")
 }
 
-export const cargarDocumentos = (req, res) => {
-    res.render("views.cargar.documentos.ejs")
-}
-
 export const Documentos = (req, res) => {
     res.render("views.documentos.ejs") 
 }
