@@ -1,21 +1,20 @@
 // url para el consumo del front del backend
 
-const apex = "http://localhost:3000/oferta/agregaroferta";
+const apex = "http://localhost:3000/entrevista/programarentrevista";
 
 // fetch
 
 
 
 
-const agregarOferta = () =>{
-    const beneficio = document.getElementById("beneficio").value;
+const agregarEntrevista = () =>{
+    const nombre = document.getElementById("nombre").value;
+    const tipo = document.getElementById("tipo").value;
     const fecha = document.getElementById("fecha").value;
-    const puesto = document.getElementById("puesto").value;
     const descripcion = document.getElementById("descripcion").value;
-    const experiencia = document.getElementById("experiencia").value;
-    const salario = document.getElementById("salario").value;
+   
     
-    if(!beneficio || !fecha|| !puesto || !descripcion || !experiencia || !salario){
+    if(!nombre || !tipo|| !fecha || !descripcion){
         Swal.fire("Campos vacíos!");
         return; 
     }
@@ -27,12 +26,10 @@ const agregarOferta = () =>{
             "Content-Type" : "application/json"
         },
         body: JSON.stringify({
-            idBeneficio: beneficio,
-            fecha_fin_oferta:fecha,
-            titulo_puesto:puesto,
-            descripcion_puesto:descripcion,
-            ano_experiencia:experiencia,
-            salario_oferta:salario
+            idReclutamiento: nombre,
+            tipo_entrevista:tipo,
+            fecha_entrevista:fecha,
+            descripcion:descripcion,
         })
     }
     fetch(apex,options)
@@ -49,7 +46,7 @@ const agregarOferta = () =>{
             Swal.fire({
                 position: "center",
                 icon: "success",
-                title: "Nota agregada Correctamente",
+                title: "Entrevista agregada Correctamente",
                 showConfirmButton: false,
                 timer: 3000
             });
@@ -61,13 +58,5 @@ const agregarOferta = () =>{
         }
     })
     .catch(error => console.error(error));
-
-    console.log(beneficio);
-    console.log(fecha);
-    console.log(puesto);
-    console.log(descripcion);
-    console.log(experiencia);
-    console.log(salario);
-    
     
 }   

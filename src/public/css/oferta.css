@@ -16,6 +16,7 @@
 }
 .contenido > .titulo{
     margin-bottom: 20px;
+
 }
 .form__oferta {
     display: grid;
@@ -56,4 +57,11 @@ input {
 
 .btn__oferta:hover {
     background-color: #0056b3;
+}
+.sle{
+    width: 520px;
+    height: 53px;
+    padding: 10px;
+    cursor: pointer;
+    background-color: rgba(128, 128, 128, 0.24);
 }

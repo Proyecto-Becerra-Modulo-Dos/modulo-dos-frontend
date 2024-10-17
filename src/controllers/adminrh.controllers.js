@@ -37,5 +37,5 @@ export const estructuraOrganizacional = (req, res) => {
     res.render("view.estructura.organizacional.ejs")
 }
 export const programarEntrevista = (req, res) => {
-    res.render("view.entrevista.ejs")
+    res.render("views.entrevista.ejs")
 }

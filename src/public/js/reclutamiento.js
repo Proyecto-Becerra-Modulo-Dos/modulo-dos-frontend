@@ -24,19 +24,12 @@
                             <td>${data[i].idReclutamiento}</td>
                             <td>${data[i].nombre}</td>
                             <td>
-                                <button class="btn btn-primary">Programar entrevista</button>
+                                <a href="/admin/entrevista" class="btn btn-primary">Programar Entrevista</a>
                                 <button class="btn btn-danger">Desvincular</button>
-                                <button class="btn btn-primary"  onclick="mostrarRecluta();">Mas informacion</button>
+                                <button class="btn btn-primary">Mas informacion</button>
                             </td>
-                        </tr>
+            </tr>
         `
     }
     document.getElementById("tableBody").innerHTML = body;
  }
-
-
- const mostrarRecluta = () =>{
-   
-    alert("hola")
-    
-}
