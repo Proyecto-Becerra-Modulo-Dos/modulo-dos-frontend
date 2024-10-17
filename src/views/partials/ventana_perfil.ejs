@@ -96,7 +96,7 @@
 
 
     const url2 = "http://localhost:3000"; //Está es la url que trae lo del backend
-    const endpoint2 = "/mostrarDescripcionRol";
+    const endpoint2 = "/empleados/mostrarDescripcionRol";
     const recurso2 = url2 + endpoint2;
     const idUser2 = 1;
 
@@ -115,14 +115,13 @@
     fetch(recurso2, options)
         .then((res) => res.json())
         .then((data) => {
-            console.log(data.body[0]);
 
             if (data.error) {
                 console.error("error al mostrar datos", data);
             } else {
 
-                document.getElementById("descripcion_puesto").innerText = data.body[0].descripcion.substring(0, 150) + "...";
-                document.getElementById("nombre").innerText = `¡Hola, ${data.body[0].nombre}!`;
+                document.getElementById("descripcion_puesto").innerText = data[0].Descripcion.substring(0, 150) + "...";
+                document.getElementById("nombre").innerText = `¡Hola, ${data[0].nombre}!`;
             }
 
         })
