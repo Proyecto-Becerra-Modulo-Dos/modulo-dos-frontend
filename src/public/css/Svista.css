@@ -1,0 +1,108 @@
+* {
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /* Incluye padding y border en el tamaño total del elemento */
+}
+
+body {
+    overflow: hidden;
+}
+
+.container { /* El contenedor padre que no ocupa todo el espacio */
+    width: 80vw; /* Usa el 80% del ancho de la ventana */
+    height: 80vh; /* Usa el 80% de la altura de la ventana */
+    margin: auto; /* Centramos el contenedor */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+.headerTitle {
+    font-size: 25px;
+    margin-bottom: 2px;
+}
+
+.big_box {
+    width: 95%; /* Ajustado al 95% del contenedor */
+    height: 90%; /* Ajustado para ocupar el 75% de la altura del contenedor */
+    padding: 20px;
+    background-color: #E4E4E4;
+    border: #A0A0A0 solid 1px;
+    box-sizing: border-box;
+}
+
+.dashboard {
+    display: flex;
+    grid-gap: 20px; /* Espacio entre las cajas */
+    width: 100%;
+    height: 100%;
+}
+
+.box {
+    background-color: white;
+    padding: 11px 36px 11px 36px;
+    margin: 10px;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.parts{
+    display: flex;
+}
+
+.column__one{
+    width: 60%;
+}
+
+.total {
+    background-color: #FFFFFF;
+    border: #BABABA 1px solid;
+}
+
+.ganancias {
+    background-color: #53FF4A;
+    border: #008500 solid 1px;
+    color: #008500;
+}
+
+.gastos {
+    background-color: #FFFF4C;
+    border: #81811A solid 1px;
+    color: #81811A;
+}
+
+.perdidas {
+    background-color: #FF4E4E;
+    border: #851111 solid 1px;
+    color: #851111;
+}
+
+.circle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pie-chart {
+    width: 70%;
+    height: 70%;
+}
+
+.column__two{
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+.line-chart{
+    width: 104%;
+    height: 60%;
+}
