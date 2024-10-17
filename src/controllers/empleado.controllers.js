@@ -48,3 +48,6 @@ export const pago = (req, res) => {
         })
         .catch(err => console.error(err));
 }
+export const registrarHoras = (req, res) => {
+    res.render("views.registrar_horas.ejs")
+}

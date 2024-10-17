@@ -6,6 +6,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="/css/pago.css">
+  <link rel="stylesheet" href="/css/horas.css">
   <title>Empleado</title>
 </head>
 <body>
@@ -15,72 +16,21 @@
     
     <div class="container">
       <div class="contenedor">
-        <h2 class="pagos">Pagos</h2>
-          <div class="titulo">
-            <div class="separador">
-              <div class="opcion">
-                  <a class="nav1">Mis cuentas asociadas</a>
-              </div>
-              <div class="opcion">
-                  <a class="nav1">Solicitudes de Cambios</a>
-              </div>
-            </div>
-            <a href="solicitar" class="solicitar_info">Cambiar informacion bancaria</a>
-          </div>
-      <div class="contenedorg">
-        <div class="contenido1">
-          <% data.cuenta.forEach(cuenta => { %>
-              <div class="contenedor_cuenta">
-                  <div></div>
-                  <div class="inf">
-                      <h5><%= cuenta.banco %>****<%= cuenta.numero_cuenta.toString().slice(-4) %></h5>
-                      <p class="razon">Razón social: <span class="censura"><%= cuenta.banco %></span></p>
-                      <a href="" class="tiendas">Ver 15 tiendas que usan esta tienda ></a>
-                  </div>
-              </div>
-          <% }); %>
-      </div>
-      
-
-        <div class="contenido2">
-          <div class="tabla-container">
-            <table>
-              <thead>
-                  <tr>
-                      <th>ID de Solicitud</th>
-                      <th>Fecha</th>
-                      <th>Banco</th>
-                      <th>Cuentas Bancarias</th>
-                      <th>Estado</th>
-                  </tr>
-              </thead>
-              <tbody>
-                <% if (Array.isArray(soli)) { %>
-                    <% soli.forEach(solicitud => { %>
-                        <tr>
-                            <td><a href="#"><%= solicitud.idSolicitudes %></a></td>
-                            <td><%= new Date(solicitud.fecha_solicitud).toLocaleDateString() %></td>
-                            <td><%= solicitud.banco %></td>
-                            <td><%= solicitud.descripcion %></td>
-                            <td><span class="badge  <%= solicitud.estado.toLowerCase() %>"><%= solicitud.estado %></span></td>
-                        </tr>
-                    <% }); %>
-                <% } else { %>
-                    <tr>
-                        <td colspan="5">No hay solicitudes disponibles.</td>
-                    </tr>
-                <% } %>
-            </tbody>
-            
-          </table>
+        <h1>Registrar Horas Trabajadas</h1>
+        <div class="hInicio">
+          <p>Hora de Inicio:</p>
+          <input type="time" class="form-control horaInicio">
         </div>
+        <div class="hInicio">
+          <p>Hora de Finalización:</p>
+          <input type="time" class="form-control horaFin">
         </div>
-      </div>
-
+        <button class="btn btn-guardar">Guardar</button>
+      </div> 
     </div>
-  </div>
 </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/js/horas.js"></script>
 </body>
 </html>
