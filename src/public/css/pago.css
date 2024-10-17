@@ -1,5 +1,6 @@
 body {
     display: flex;
+    user-select: none;
   }
   .content {
     flex-grow: 1;
@@ -113,7 +114,9 @@ body {
 .pagos{
     height: 60px;
 }
-
+.datosCuenta{
+    display: flex;
+}
 .tabla-container {
     width: 100%;
     max-width: 800px;

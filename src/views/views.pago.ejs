@@ -41,7 +41,7 @@
       
 
         <div class="contenido2">
-          <div class="tabla-container">
+          <div class="tabla-container" id="tablaContainer">
             <table>
               <thead>
                   <tr>
@@ -116,6 +116,36 @@
                 contenido1.style.display = "flex";
                 contenido2.style.display = "none";
             }
+        });
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const tablaContainer = document.getElementById('tablaContainer');
+
+        let isDown = false;
+        let startY;
+        let scrollTop;
+
+        tablaContainer.addEventListener('mousedown', (e) => {
+            isDown = true;
+            startY = e.pageY - tablaContainer.offsetTop;
+            scrollTop = tablaContainer.scrollTop;
+        });
+
+        tablaContainer.addEventListener('mouseleave', () => {
+            isDown = false;
+        });
+
+        tablaContainer.addEventListener('mouseup', () => {
+            isDown = false;
+        });
+
+        tablaContainer.addEventListener('mousemove', (e) => {
+            if (!isDown) return; // Detener si no se está arrastrando
+            e.preventDefault();
+            const y = e.pageY - tablaContainer.offsetTop;
+            const walk = (y - startY) * 1.5; // Ajusta la velocidad de desplazamiento
+            tablaContainer.scrollTop = scrollTop - walk;
         });
     });
 </script>
