@@ -84,8 +84,8 @@ export const politicasRemoto = async(req, res) => {
         const recurso = url + `/politicas-remoto`;
         const response = await fetch(recurso);
         const data = await response.json();
-        console.log(data.response);
-        res.render("view.politica.trabajo.remoto.admin.rh.ejs", {data : data.response});
+        console.log(data);
+        res.render("view.politica.trabajo.remoto.admin.rh.ejs", {data : data});
         
     } catch (error) {
         console.error(error);
