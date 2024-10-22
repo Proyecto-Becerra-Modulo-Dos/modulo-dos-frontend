@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apex</title>
+    <link rel="stylesheet" href="/css/menu_barra_adminrh.css">
+    <!-- css personalizado  -->
+    <link rel="stylesheet" href="/css/politica.trabajo.remoto.admin.rh.css">
+    <link rel="icon" href="/img/estrella-afilada-medio-trazo 1.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <%- include('partials/menu_adminrh') %>
+        <%- include('partials/barra_adminrh') %>
+        <div class="cont-fondo">
+
+            <div class="admin_politicas_remoto_header">
+                
+                <div class="admin_politicas_remoto_header_left" >
+
+                    <img src="/img/Back.png" width="50px">
+                    <h2>Políticas de Trabajo Remoto</h2>
+                </div>
+
+                <!-- boton editar politicas  -->
+                <div class="admin_politicas_remoto_header_right">
+                    <div class="admin_politicas_remoto_right_btn">Editar politicas</div>
+                </div>
+            </div>
+
+            <!-- cuadro de informacion  -->
+            <% data.forEach(data => { %>
+            <div class="admin_politicas_remoto_contenedor_info">
+                <div class="admin_politicas_remoto_cuadro_gris">
+                    <div class="admin_politicas_remoto_cuadro_gris_text"><%= data.nombre %></div>
+                </div>
+                <div class="admin_politicas_remoto_cuadro_borde_black">
+                    <div class="admin_politicas_remoto_cuadro_borde_black_text"><%= data.descripcion %></div>
+                </div>
+            </div>
+            <% }); %>
+
+            
+    </div>
+
+
+    <!-- script personalizado  -->
+     <script src="/js/politica.trabajo.remoto.js"></script>
+</body>
+</html>

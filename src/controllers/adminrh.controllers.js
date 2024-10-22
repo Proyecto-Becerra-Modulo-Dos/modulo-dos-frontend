@@ -77,3 +77,18 @@ export const verNomina = async(req, res) => {
         res.status(500).send(error);
     }
 }
+
+export const politicasRemoto = async(req, res) => {
+    
+    try {
+        const recurso = url + `/politicas-remoto`;
+        const response = await fetch(recurso);
+        const data = await response.json();
+        console.log(data.response);
+        res.render("view.politica.trabajo.remoto.admin.rh.ejs", {data : data.response});
+        
+    } catch (error) {
+        console.error(error);
+        res.status(500).send(error);
+    }
+}
