@@ -77,6 +77,7 @@ export const verNomina = async(req, res) => {
         res.status(500).send(error);
     }
 }
+
 export const gestionReclutamiento = (req, res) => {
     res.render("views.gestion.reclutamiento.ejs")
 }
@@ -102,4 +103,3 @@ export const estructuraOrganizacional = (req, res) => {
 export const programarEntrevista = (req, res) => {
     res.render("views.entrevista.ejs")
 }
-

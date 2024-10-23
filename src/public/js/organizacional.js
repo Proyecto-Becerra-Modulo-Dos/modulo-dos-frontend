@@ -1,3 +1,13 @@
+document.addEventListener('DOMContentLoaded', async () => {
+
+    // Ventana Emergente
+    document.getElementById('openModal').addEventListener('click', function () {
+        document.getElementById('modalPlan').style.display = 'flex';
+    });
+    document.getElementById('closeModal').addEventListener('click', function () {
+        document.getElementById('modalPlan').style.display = 'none';
+    });
+})
 
 const apex = "http://localhost:3000/mostrar/rol";
 

@@ -11,4 +11,4 @@ ruta.use("/admin", rutaAdminRH);
 ruta.use("/empleado", rutaEmpleado);
 ruta.use("/supervisor", rutaSupervisor)
 
-export default ruta
+export default ruta;

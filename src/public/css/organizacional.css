@@ -41,7 +41,7 @@ h1 {
     width: 30%;
 }
 
-h2 {
+.txt-h2 {
     font-size: 18px;
     margin-bottom: 10px;
     background-color: #3b82f6;
@@ -63,10 +63,11 @@ h2 {
 }
 
 .role p {
+    color: #2B2C33;
     font-size: 16px;
 }
 
-button {
+.btn-respo {
     background-color: #3b82f6;
     color: white;
     border: none;
@@ -107,6 +108,10 @@ button:hover {
     background-color: #ffffff;
 }
 
+.roles-table tbody td{
+    color: #2B2C33;
+}
+
 .btn-action {
     background-color: #007bff;
     color: white;
@@ -119,4 +124,70 @@ button:hover {
 
 .btn-action:hover {
     background-color: #0056b3;
+}
+
+/* Ventana emergente */
+
+.modal {
+    display: none; 
+    position: fixed;
+    border-radius: 15px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    border-radius: 6px;
+    width: 500px;
+    background-color: #C8CBE0;
+    text-align: center;
+    position: relative;
+}
+
+.h2-modal{
+    font-size: 18px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    color: white;
+    background-color: #1E3DEA;
+    padding: 15px;
+    text-align: start;
+}
+
+.role-modal{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    padding-left: 15px;
+    border-top: 1px solid #A1A6CA;
+}
+
+.role-modal p {
+    color: #2B2C33;
+}
+
+.btn-activar{
+    width: 240px;
+    border-radius: 15px;
+    height: 30px;
+    background-color: #1E3DEA;
+    color: white;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.btn-x{
+    cursor: pointer;
+    margin-left: 370px;
+    color: white;
 }

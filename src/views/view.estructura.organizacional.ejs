@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,34 +9,35 @@
     <link rel="stylesheet" href="/css/crear_empleado.css">
 
     <link rel="stylesheet" href="/css/organizacional.css">
-    
+
 </head>
+
 <body>
     <div class="container">
         <%- include("partials/menu_adminrh") %>
-        <%- include("partials/barra_adminrh") %>
-        
-        <div class="contenido">
-            <div class="he">
-                
-                <h1>Administración de Estructura Organizacional</h1>
-                <button>Crear Permiso</button>
-                <button>Ver Permiso</button>
-            </div>
+            <%- include("partials/barra_adminrh") %>
 
-        <div class="section-container">
-            <!-- Sección Recursos Humanos -->
-            <div class="section">
-                <h2>Recursos Humanos</h2>
-                <table class="roles-table">
-                    <thead>
-                        <tr>
-                            <th>Rol</th>
-                            <th>Acción</th>
-                        </tr>
-                    </thead>
-                    <tbody id="cuerpo">
-                        <!-- <tr>
+                <div class="contenido">
+                    <div class="he">
+
+                        <h1>Administración de Estructura Organizacional</h1>
+                        <button class="btn-respo">Crear Permiso</button>
+                        <button class="btn-respo">Ver Permiso</button>
+                    </div>
+
+                    <div class="section-container">
+                        <!-- Sección Recursos Humanos -->
+                        <div class="section">
+                            <h2 class="txt-h2">Recursos Humanos</h2>
+                            <table class="roles-table">
+                                <thead>
+                                    <tr>
+                                        <th>Rol</th>
+                                        <th>Acción</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="cuerpo">
+                                    <!-- <tr>
                             <td>Administrador</td>
                             <td><button class="btn-action">Responsabilidad</button></td>
                         </tr>
@@ -51,46 +53,57 @@
                             <td>Reclutador</td>
                             <td><button class="btn-action">Responsabilidad</button></td>
                         </tr> -->
-                    </tbody>
-                </table>
-            </div>
-            
-            
+                                </tbody>
+                            </table>
+                        </div>
 
-            <!-- Sección Inventario -->
-            <div class="section">
-                <h2>Inventario</h2>
-                <div class="role">
-                    <p>Encargado</p>
-                    <button>Responsabilidad</button>
-                </div>
-            </div>
 
-            <!-- Sección Ventas -->
-            <div class="section">
-                <h2>Ventas</h2>
-                <div class="role">
-                    <p>Gerente</p>
-                    <button>Responsabilidad</button>
+
+                        <!-- Sección Inventario -->
+                        <div class="section">
+                            <h2 class="txt-h2">Inventario</h2>
+                            <div class="role">
+                                <p>Encargado</p>
+                                <button class="btn-respo" id="openModal">Responsabilidad</button>
+                            </div>
+                        </div>
+
+                        <!-- Sección Ventas -->
+                        <div class="section">
+                            <h2 class="txt-h2">Ventas</h2>
+                            <div class="role">
+                                <p>Gerente</p>
+                                <button class="btn-respo">Responsabilidad</button>
+                            </div>
+                            <div class="role">
+                                <p>Vendedor</p>
+                                <button class="btn-respo">Responsabilidad</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="role">
-                    <p>Vendedor</p>
-                    <button>Responsabilidad</button>
-                </div>
-            </div>
-        </div>
-        </div>
-        
-        
-        
+
+
+
     </div>
-
-
 
     <!-- modal -->
 
+    <div id="modalPlan" class="modal">
+        <div class="modal-content">
+            <h2 class="h2-modal">Permisos <span id="closeModal" class="btn-x">&times;</span></h2>
+            <div class="role-modal">
+                <p>Permiso #1</p>
+                <button class="btn-activar">Activar Responsabilidad</button>
+            </div>
+            <div class="role-modal">
+                <p>Permiso #2</p>
+                <button class="btn-activar">Desactivar Responsabilidad</button>
+            </div>
+        </div>
+    </div>
 
-     
     <script src="/js/organizacional.js"></script>
 </body>
+
 </html>

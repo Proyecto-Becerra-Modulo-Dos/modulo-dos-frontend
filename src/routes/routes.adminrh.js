@@ -1,6 +1,16 @@
 import { Router } from "express";
-import { crearEmpleadoAdminRH, empleadosAdminRH, empleadoXCompensacion, planCompesaciones, principalAdminRH, seleccionarPlan, verNomina } from "../controllers/adminrh.controllers.js";
-import { agregarOferta, estructuraOrganizacional, gestionReclutamiento, mostrarRecluta,  programarEntrevista } from "../controllers/adminrh.controllers.js";
+import { crearEmpleadoAdminRH, 
+    empleadosAdminRH, 
+    empleadoXCompensacion, 
+    planCompesaciones, 
+    principalAdminRH, 
+    seleccionarPlan, 
+    verNomina,
+    agregarOferta,
+    estructuraOrganizacional, 
+    gestionReclutamiento, 
+    mostrarRecluta,  
+    programarEntrevista } from "../controllers/adminrh.controllers.js";
 
 const rutaAdminRH = Router();
 
@@ -16,6 +26,5 @@ rutaAdminRH.get("/recluta", mostrarRecluta)
 rutaAdminRH.get("/oferta", agregarOferta)
 rutaAdminRH.get("/estructura", estructuraOrganizacional)
 rutaAdminRH.get("/entrevista", programarEntrevista)
-
 
 export default rutaAdminRH

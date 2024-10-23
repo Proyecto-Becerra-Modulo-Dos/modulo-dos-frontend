@@ -53,3 +53,7 @@ export const incoporacion = (req, res) => {
 export const Documentos = (req, res) => {
     res.render("views.documentos.ejs") 
 }
+
+export const cargarDocumentos = (req, res) => {
+    res.render("views.cargar.documentos.ejs")
+}
