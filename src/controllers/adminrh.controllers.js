@@ -103,3 +103,18 @@ export const estructuraOrganizacional = (req, res) => {
 export const programarEntrevista = (req, res) => {
     res.render("views.entrevista.ejs")
 }
+
+export const politicasRemoto = async(req, res) => {
+    
+    try {
+        const recurso = url + `/politicas-remoto`;
+        const response = await fetch(recurso);
+        const data = await response.json();
+        console.log(data);
+        res.render("view.politica.trabajo.remoto.admin.rh.ejs", {data : data});
+        
+    } catch (error) {
+        console.error(error);
+        res.status(500).send(error);
+    }
+}

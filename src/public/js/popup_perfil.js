@@ -4,8 +4,9 @@ const popup = document.querySelector('.popup');
 const accountButton = document.querySelector('.account-button');
 
 // Redirigir a empleado
+
 accountButton.addEventListener('click', function() {
-    window.location.href = '/empleado'; 
+    window.open('http://localhost:3100/empleado');
 });
 
 // abrir la ventana emergente 

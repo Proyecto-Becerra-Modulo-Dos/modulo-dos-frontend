@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+}
+
+.cont-fondo{
+    width: calc(100% - 255px);
+    margin-left: 255px;
+    margin-top: 36px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.admin_politicas_remoto_header{
+    width: 100%;
+    height: 80px;
+    margin-top: 2px;
+    /* background-color: aqua; */
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.admin_politicas_remoto_header_left{
+    width: 70%;
+    display: flex;
+    align-items: center;
+}
+.admin_politicas_remoto_header_left > img{
+    cursor: pointer;
+}
+
+.admin_politicas_remoto_header_left > h2{
+    margin-left: 10px;
+}
+
+.admin_politicas_remoto_right_btn{
+    width: 200px;
+    height: 50px;
+    margin-right: 30px;
+    background-color: #B2B0B0;
+    color: white;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+
+.admin_politicas_remoto_contenedor_info{
+    width: 70%;
+    margin-top: 10px;
+    margin-bottom: 15px;
+
+}
+
+.admin_politicas_remoto_cuadro_gris{
+    width: 100%;
+    height: 50px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-color: #A1A6CA;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding-left: 10px;
+}
+
+.admin_politicas_remoto_cuadro_gris_text{
+    color: rgb(107, 105, 105);
+}
+
+.admin_politicas_remoto_cuadro_borde_black{
+    width: 100%;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding-left: 8px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    
+}
+
+
+.line{
+    width: 75%;
+    height: 1px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    background: radial-gradient(circle, black 60%, rgba(0, 0, 0, 0) 100%);
+}
+
+.cuadro-gris{
+    width: 70%;
+    background-color: #D9D9D9;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.none{
+    display: none;
+}
+
+.circulo-rojo{
+    width: 40px;
+    height: 40px;
+    background: #FF2E2E;
+    margin-left: 10px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -10,8 +10,11 @@ import { crearEmpleadoAdminRH,
     estructuraOrganizacional, 
     gestionReclutamiento, 
     mostrarRecluta,  
-    programarEntrevista } from "../controllers/adminrh.controllers.js";
+    programarEntrevista,
+    politicasRemoto
+ } from "../controllers/adminrh.controllers.js"
 
+ 
 const rutaAdminRH = Router();
 
 rutaAdminRH.get("/principal", principalAdminRH)
@@ -26,5 +29,6 @@ rutaAdminRH.get("/recluta", mostrarRecluta)
 rutaAdminRH.get("/oferta", agregarOferta)
 rutaAdminRH.get("/estructura", estructuraOrganizacional)
 rutaAdminRH.get("/entrevista", programarEntrevista)
+rutaAdminRH.get("/politicas-trabajo-remoto", politicasRemoto)
 
 export default rutaAdminRH
