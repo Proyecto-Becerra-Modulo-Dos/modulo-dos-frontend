@@ -1,0 +1,151 @@
+body {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #f8f9fa;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.container {
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bienvenida {
+    color: white;
+    text-align: center;
+}
+
+.principal {
+    position: relative;
+    padding: 0;
+    background-image: url('../img/pexels-olia-danilevich-8145335.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 1;
+}
+
+.principal::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+.apex {
+    text-decoration: none;
+    color: white;
+    margin-top: 20px;
+}
+
+.apexx {
+    color: blue;
+    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+}
+
+.formulario-incorporacion {
+    background-color: #D5D5D5;
+    height: auto;
+    width: 650px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #394DC0;
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+}
+
+.linee{
+    height: 4px;
+    width: 610px;
+    display: flex;
+    position: absolute;
+    background: #394DC0;
+    margin-left: -5px;
+    border-radius: 15px;
+    
+}
+
+.formular{
+    height: auto;
+    width: auto;
+    background-color: #394DC0;
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 10px;
+    width: 180px; 
+}
+
+.form-group input {
+    width: 60%; 
+    background-color: transparent;
+    border: none;
+    border-radius: 5px;
+    margin: 8px;
+}
+.form-group input:focus {
+    background-color: #5064F0; 
+    border: 1px solid #5064F0;  
+    color: white;  
+}
+.form-group input::placeholder {
+    color: lightgray;  
+}
+input[type="date"]::-webkit-datetime-edit {
+    color: white;
+}
+
+
+.guardar-btn {
+    background-color: #394DC0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.guardar-btn {
+    width: 20%;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-left: 250px;
+}
+
+.guardar-btn:hover {
+    background-color: #101f74bd;
+}
+
