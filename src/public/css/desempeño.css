@@ -7,16 +7,20 @@
 
 body {
     overflow: hidden;
-}
-
-.container { /* El contenedor padre que no ocupa todo el espacio */
-    width: 80vw; /* Usa el 80% del ancho de la ventana */
-    height: 80vh; /* Usa el 80% de la altura de la ventana */
-    margin: auto; /* Centramos el contenedor */
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+    background-color: #f0f0f0;
+}
+
+.container { 
+    width: 80vw; /* Usa el 80% del ancho de la ventana */
+    height: 80vh; /* Usa el 80% de la altura de la ventana */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente */
+    align-items: center; /* Centra horizontalmente */
     background-color: #f0f0f0;
 }
 
@@ -27,13 +31,21 @@ body {
 
 .big_box {
     width: 95%; /* Ajustado al 95% del contenedor */
-    height: 90%; /* Ajustado para ocupar el 75% de la altura del contenedor */
+    height: 75%; /* Ajustado para ocupar el 75% de la altura del contenedor */
     padding: 20px;
     background-color: #C8CBE0;
     box-sizing: border-box;
 }
 
 .classification {
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+    padding: 2px;
+    border-radius: 5px;
+}
+
+.trabajador {
     display: flex;
     justify-content: space-around;
     background-color: white;
@@ -48,16 +60,6 @@ body {
     font-size: 18px;
     font-weight: bold;
     border-bottom: 3px solid transparent;
-}
-
-.trabajador {
-    font-size: 21px;
-    border-bottom-color: transparent;
-}
-
-.pasante {
-    font-size: 21px;
-    border-bottom-color: #1EEA7A;
 }
 
 .cont-classification {
