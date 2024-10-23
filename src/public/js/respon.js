@@ -1,5 +1,5 @@
 
-const apex = "http://localhost:3000/mostrar/rol";
+const apex = "http://localhost:3000/mostrar/permiso";
 
 
 
@@ -20,12 +20,14 @@ const mostrar = (data)=>{
     let body = "";
     for(let i=0; i<data.length;i++){
         body += `
-                <tr>
-                    <td>${data[i].nombre}</td>
-                    <td><a href="/admin/respo" class="btn-r">Responsabilidad</a></td>
+               <tr>
+                    <td>${data[i].permisos}</td>
+                    <td class="text-center">
+                        <button class="btn btn-primary">Activar</button>
+                    </td>
                 </tr>
         
         `
     }
-    document.getElementById("cuerpo").innerHTML = body;
+    document.getElementById("contenido").innerHTML = body;
 }

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estructura</title>
+    <link rel="stylesheet" href="/css/menu_barra_adminrh.css">
+    <link rel="stylesheet" href="/css/crear_empleado.css">
+    <link rel="stylesheet" href="/css/respo.css">
+    
+</head>
+<body>
+    <div class="container">
+        <%- include("partials/menu_adminrh") %>
+        <%- include("partials/barra_adminrh") %>
+        
+        <div class="contenido">
+            <h1>Editar Responsabilidad</h1>
+
+            <div class="container">
+                <!-- Cuadro contenedor -->
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Permisos</h4>
+                    </div>
+                    <div class="card-body">
+                        <!-- Tabla dentro del cuadro -->
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Permiso</th>
+                                    <th class="text-center">Responsabilidad</th>
+                                </tr>
+                            </thead>
+                            <tbody id="contenido">
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+
+            
+        </div>      
+    </div>   
+    <script src="/js/respon.js"></script>
+
+</body>
+</html>

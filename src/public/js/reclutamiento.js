@@ -26,7 +26,7 @@
                             <td>
                                 <a href="/admin/entrevista" class="btn btn-primary">Programar Entrevista</a>
                                 <button class="btn btn-danger">Desvincular</button>
-                                <button class="btn btn-primary">Mas informacion</button>
+                                <a href="/admin/recluta" class="btn btn-primary">Mas Información</a>
                             </td>
             </tr>
         `
