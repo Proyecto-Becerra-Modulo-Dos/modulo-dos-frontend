@@ -45,3 +45,7 @@ export const pago = (req, res) => {
         })
         .catch(err => console.error(err));
 }
+
+export const solicitarpermiso = (req, res) => {
+    res.render("views.solicitud-permiso-ausencia.ejs")
+}
