@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Open the modal
     createProgramBtn.addEventListener('click', () => {
-        createProgramModal.style.display = 'block';
+        createProgramModal.style.display = 'flex';
     });
 
     // Close the modal
@@ -90,7 +90,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function closeModal() {
         createProgramModal.style.display = 'none';
-        // Reset the form submission to create new programs
         confirmCreateBtn.removeEventListener('click', updateProgram);
         confirmCreateBtn.addEventListener('click', createProgram);
     }
@@ -100,7 +99,6 @@ document.addEventListener('DOMContentLoaded', () => {
         programDescriptionInput.value = '';
     }
 
-    // Helper function to escape HTML and prevent XSS
     function escapeHTML(str) {
         return str.replace(/[&<>'"]/g, 
             tag => ({

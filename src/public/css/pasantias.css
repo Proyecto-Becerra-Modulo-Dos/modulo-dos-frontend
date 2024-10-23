@@ -52,25 +52,26 @@ button.primary:hover {
 
 button.secondary {
     background-color: white;
-    color: red;
-    border: solid 1px red;
+    color: #007bff;
+    border: solid 1px #007bff;
     border-radius: 10px;
 }
 
 button.secondary:hover {
-    background-color: #545b62;
+    background-color: #0056b3;
 }
 
 button.danger {
-    background-color: #dc3545;
-    color: white;
+    background-color: white;
+    color: #ff7878;
+    border: solid 1px #c82333;
+    border-radius: 10px;
 }
 
 button.danger:hover {
     background-color: #c82333;
 }
 
-/* Programs grid */
 .programs {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -100,7 +101,17 @@ button.danger:hover {
     margin-bottom: 15px;
 }
 
-/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 90%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.1);
+}
 
 .modal-content {
     background-color: #fefefe;
@@ -150,7 +161,7 @@ button.danger:hover {
     border-radius: 10px;
     cursor: pointer;
     font-size: 14px;
-    width: 48%; /* Ajusta el ancho para que quepan dos botones con un pequeño espacio entre ellos */
+    width: 48%; 
 }
 
 .modal-buttons button.secondary {
@@ -160,8 +171,8 @@ button.danger:hover {
 }
 
 .modal-buttons button.primary {
-    background-color: #007bff;
-    color: white;
+    background-color: #fff;
+    color: #007bff;
     border: 1px solid #007bff;
 }
 
@@ -173,7 +184,6 @@ button.danger:hover {
 .modal-buttons button.primary:hover {
     background-color: #0056b3;
 }
-
 
 @media (max-width: 768px) {
     .container {
