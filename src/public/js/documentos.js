@@ -31,19 +31,21 @@ async function uploadDocument() {
     const formData = new FormData();
     formData.append('tipoDocumento', tipoDocumento);
 
+
     // Adjuntar todos los archivos seleccionados
     for (const file of selectedFiles) {
-        formData.append('documentos[]', file); // 'documentos[]' es un array de archivos
+        formData.append('documento[]', file); // 'documentos[]' es un array de archivos
     }
-
+    
     try {
-        const response = await fetch('http://localhost:3000/documentos/upload', {
+        const response = await fetch('http://localhost:3000/documentos/uploads', {
             method: 'POST',
             body: formData
         });
 
         if (response.ok) {
             const result = await response.json();
+            console.log("Ya funciona el json");
             alert(result.message);
 
             // Limpiar la lista de archivos y el input al guardar exitosamente
