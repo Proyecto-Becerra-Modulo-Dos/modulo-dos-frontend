@@ -52,7 +52,12 @@ nav .logo img {
     height: 50%;
     width: 90%;
     flex: 1;
+    padding: 20px;
+    margin: 10px;
+    background-color: #334cd7;
+    border-radius: 10px;
 }
+
 .card1 img {
     max-width: 40%;
     height: auto;
@@ -97,11 +102,7 @@ nav .logo img {
     margin-top: 50px;
     grid-column: 2;
     text-align: center;
-
-   
-}
-.apply-button a {
-    margin: 0 2px 0 5%;
+    margin: 35px 2px 0 35%;
     background-color: #334bd7;
     color: rgb(0, 0, 0);
     padding: 10px 35px;
@@ -109,7 +110,9 @@ nav .logo img {
     text-decoration: none;
     font-size: 16px;
     box-shadow: 2px 2px 12px rgb(255, 252, 252);
+   
 }
+
 .apply-button a:hover {
     background-color: #98a0a0;
 }

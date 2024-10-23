@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+}
+
+.container {
+    width: 100%;
+}
+
+.cabecera {
+    margin-top: 35px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.tittle {
+    font-size: 30px;
+    color: #2B2C33;
+    margin-left: 280px;
+    margin-top: 20px;
+}
+
+/* Formulario */
+
+.cont-form{
+    margin-left: 280px;
+    width: calc(100% - 280px);
+}
+
+.form-crear-empleado{
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+select,
+input{
+    width: 550px;
+    padding-left: 15px;
+    height: 35px;
+    background-color: #A1A6CA;
+    border-radius: 10px;
+    border: none;
+    margin-top: 25px;
+    color: #2B2C33;
+}
+
+select{
+    width: 565px;
+}
+
+::placeholder{
+    color: rgba(43, 44, 51, 0.7);
+}
+
+.cont-btn{
+    width: 100%;
+    display: flex;
+    justify-content: right;
+}
+
+.btn-guardar{
+    margin-top: 25px;
+    margin-right: 20px;
+    width: 150px;
+    height: 35px;
+    border-radius: 10px;
+    border: none;
+    background-color: #1E3DEA;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all ease 0.5s;
+}
+
+.btn-guardar:hover{
+    transform: scale(1.05);
+}

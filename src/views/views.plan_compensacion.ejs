@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apex</title>
+    <link rel="stylesheet" href="/css/menu_barra_adminrh.css">
+    <link rel="stylesheet" href="/css/plan_compensacion.css">
+    <link rel="icon" href="/img/estrella-afilada-medio-trazo 1.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <%- include('partials/menu_adminrh') %>
+            <%- include('partials/barra_adminrh') %>
+                <div class="cont-fondo">
+                    <div class="cont-mit">
+                        <div class="cont">
+                            <div class="cont-tittle">
+                                <h1 class="tittle">Planes de Compensación</h1>
+                                <button class="btn-crear-plan" id="openModalPlan">Crear Plan</button>
+                            </div>
+                            <% if (compensaciones && compensaciones.length> 0) { %>
+                            <div class="cont-users">
+                            <% compensaciones.forEach(compensacion=> { %>
+                            <div class="users">
+                                    <h3 class="tittle-users"><%= compensacion.nombre%></h3>
+                                    <div class="cont-txt">
+                                        <p class="txt-users">Salario Base: <span class="spn-users">$<%= Number(compensacion.salario).toLocaleString('es-CO')%></span></p>
+                                        <p class="txt-users">Bonificación: <span class="spn-users">$<%= Number(compensacion.bonificacion).toLocaleString('es-CO')%></span></p>
+                                        <p class="txt-users">Incentivo: <span class="spn-users"><%= compensacion.incentivo%></span></p>
+                                        <p class="txt-users">Fecha Inicio: <span class="spn-users"><%= compensacion.fechaInicio%></span></p>
+                                        <p class="txt-users">Fecha Fin: <span class="spn-users"><%= compensacion.fechaFin%></span></p>
+                                    </div>
+                                    <div class="cont-btns">
+                                        <button onclick="editarCompensacion('<%= compensacion.id %>')" class="btn-edit" id="openModalEdit">Editar</button>
+                                        <button onclick="eliminarCompensacion('<%= compensacion.id %>')" class="btn-delete">Eliminar</button>
+                                    </div>
+                                    <a href="/admin/empleadoXcompensacion/<%= compensacion.id %>" class="btn-ver">Ver empleados</a>
+                                </div>
+                                <% }); %>
+                            </div>
+                            <% } %>
+                        </div>
+                    </div>
+                    <div id="modalPlan" class="modal">
+                        <div class="modal-content">
+                            <h2>Crear Plan</h2>
+                            <form action="" id="crearPlan" class="form-plan">
+                                <input class="inp-plan" type="text" name="nombre" id="nombre"
+                                    placeholder="Nombre de Compensación">
+                                <input class="inp-plan" type="number" name="salario" id="salario"
+                                    placeholder="Salario Base">
+                                <input class="inp-plan" type="number" name="bonificaciones" id="bonificaciones"
+                                    placeholder="Bonificación">
+                                <input class="inp-plan" type="text" name="incentivos" id="incentivos"
+                                    placeholder="Incentivo">
+                                <input class="inp-plan" type="date" name="fechaInicio" id="fechaInicio"
+                                    placeholder="Fecha Inicio">
+                                <input class="inp-plan" type="date" name="fechaFin" id="fechaFin"
+                                    placeholder="Fecha Fin">
+                                <div class="cont-btns-plan">
+                                    <button id="closeModalPlan" class="btn-cancel">Cancelar</button>
+                                    <button type="submit" class="btn-crear">Crear</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div id="modalEdit" class="modal">
+                        <div class="modal-content-edit">
+                            <h2>Editar Plan</h2>
+                            <form action="" id="editarPlan" class="form-plan">
+                                <input type="hidden" name="id" id="edit-id" value="">
+                                <input class="inp-plan" type="number" name="salario" id="edit-salario"
+                                    placeholder="Salario Base">
+                                <input class="inp-plan" type="number" name="bonificacion" id="edit-bonificaciones"
+                                    placeholder="Bonificación">
+                                <input class="inp-plan" type="text" name="incentivo" id="edit-incentivos"
+                                    placeholder="Incentivo">
+                                <input class="inp-plan" type="date" name="fechaInicio" id="edit-fechaInicio"
+                                    placeholder="Fecha Inicio">
+                                <input class="inp-plan" type="date" name="fechaFin" id="edit-fechaFin"
+                                    placeholder="Fecha Fin">
+                                <div class="cont-btns-plan">
+                                    <button id="closeModalEdit" class="btn-cancel">Cancelar</button>
+                                    <button type="submit" class="btn-crear">Guardar</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/js/plan_compensacion.js"></script>
+</body>
+
+</html>

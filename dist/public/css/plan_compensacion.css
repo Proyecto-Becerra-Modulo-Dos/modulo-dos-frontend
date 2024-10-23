@@ -1,0 +1,254 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+}
+
+.cont-fondo{
+    width: calc(100% - 255px);
+    height: 100vh;
+    margin-left: 255px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cont-mit{
+    display: flex;
+    width: 900px;
+    height: 580px;
+}
+
+.cont{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    gap: 15px;
+    grid-template-columns: 100%;
+    grid-template-rows: 9% 91%;
+    background-color: rgb(200, 203, 224, 0.69);
+    border-radius: 15px;
+    padding: 15px
+}
+
+.cont-tittle{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.tittle {
+    font-size: 23px;
+    color: #2B2C33;
+    margin-left: 20px;
+}
+
+.btn-crear-plan {
+    width: 130px;
+    height: 35px;
+    border-radius: 13px;
+    background-color: #00000000;
+    border: 1.5px solid #139C31;
+    color: #139C31;
+    font-size: 15px;
+    text-decoration: none;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-right: 20px;
+    transition: all ease 0.5s;
+}
+
+.btn-crear-plan:hover {
+    transform: scale(1.05);
+    background-color: rgba(19, 156, 49, 0.1);
+}
+
+.cont-users{
+    width: calc(100% - 30px);
+    height: calc(100% - 45px);
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+    background-color: white;
+    border-radius: 15px;
+    padding: 15px
+}
+
+.users{
+    width: 100%;
+    height: 100%;
+    border: 1.5px solid rgb(200, 203, 224);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cont-txt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.txt-users{
+    font-weight: bold;
+    color: rgba(43, 44, 51, 0.7);
+}
+
+.spn-users{
+    font-weight: normal;
+}
+
+.cont-btns{
+    width: calc(100% - 60px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.btn-ver,
+.btn-edit,
+.btn-delete{
+    width: 100px;
+    height: 27px;
+    font-weight: bold;
+    background-color: #00000000;
+    border: 1.5px solid #1E3DEA;
+    color: #1E3DEA;
+    border-radius: 12px;
+    transition: all ease 0.5s;
+}
+
+.btn-ver{
+    width: 215px;
+    text-decoration: none;
+    text-align: center;
+    padding-top: 5px;
+    height: 22px;
+    font-size: 14px;
+}
+
+.btn-delete{
+    border: 1.5px solid #C90000;
+    color: #C90000;
+}
+
+.btn-delete:hover{
+    background-color: rgb(201, 0, 0, 0.2);
+}
+
+.btn-ver:hover,
+.btn-edit:hover{
+    background-color: rgba(30, 61, 234, 0.2);
+}
+
+/* Modal crear plan */
+
+.modal {
+    display: none; 
+    position: fixed;
+    border-radius: 15px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    border-radius: 15px;
+    background-color: white;
+    width: 350px;
+    height: 400px;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+h2{
+    margin-bottom: 20px;
+}
+
+.form-plan{
+    width: 100%;
+}
+.inp-plan{
+    width: 300px;
+    height: 40px;
+    border-radius: 10px;
+    color: #2B2C33;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    border: 1.5px solid rgb(200, 203, 224);
+}
+
+.cont-btns-plan{
+    width: calc(100% - 34px);
+    padding-left: 17px;
+    padding-right: 17px;
+    display: flex;
+    background-color: #00000000;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.btn-cancel,
+.btn-crear{
+    width: 45%;
+    height: 30px;
+    border-radius: 15px;
+    border: 1.5px solid #1E3DEA;
+    font-size: 14px;
+    font-weight: bold;
+    color: #1E3DEA;
+}
+
+.btn-cancel{
+    border: 1.5px solid #C90000;
+    color: #C90000;
+}
+
+.btn-cancel:hover{
+    background-color: rgba(201, 0, 0, 0.2);
+}
+
+.btn-crear:hover{
+    background-color: rgba(30, 61, 234, 0.2);
+}
+
+/* Modal editar plan */
+
+.modal-content-edit {
+    border-radius: 15px;
+    background-color: white;
+    width: 350px;
+    height: 350px;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}

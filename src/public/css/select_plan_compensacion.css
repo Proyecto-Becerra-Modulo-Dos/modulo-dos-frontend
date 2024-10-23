@@ -1,0 +1,34 @@
+.card{
+    width: 280px;
+    height: 250px;
+    border: 0.5px black solid;
+    margin-top: 100px;
+    margin-left: 380px;
+    border-radius: 10px;
+}
+
+.img-card{
+    width: 100%;
+    height: 50%;
+    background: url(../img/img-compensaciones.png);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 8px;
+}
+
+.card:hover{
+    transform: scale(1.01);
+    box-shadow: #333541c5 3px 3px 15px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}

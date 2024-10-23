@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planes</title>
+    <link rel="stylesheet" href="/css/menu_barra_adminrh.css">
+    <link rel="stylesheet" href="/css/select_plan_compensacion.css">
+    <link rel="icon" href="/img/estrella-afilada-medio-trazo 1.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <!-- partial menú lateral  -->
+        <%- include('partials/menu_adminrh') %>
+        <!-- partial bara superior  -->
+        <%- include('partials/barra_adminrh') %>
+
+        <div class="cont">
+            <!-- carta planes compensaciones -->
+            <div class="card">
+                <div class="img-card"></div>
+                <div class="card-body">
+                    <h4 class="card-title" style="margin-bottom: 5px; cursor: pointer;"> <a href="./compensaciones">Plan de Compensación</a></h4>
+                  <p class="card-text">Aquí encontras todos los planes de compensación de los empleados.</p>
+              </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
