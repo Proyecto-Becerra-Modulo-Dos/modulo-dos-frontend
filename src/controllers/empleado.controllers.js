@@ -13,7 +13,7 @@ export const solicitarcambio = (req, res) => {
         .then(res => res.json())
         .then(data => {
             const cuentasBancarias = data.cuenta;
-            res.render("views.solicitarcambio.ejs", { cuentasBancarias });            
+            res.render("views.solicitarcambio.ejs", { cuentasBancarias });
         })
         .catch(err => console.error(err));
 }
@@ -46,6 +46,10 @@ export const pago = (req, res) => {
         .catch(err => console.error(err));
 }
 
-export const solicitarpermiso = (req, res) => {
-    res.render("views.solicitud-permiso-ausencia.ejs")
-}
+
+export const solicitarpermiso = (req, res) =>{
+  const options= {
+      url : url
+  };
+  res.render("views.solicitud-permiso-ausencia.ejs",options)
+};
