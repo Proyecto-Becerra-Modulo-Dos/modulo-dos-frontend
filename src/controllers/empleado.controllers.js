@@ -7,7 +7,6 @@ export const login = (req, res) => {
     res.render("views.login.ejs", {url: url})
 }
 
-
 export const solicitarcambio = (req, res) => {
     fetch(url + "/empleados/solicitar")
         .then(res => res.json())
@@ -44,4 +43,8 @@ export const pago = (req, res) => {
                 .catch(err => console.error(err));
         })
         .catch(err => console.error(err));
+}
+
+export const editarPerfilEmpleado = (req, res) => {
+    res.render("views.editar.perfil.empleado.ejs")
 }
